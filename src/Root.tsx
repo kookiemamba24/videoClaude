@@ -1,4 +1,5 @@
 import { Composition, Folder } from "remotion";
+import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -50,7 +51,29 @@ export const RemotionRoot: React.FC = () => {
           titleColor: "#000000",
         }}
       />
-
+      <Composition
+        id="ClientResult"
+        component={ClientResult}
+        schema={clientResultSchema}
+        durationInFrames={240}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          name: "William",
+          role: "Marketing agency",
+          before: [
+            "Inconsistent lead flow",
+            "Leads not consistently qualified",
+            "No follow-up sequence or automations",
+          ],
+          tookOver: ["The offer", "Ads", "Funnel", "Follow-up"],
+          stat: 34,
+          statSuffix: "K",
+          statCaption: "a month, with more than $80K in profit",
+          days: 86,
+        }}
+      />
     </>
   );
 };
