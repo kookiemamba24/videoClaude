@@ -1,5 +1,6 @@
 import { Composition, Folder } from "remotion";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
+import { calculateVSLMetadata, VSL } from "./VSL/VSL";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -73,6 +74,15 @@ export const RemotionRoot: React.FC = () => {
           statCaption: "a month, with more than $80K in profit",
           days: 86,
         }}
+      />
+      <Composition
+        id="VSL"
+        component={VSL}
+        calculateMetadata={calculateVSLMetadata}
+        durationInFrames={1}
+        fps={30}
+        width={1920}
+        height={1080}
       />
     </>
   );

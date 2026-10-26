@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@remotion/captions": "4.0.538",
     "@remotion/cli": "4.0.538",
     "@remotion/fonts": "4.0.538",
     "@remotion/zod-types": "4.0.538",

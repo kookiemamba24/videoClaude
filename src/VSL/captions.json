@@ -1,0 +1,6066 @@
+[
+ {
+  "text": "If",
+  "startMs": 0,
+  "endMs": 171,
+  "timestampMs": 86,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 171,
+  "endMs": 363,
+  "timestampMs": 267,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 363,
+  "endMs": 555,
+  "timestampMs": 459,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 555,
+  "endMs": 705,
+  "timestampMs": 630,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 705,
+  "endMs": 981,
+  "timestampMs": 843,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " business",
+  "startMs": 981,
+  "endMs": 1278,
+  "timestampMs": 1130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " doing",
+  "startMs": 1278,
+  "endMs": 1512,
+  "timestampMs": 1395,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " at",
+  "startMs": 1512,
+  "endMs": 1683,
+  "timestampMs": 1598,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " least",
+  "startMs": 1683,
+  "endMs": 1917,
+  "timestampMs": 1800,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $20,000",
+  "startMs": 1917,
+  "endMs": 2172,
+  "timestampMs": 2045,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 2172,
+  "endMs": 2322,
+  "timestampMs": 2247,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " month",
+  "startMs": 2322,
+  "endMs": 2556,
+  "timestampMs": 2439,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " or",
+  "startMs": 2556,
+  "endMs": 2727,
+  "timestampMs": 2642,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 2727,
+  "endMs": 2940,
+  "timestampMs": 2834,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 2940,
+  "endMs": 3132,
+  "timestampMs": 3036,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 3132,
+  "endMs": 3324,
+  "timestampMs": 3228,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 3324,
+  "endMs": 3516,
+  "timestampMs": 3420,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " struggling",
+  "startMs": 3516,
+  "endMs": 3855,
+  "timestampMs": 3686,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 3855,
+  "endMs": 4026,
+  "timestampMs": 3941,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " get",
+  "startMs": 4026,
+  "endMs": 4218,
+  "timestampMs": 4122,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 4218,
+  "endMs": 4431,
+  "timestampMs": 4325,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs",
+  "startMs": 4431,
+  "endMs": 4644,
+  "timestampMs": 4538,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " consistently",
+  "startMs": 4644,
+  "endMs": 5026,
+  "timestampMs": 4835,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " We",
+  "startMs": 5904,
+  "endMs": 6075,
+  "timestampMs": 5990,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " will",
+  "startMs": 6075,
+  "endMs": 6288,
+  "timestampMs": 6182,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " get",
+  "startMs": 6288,
+  "endMs": 6480,
+  "timestampMs": 6384,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 6480,
+  "endMs": 6672,
+  "timestampMs": 6576,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 6-12",
+  "startMs": 6672,
+  "endMs": 6864,
+  "timestampMs": 6768,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 6864,
+  "endMs": 7077,
+  "timestampMs": 6971,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " booked",
+  "startMs": 7077,
+  "endMs": 7332,
+  "timestampMs": 7205,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs",
+  "startMs": 7332,
+  "endMs": 7545,
+  "timestampMs": 7439,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " into",
+  "startMs": 7545,
+  "endMs": 7758,
+  "timestampMs": 7652,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 7758,
+  "endMs": 7971,
+  "timestampMs": 7865,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calendar",
+  "startMs": 7971,
+  "endMs": 8268,
+  "timestampMs": 8120,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 8268,
+  "endMs": 8439,
+  "timestampMs": 8354,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 8439,
+  "endMs": 8631,
+  "timestampMs": 8535,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " next",
+  "startMs": 8631,
+  "endMs": 8844,
+  "timestampMs": 8738,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 90",
+  "startMs": 8844,
+  "endMs": 9015,
+  "timestampMs": 8930,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 9015,
+  "endMs": 9228,
+  "timestampMs": 9122,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Or",
+  "startMs": 9711,
+  "endMs": 9882,
+  "timestampMs": 9797,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 9882,
+  "endMs": 10053,
+  "timestampMs": 9968,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " work",
+  "startMs": 10053,
+  "endMs": 10266,
+  "timestampMs": 10160,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 10266,
+  "endMs": 10458,
+  "timestampMs": 10362,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " free",
+  "startMs": 10458,
+  "endMs": 10671,
+  "timestampMs": 10565,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " until",
+  "startMs": 10671,
+  "endMs": 10905,
+  "timestampMs": 10788,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 10905,
+  "endMs": 11097,
+  "timestampMs": 11001,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hit",
+  "startMs": 11097,
+  "endMs": 11289,
+  "timestampMs": 11193,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it.",
+  "startMs": 11289,
+  "endMs": 11460,
+  "timestampMs": 11375,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 12338,
+  "endMs": 12530,
+  "timestampMs": 12434,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " before",
+  "startMs": 12530,
+  "endMs": 12785,
+  "timestampMs": 12658,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " I",
+  "startMs": 12785,
+  "endMs": 12935,
+  "timestampMs": 12860,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " tell",
+  "startMs": 12935,
+  "endMs": 13148,
+  "timestampMs": 13042,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 13148,
+  "endMs": 13340,
+  "timestampMs": 13244,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " how -",
+  "startMs": 13340,
+  "endMs": 13532,
+  "timestampMs": 13436,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " let",
+  "startMs": 13751,
+  "endMs": 13943,
+  "timestampMs": 13847,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " me",
+  "startMs": 13943,
+  "endMs": 14114,
+  "timestampMs": 14029,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " show",
+  "startMs": 14114,
+  "endMs": 14327,
+  "timestampMs": 14221,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 14327,
+  "endMs": 14519,
+  "timestampMs": 14423,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " how",
+  "startMs": 14519,
+  "endMs": 14711,
+  "timestampMs": 14615,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we've",
+  "startMs": 14711,
+  "endMs": 14924,
+  "timestampMs": 14818,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " been",
+  "startMs": 14924,
+  "endMs": 15137,
+  "timestampMs": 15031,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " able",
+  "startMs": 15137,
+  "endMs": 15350,
+  "timestampMs": 15244,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 15350,
+  "endMs": 15521,
+  "timestampMs": 15436,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " do",
+  "startMs": 15521,
+  "endMs": 15692,
+  "timestampMs": 15607,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it.",
+  "startMs": 15692,
+  "endMs": 15863,
+  "timestampMs": 15778,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Action",
+  "startMs": 16741,
+  "endMs": 16996,
+  "timestampMs": 16869,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 16996,
+  "endMs": 17272,
+  "timestampMs": 17134,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " added",
+  "startMs": 17272,
+  "endMs": 17506,
+  "timestampMs": 17389,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $190,000",
+  "startMs": 17506,
+  "endMs": 17783,
+  "timestampMs": 17645,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 17783,
+  "endMs": 17954,
+  "timestampMs": 17869,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 90",
+  "startMs": 17954,
+  "endMs": 18124,
+  "timestampMs": 18039,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days",
+  "startMs": 18124,
+  "endMs": 18337,
+  "timestampMs": 18231,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 18337,
+  "endMs": 18550,
+  "timestampMs": 18444,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " just",
+  "startMs": 18550,
+  "endMs": 18763,
+  "timestampMs": 18657,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $3,200",
+  "startMs": 18763,
+  "endMs": 18998,
+  "timestampMs": 18881,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 18998,
+  "endMs": 19168,
+  "timestampMs": 19083,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ad",
+  "startMs": 19168,
+  "endMs": 19339,
+  "timestampMs": 19254,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " spend.",
+  "startMs": 19339,
+  "endMs": 19573,
+  "timestampMs": 19456,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Happy",
+  "startMs": 20452,
+  "endMs": 20686,
+  "timestampMs": 20569,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 20686,
+  "endMs": 20962,
+  "timestampMs": 20824,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " generated",
+  "startMs": 20962,
+  "endMs": 21280,
+  "timestampMs": 21121,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $1.2M",
+  "startMs": 21280,
+  "endMs": 21493,
+  "timestampMs": 21387,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 21493,
+  "endMs": 21664,
+  "timestampMs": 21579,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " revenue",
+  "startMs": 21664,
+  "endMs": 21940,
+  "timestampMs": 21802,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 21940,
+  "endMs": 22111,
+  "timestampMs": 22026,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " just",
+  "startMs": 22111,
+  "endMs": 22324,
+  "timestampMs": 22218,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 70",
+  "startMs": 22324,
+  "endMs": 22495,
+  "timestampMs": 22410,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 22495,
+  "endMs": 22708,
+  "timestampMs": 22602,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Braga",
+  "startMs": 23587,
+  "endMs": 23821,
+  "timestampMs": 23704,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 23821,
+  "endMs": 24097,
+  "timestampMs": 23959,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " went",
+  "startMs": 24097,
+  "endMs": 24310,
+  "timestampMs": 24204,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 24310,
+  "endMs": 24523,
+  "timestampMs": 24417,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " an",
+  "startMs": 24523,
+  "endMs": 24694,
+  "timestampMs": 24609,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " inconsistent",
+  "startMs": 24694,
+  "endMs": 25075,
+  "timestampMs": 24885,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calendar",
+  "startMs": 25075,
+  "endMs": 25373,
+  "timestampMs": 25224,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 25373,
+  "endMs": 25543,
+  "timestampMs": 25458,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $150,000",
+  "startMs": 25543,
+  "endMs": 25820,
+  "timestampMs": 25682,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 25820,
+  "endMs": 25991,
+  "timestampMs": 25906,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " booked",
+  "startMs": 25991,
+  "endMs": 26246,
+  "timestampMs": 26119,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs",
+  "startMs": 26246,
+  "endMs": 26459,
+  "timestampMs": 26353,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 26459,
+  "endMs": 26630,
+  "timestampMs": 26545,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " two",
+  "startMs": 26630,
+  "endMs": 26822,
+  "timestampMs": 26726,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " months.",
+  "startMs": 26822,
+  "endMs": 27077,
+  "timestampMs": 26950,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Vista",
+  "startMs": 27955,
+  "endMs": 28189,
+  "timestampMs": 28072,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing -",
+  "startMs": 28189,
+  "endMs": 28465,
+  "timestampMs": 28327,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $96,000",
+  "startMs": 28685,
+  "endMs": 28940,
+  "timestampMs": 28813,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 28940,
+  "endMs": 29111,
+  "timestampMs": 29026,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " their",
+  "startMs": 29111,
+  "endMs": 29345,
+  "timestampMs": 29228,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " very",
+  "startMs": 29345,
+  "endMs": 29558,
+  "timestampMs": 29452,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " first",
+  "startMs": 29558,
+  "endMs": 29792,
+  "timestampMs": 29675,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " month",
+  "startMs": 29792,
+  "endMs": 30026,
+  "timestampMs": 29909,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 30026,
+  "endMs": 30239,
+  "timestampMs": 30133,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " just",
+  "startMs": 30239,
+  "endMs": 30452,
+  "timestampMs": 30346,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " three",
+  "startMs": 30452,
+  "endMs": 30686,
+  "timestampMs": 30569,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs!",
+  "startMs": 30686,
+  "endMs": 30899,
+  "timestampMs": 30793,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " These",
+  "startMs": 31778,
+  "endMs": 32012,
+  "timestampMs": 31895,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " were",
+  "startMs": 32012,
+  "endMs": 32225,
+  "timestampMs": 32119,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " real",
+  "startMs": 32225,
+  "endMs": 32438,
+  "timestampMs": 32332,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 32438,
+  "endMs": 32714,
+  "timestampMs": 32576,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " businesses",
+  "startMs": 32714,
+  "endMs": 33053,
+  "timestampMs": 32884,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " sitting",
+  "startMs": 33053,
+  "endMs": 33330,
+  "timestampMs": 33192,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " exactly",
+  "startMs": 33330,
+  "endMs": 33606,
+  "timestampMs": 33468,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " where",
+  "startMs": 33606,
+  "endMs": 33840,
+  "timestampMs": 33723,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 33840,
+  "endMs": 34032,
+  "timestampMs": 33936,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 34032,
+  "endMs": 34224,
+  "timestampMs": 34128,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " right",
+  "startMs": 34224,
+  "endMs": 34458,
+  "timestampMs": 34341,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " now.",
+  "startMs": 34458,
+  "endMs": 34650,
+  "timestampMs": 34554,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " The",
+  "startMs": 35133,
+  "endMs": 35325,
+  "timestampMs": 35229,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " same",
+  "startMs": 35325,
+  "endMs": 35538,
+  "timestampMs": 35432,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " frustration",
+  "startMs": 35538,
+  "endMs": 35898,
+  "timestampMs": 35718,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 35898,
+  "endMs": 36069,
+  "timestampMs": 35984,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " knowing",
+  "startMs": 36069,
+  "endMs": 36345,
+  "timestampMs": 36207,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 36345,
+  "endMs": 36558,
+  "timestampMs": 36452,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " work",
+  "startMs": 36558,
+  "endMs": 36771,
+  "timestampMs": 36665,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 36771,
+  "endMs": 36942,
+  "timestampMs": 36857,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " good",
+  "startMs": 36942,
+  "endMs": 37155,
+  "timestampMs": 37049,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " but",
+  "startMs": 37155,
+  "endMs": 37347,
+  "timestampMs": 37251,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 37347,
+  "endMs": 37539,
+  "timestampMs": 37443,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calendar",
+  "startMs": 37539,
+  "endMs": 37836,
+  "timestampMs": 37688,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 37836,
+  "endMs": 38007,
+  "timestampMs": 37922,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 38007,
+  "endMs": 38199,
+  "timestampMs": 38103,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " filling",
+  "startMs": 38199,
+  "endMs": 38475,
+  "timestampMs": 38337,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 38475,
+  "endMs": 38667,
+  "timestampMs": 38571,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 38667,
+  "endMs": 38859,
+  "timestampMs": 38763,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " way",
+  "startMs": 38859,
+  "endMs": 39051,
+  "timestampMs": 38955,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it",
+  "startMs": 39051,
+  "endMs": 39222,
+  "timestampMs": 39137,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " should",
+  "startMs": 39222,
+  "endMs": 39477,
+  "timestampMs": 39350,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " be.",
+  "startMs": 39477,
+  "endMs": 39648,
+  "timestampMs": 39563,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " So",
+  "startMs": 40527,
+  "endMs": 40697,
+  "timestampMs": 40612,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " what",
+  "startMs": 40697,
+  "endMs": 40910,
+  "timestampMs": 40804,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 40910,
+  "endMs": 41102,
+  "timestampMs": 41006,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " actually",
+  "startMs": 41102,
+  "endMs": 41400,
+  "timestampMs": 41251,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " holding",
+  "startMs": 41400,
+  "endMs": 41676,
+  "timestampMs": 41538,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " them",
+  "startMs": 41676,
+  "endMs": 41889,
+  "timestampMs": 41783,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " back?",
+  "startMs": 41889,
+  "endMs": 42102,
+  "timestampMs": 41996,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 42585,
+  "endMs": 42756,
+  "timestampMs": 42671,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 42756,
+  "endMs": 42948,
+  "timestampMs": 42852,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 42948,
+  "endMs": 43140,
+  "timestampMs": 43044,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " their",
+  "startMs": 43140,
+  "endMs": 43374,
+  "timestampMs": 43257,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " pricing.",
+  "startMs": 43374,
+  "endMs": 43650,
+  "timestampMs": 43512,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 44133,
+  "endMs": 44304,
+  "timestampMs": 44219,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 44304,
+  "endMs": 44496,
+  "timestampMs": 44400,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 44496,
+  "endMs": 44688,
+  "timestampMs": 44592,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 44688,
+  "endMs": 44880,
+  "timestampMs": 44784,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " quality",
+  "startMs": 44880,
+  "endMs": 45156,
+  "timestampMs": 45018,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 45156,
+  "endMs": 45327,
+  "timestampMs": 45242,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " their",
+  "startMs": 45327,
+  "endMs": 45561,
+  "timestampMs": 45444,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " work.",
+  "startMs": 45561,
+  "endMs": 45774,
+  "timestampMs": 45668,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 46257,
+  "endMs": 46428,
+  "timestampMs": 46343,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 46428,
+  "endMs": 46620,
+  "timestampMs": 46524,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 46620,
+  "endMs": 46812,
+  "timestampMs": 46716,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " even",
+  "startMs": 46812,
+  "endMs": 47025,
+  "timestampMs": 46919,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " their",
+  "startMs": 47025,
+  "endMs": 47259,
+  "timestampMs": 47142,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ads.",
+  "startMs": 47259,
+  "endMs": 47451,
+  "timestampMs": 47355,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 47934,
+  "endMs": 48105,
+  "timestampMs": 48020,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 48105,
+  "endMs": 48297,
+  "timestampMs": 48201,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 48297,
+  "endMs": 48510,
+  "timestampMs": 48404,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 48510,
+  "endMs": 48723,
+  "timestampMs": 48617,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looked",
+  "startMs": 48723,
+  "endMs": 48978,
+  "timestampMs": 48851,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " exactly",
+  "startMs": 48978,
+  "endMs": 49254,
+  "timestampMs": 49116,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " like",
+  "startMs": 49254,
+  "endMs": 49467,
+  "timestampMs": 49361,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " every",
+  "startMs": 49467,
+  "endMs": 49701,
+  "timestampMs": 49584,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " other",
+  "startMs": 49701,
+  "endMs": 49935,
+  "timestampMs": 49818,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 49935,
+  "endMs": 50190,
+  "timestampMs": 50063,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " down",
+  "startMs": 50190,
+  "endMs": 50404,
+  "timestampMs": 50297,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 50404,
+  "endMs": 50595,
+  "timestampMs": 50500,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " road.",
+  "startMs": 50595,
+  "endMs": 50808,
+  "timestampMs": 50702,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 51687,
+  "endMs": 51879,
+  "timestampMs": 51783,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " here",
+  "startMs": 51879,
+  "endMs": 52092,
+  "timestampMs": 51986,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 52092,
+  "endMs": 52263,
+  "timestampMs": 52178,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " what",
+  "startMs": 52263,
+  "endMs": 52476,
+  "timestampMs": 52370,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " I",
+  "startMs": 52476,
+  "endMs": 52625,
+  "timestampMs": 52551,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " mean",
+  "startMs": 52625,
+  "endMs": 52838,
+  "timestampMs": 52732,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 52838,
+  "endMs": 53009,
+  "timestampMs": 52924,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that.",
+  "startMs": 53009,
+  "endMs": 53222,
+  "timestampMs": 53116,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " When",
+  "startMs": 53705,
+  "endMs": 53918,
+  "timestampMs": 53812,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 53918,
+  "endMs": 54068,
+  "timestampMs": 53993,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " homeowner",
+  "startMs": 54068,
+  "endMs": 54387,
+  "timestampMs": 54228,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 54387,
+  "endMs": 54557,
+  "timestampMs": 54472,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 54557,
+  "endMs": 54770,
+  "timestampMs": 54664,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " area",
+  "startMs": 54770,
+  "endMs": 54983,
+  "timestampMs": 54877,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " has",
+  "startMs": 54983,
+  "endMs": 55175,
+  "timestampMs": 55079,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 55175,
+  "endMs": 55325,
+  "timestampMs": 55250,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 55325,
+  "endMs": 55601,
+  "timestampMs": 55463,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " problem -",
+  "startMs": 55601,
+  "endMs": 55878,
+  "timestampMs": 55740,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 56097,
+  "endMs": 56247,
+  "timestampMs": 56172,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " leak,",
+  "startMs": 56247,
+  "endMs": 56460,
+  "timestampMs": 56354,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " storm",
+  "startMs": 56636,
+  "endMs": 56870,
+  "timestampMs": 56753,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " damage,",
+  "startMs": 56870,
+  "endMs": 57125,
+  "timestampMs": 56998,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 57301,
+  "endMs": 57450,
+  "timestampMs": 57376,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " full",
+  "startMs": 57450,
+  "endMs": 57663,
+  "timestampMs": 57557,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " replacement",
+  "startMs": 57663,
+  "endMs": 58024,
+  "timestampMs": 57844,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 58024,
+  "endMs": 58237,
+  "timestampMs": 58131,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " have",
+  "startMs": 58237,
+  "endMs": 58450,
+  "timestampMs": 58344,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " been",
+  "startMs": 58450,
+  "endMs": 58663,
+  "timestampMs": 58557,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " putting",
+  "startMs": 58663,
+  "endMs": 58939,
+  "timestampMs": 58801,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " off -",
+  "startMs": 58939,
+  "endMs": 59131,
+  "timestampMs": 59035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 59351,
+  "endMs": 59564,
+  "timestampMs": 59458,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " do",
+  "startMs": 59564,
+  "endMs": 59735,
+  "timestampMs": 59650,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 59735,
+  "endMs": 59927,
+  "timestampMs": 59831,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " call",
+  "startMs": 59927,
+  "endMs": 60140,
+  "timestampMs": 60034,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 60140,
+  "endMs": 60332,
+  "timestampMs": 60236,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " first",
+  "startMs": 60332,
+  "endMs": 60566,
+  "timestampMs": 60449,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 60566,
+  "endMs": 60821,
+  "timestampMs": 60694,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 60821,
+  "endMs": 61034,
+  "timestampMs": 60928,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " find.",
+  "startMs": 61034,
+  "endMs": 61247,
+  "timestampMs": 61141,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " They",
+  "startMs": 61730,
+  "endMs": 61943,
+  "timestampMs": 61837,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " look",
+  "startMs": 61943,
+  "endMs": 62156,
+  "timestampMs": 62050,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " at",
+  "startMs": 62156,
+  "endMs": 62327,
+  "timestampMs": 62242,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 62327,
+  "endMs": 62477,
+  "timestampMs": 62402,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " few",
+  "startMs": 62477,
+  "endMs": 62669,
+  "timestampMs": 62573,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " options.",
+  "startMs": 62669,
+  "endMs": 62945,
+  "timestampMs": 62807,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " They",
+  "startMs": 63823,
+  "endMs": 64036,
+  "timestampMs": 63930,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " scroll",
+  "startMs": 64036,
+  "endMs": 64291,
+  "timestampMs": 64164,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " through",
+  "startMs": 64291,
+  "endMs": 64567,
+  "timestampMs": 64429,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Facebook.",
+  "startMs": 64567,
+  "endMs": 64865,
+  "timestampMs": 64716,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " They",
+  "startMs": 65348,
+  "endMs": 65561,
+  "timestampMs": 65455,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " check",
+  "startMs": 65561,
+  "endMs": 65795,
+  "timestampMs": 65678,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 65795,
+  "endMs": 65945,
+  "timestampMs": 65870,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " website",
+  "startMs": 65945,
+  "endMs": 66221,
+  "timestampMs": 66083,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " or",
+  "startMs": 66221,
+  "endMs": 66392,
+  "timestampMs": 66307,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " two.",
+  "startMs": 66392,
+  "endMs": 66584,
+  "timestampMs": 66488,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " And",
+  "startMs": 67067,
+  "endMs": 67259,
+  "timestampMs": 67163,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " within",
+  "startMs": 67259,
+  "endMs": 67514,
+  "timestampMs": 67387,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " about",
+  "startMs": 67514,
+  "endMs": 67748,
+  "timestampMs": 67631,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 10",
+  "startMs": 67748,
+  "endMs": 67919,
+  "timestampMs": 67834,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " seconds",
+  "startMs": 67919,
+  "endMs": 68195,
+  "timestampMs": 68057,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 68195,
+  "endMs": 68408,
+  "timestampMs": 68302,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " make",
+  "startMs": 68408,
+  "endMs": 68621,
+  "timestampMs": 68515,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 68621,
+  "endMs": 68771,
+  "timestampMs": 68696,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " decision",
+  "startMs": 68771,
+  "endMs": 69068,
+  "timestampMs": 68920,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " about",
+  "startMs": 69068,
+  "endMs": 69302,
+  "timestampMs": 69185,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " who",
+  "startMs": 69302,
+  "endMs": 69494,
+  "timestampMs": 69398,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looks",
+  "startMs": 69494,
+  "endMs": 69728,
+  "timestampMs": 69611,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " trustworthy",
+  "startMs": 69728,
+  "endMs": 70089,
+  "timestampMs": 69909,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 70089,
+  "endMs": 70281,
+  "timestampMs": 70185,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " who",
+  "startMs": 70281,
+  "endMs": 70473,
+  "timestampMs": 70377,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " does",
+  "startMs": 70473,
+  "endMs": 70686,
+  "timestampMs": 70580,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not.",
+  "startMs": 70686,
+  "endMs": 70878,
+  "timestampMs": 70782,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " That",
+  "startMs": 71756,
+  "endMs": 71969,
+  "timestampMs": 71863,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " decision",
+  "startMs": 71969,
+  "endMs": 72266,
+  "timestampMs": 72118,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 72266,
+  "endMs": 72437,
+  "timestampMs": 72352,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 72437,
+  "endMs": 72629,
+  "timestampMs": 72533,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " based",
+  "startMs": 72629,
+  "endMs": 72863,
+  "timestampMs": 72746,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on",
+  "startMs": 72863,
+  "endMs": 73034,
+  "timestampMs": 72949,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 73034,
+  "endMs": 73247,
+  "timestampMs": 73141,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " reviews.",
+  "startMs": 73247,
+  "endMs": 73523,
+  "timestampMs": 73385,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 74006,
+  "endMs": 74177,
+  "timestampMs": 74092,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 74177,
+  "endMs": 74348,
+  "timestampMs": 74263,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 74348,
+  "endMs": 74540,
+  "timestampMs": 74444,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " based",
+  "startMs": 74540,
+  "endMs": 74774,
+  "timestampMs": 74657,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on",
+  "startMs": 74774,
+  "endMs": 74945,
+  "timestampMs": 74860,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " how",
+  "startMs": 74945,
+  "endMs": 75137,
+  "timestampMs": 75041,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " long",
+  "startMs": 75137,
+  "endMs": 75350,
+  "timestampMs": 75244,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 75350,
+  "endMs": 75542,
+  "timestampMs": 75446,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " have",
+  "startMs": 75542,
+  "endMs": 75755,
+  "timestampMs": 75649,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " been",
+  "startMs": 75755,
+  "endMs": 75968,
+  "timestampMs": 75862,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 75968,
+  "endMs": 76139,
+  "timestampMs": 76054,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " business.",
+  "startMs": 76139,
+  "endMs": 76436,
+  "timestampMs": 76288,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " It",
+  "startMs": 76919,
+  "endMs": 77090,
+  "timestampMs": 77005,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 77090,
+  "endMs": 77261,
+  "timestampMs": 77176,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " based",
+  "startMs": 77261,
+  "endMs": 77495,
+  "timestampMs": 77378,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on",
+  "startMs": 77495,
+  "endMs": 77666,
+  "timestampMs": 77581,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " how",
+  "startMs": 77666,
+  "endMs": 77858,
+  "timestampMs": 77762,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 77858,
+  "endMs": 78071,
+  "timestampMs": 77965,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " brand",
+  "startMs": 78071,
+  "endMs": 78305,
+  "timestampMs": 78188,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looks",
+  "startMs": 78305,
+  "endMs": 78539,
+  "timestampMs": 78422,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " compared",
+  "startMs": 78539,
+  "endMs": 78836,
+  "timestampMs": 78688,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 78836,
+  "endMs": 79007,
+  "timestampMs": 78922,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " every",
+  "startMs": 79007,
+  "endMs": 79241,
+  "timestampMs": 79124,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " other",
+  "startMs": 79241,
+  "endMs": 79475,
+  "timestampMs": 79358,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 79475,
+  "endMs": 79730,
+  "timestampMs": 79603,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " showing",
+  "startMs": 79730,
+  "endMs": 80007,
+  "timestampMs": 79869,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " up",
+  "startMs": 80007,
+  "endMs": 80178,
+  "timestampMs": 80093,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 80178,
+  "endMs": 80348,
+  "timestampMs": 80263,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " front",
+  "startMs": 80348,
+  "endMs": 80582,
+  "timestampMs": 80465,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 80582,
+  "endMs": 80753,
+  "timestampMs": 80668,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " them",
+  "startMs": 80753,
+  "endMs": 80966,
+  "timestampMs": 80860,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " at",
+  "startMs": 80966,
+  "endMs": 81137,
+  "timestampMs": 81052,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 81137,
+  "endMs": 81350,
+  "timestampMs": 81244,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " exact",
+  "startMs": 81350,
+  "endMs": 81584,
+  "timestampMs": 81467,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " moment.",
+  "startMs": 81584,
+  "endMs": 81839,
+  "timestampMs": 81712,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " So",
+  "startMs": 82718,
+  "endMs": 82889,
+  "timestampMs": 82804,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 82889,
+  "endMs": 83081,
+  "timestampMs": 82985,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " think",
+  "startMs": 83081,
+  "endMs": 83315,
+  "timestampMs": 83198,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 83315,
+  "endMs": 83507,
+  "timestampMs": 83411,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " just",
+  "startMs": 83507,
+  "endMs": 83720,
+  "timestampMs": 83614,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " need",
+  "startMs": 83720,
+  "endMs": 83933,
+  "timestampMs": 83827,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 83933,
+  "endMs": 84146,
+  "timestampMs": 84040,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ads",
+  "startMs": 84146,
+  "endMs": 84338,
+  "timestampMs": 84242,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hoping",
+  "startMs": 84338,
+  "endMs": 84593,
+  "timestampMs": 84466,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it",
+  "startMs": 84593,
+  "endMs": 84764,
+  "timestampMs": 84679,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " would",
+  "startMs": 84764,
+  "endMs": 84998,
+  "timestampMs": 84881,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " convert,",
+  "startMs": 84998,
+  "endMs": 85274,
+  "timestampMs": 85136,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " its",
+  "startMs": 85450,
+  "endMs": 85642,
+  "timestampMs": 85546,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " NOT.",
+  "startMs": 85642,
+  "endMs": 85834,
+  "timestampMs": 85738,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " The",
+  "startMs": 86712,
+  "endMs": 86904,
+  "timestampMs": 86808,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " problem",
+  "startMs": 86904,
+  "endMs": 87180,
+  "timestampMs": 87042,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 87180,
+  "endMs": 87351,
+  "timestampMs": 87266,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 87351,
+  "endMs": 87564,
+  "timestampMs": 87458,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ads",
+  "startMs": 87564,
+  "endMs": 87756,
+  "timestampMs": 87660,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " look",
+  "startMs": 87756,
+  "endMs": 87969,
+  "timestampMs": 87863,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 87969,
+  "endMs": 88161,
+  "timestampMs": 88065,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " same",
+  "startMs": 88161,
+  "endMs": 88374,
+  "timestampMs": 88268,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " as",
+  "startMs": 88374,
+  "endMs": 88545,
+  "timestampMs": 88460,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " every",
+  "startMs": 88545,
+  "endMs": 88779,
+  "timestampMs": 88662,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " other",
+  "startMs": 88779,
+  "endMs": 89013,
+  "timestampMs": 88896,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 89013,
+  "endMs": 89268,
+  "timestampMs": 89141,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " running",
+  "startMs": 89268,
+  "endMs": 89544,
+  "timestampMs": 89406,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " cheap",
+  "startMs": 89544,
+  "endMs": 89778,
+  "timestampMs": 89661,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " static",
+  "startMs": 89778,
+  "endMs": 90033,
+  "timestampMs": 89906,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " images",
+  "startMs": 90033,
+  "endMs": 90289,
+  "timestampMs": 90161,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on",
+  "startMs": 90289,
+  "endMs": 90459,
+  "timestampMs": 90374,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Facebook.",
+  "startMs": 90459,
+  "endMs": 90757,
+  "timestampMs": 90608,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 91240,
+  "endMs": 91453,
+  "timestampMs": 91347,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " website",
+  "startMs": 91453,
+  "endMs": 91729,
+  "timestampMs": 91591,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looks",
+  "startMs": 91729,
+  "endMs": 91963,
+  "timestampMs": 91846,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 91963,
+  "endMs": 92155,
+  "timestampMs": 92059,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " same.",
+  "startMs": 92155,
+  "endMs": 92368,
+  "timestampMs": 92262,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 92851,
+  "endMs": 93064,
+  "timestampMs": 92958,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " follow",
+  "startMs": 93064,
+  "endMs": 93319,
+  "timestampMs": 93192,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " up",
+  "startMs": 93319,
+  "endMs": 93490,
+  "timestampMs": 93405,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 93490,
+  "endMs": 93661,
+  "timestampMs": 93576,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 93661,
+  "endMs": 93853,
+  "timestampMs": 93757,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " same",
+  "startMs": 93853,
+  "endMs": 94066,
+  "timestampMs": 93960,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " slow",
+  "startMs": 94066,
+  "endMs": 94279,
+  "timestampMs": 94173,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " process",
+  "startMs": 94279,
+  "endMs": 94555,
+  "timestampMs": 94417,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " where",
+  "startMs": 94555,
+  "endMs": 94789,
+  "timestampMs": 94672,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 94789,
+  "endMs": 94939,
+  "timestampMs": 94864,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " lead",
+  "startMs": 94939,
+  "endMs": 95152,
+  "timestampMs": 95046,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " fills",
+  "startMs": 95152,
+  "endMs": 95386,
+  "timestampMs": 95269,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 95386,
+  "endMs": 95578,
+  "timestampMs": 95482,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 95578,
+  "endMs": 95728,
+  "timestampMs": 95653,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " form",
+  "startMs": 95728,
+  "endMs": 95941,
+  "timestampMs": 95835,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 95941,
+  "endMs": 96133,
+  "timestampMs": 96037,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " does",
+  "startMs": 96133,
+  "endMs": 96346,
+  "timestampMs": 96240,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 96346,
+  "endMs": 96538,
+  "timestampMs": 96442,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hear",
+  "startMs": 96538,
+  "endMs": 96751,
+  "timestampMs": 96645,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 96751,
+  "endMs": 96964,
+  "timestampMs": 96858,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 96964,
+  "endMs": 97156,
+  "timestampMs": 97060,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 97156,
+  "endMs": 97348,
+  "timestampMs": 97252,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hours,",
+  "startMs": 97348,
+  "endMs": 97582,
+  "timestampMs": 97465,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " sometimes",
+  "startMs": 97758,
+  "endMs": 98076,
+  "timestampMs": 97917,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 98076,
+  "endMs": 98289,
+  "timestampMs": 98183,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " So",
+  "startMs": 99167,
+  "endMs": 99338,
+  "timestampMs": 99253,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 99338,
+  "endMs": 99551,
+  "timestampMs": 99445,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " move",
+  "startMs": 99551,
+  "endMs": 99764,
+  "timestampMs": 99658,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on.",
+  "startMs": 99764,
+  "endMs": 99935,
+  "timestampMs": 99850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " They",
+  "startMs": 100418,
+  "endMs": 100631,
+  "timestampMs": 100525,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " call",
+  "startMs": 100631,
+  "endMs": 100844,
+  "timestampMs": 100738,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 100844,
+  "endMs": 101036,
+  "timestampMs": 100940,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 101036,
+  "endMs": 101291,
+  "timestampMs": 101164,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 101291,
+  "endMs": 101504,
+  "timestampMs": 101398,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looked",
+  "startMs": 101504,
+  "endMs": 101759,
+  "timestampMs": 101632,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 101759,
+  "endMs": 101972,
+  "timestampMs": 101866,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " put",
+  "startMs": 101972,
+  "endMs": 102164,
+  "timestampMs": 102068,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " together.",
+  "startMs": 102164,
+  "endMs": 102462,
+  "timestampMs": 102313,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " And",
+  "startMs": 102945,
+  "endMs": 103137,
+  "timestampMs": 103041,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 103137,
+  "endMs": 103329,
+  "timestampMs": 103233,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " never",
+  "startMs": 103329,
+  "endMs": 103563,
+  "timestampMs": 103446,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " even",
+  "startMs": 103563,
+  "endMs": 103776,
+  "timestampMs": 103670,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " knew",
+  "startMs": 103776,
+  "endMs": 103989,
+  "timestampMs": 103883,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 103989,
+  "endMs": 104202,
+  "timestampMs": 104096,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " job",
+  "startMs": 104202,
+  "endMs": 104394,
+  "timestampMs": 104298,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " was",
+  "startMs": 104394,
+  "endMs": 104586,
+  "timestampMs": 104490,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " available",
+  "startMs": 104586,
+  "endMs": 104904,
+  "timestampMs": 104745,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 104904,
+  "endMs": 105075,
+  "timestampMs": 104990,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU.",
+  "startMs": 105075,
+  "endMs": 105267,
+  "timestampMs": 105171,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " That",
+  "startMs": 105750,
+  "endMs": 105963,
+  "timestampMs": 105857,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 105963,
+  "endMs": 106134,
+  "timestampMs": 106049,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " happening",
+  "startMs": 106134,
+  "endMs": 106452,
+  "timestampMs": 106293,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " every",
+  "startMs": 106452,
+  "endMs": 106686,
+  "timestampMs": 106569,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " single",
+  "startMs": 106686,
+  "endMs": 106941,
+  "timestampMs": 106814,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " week",
+  "startMs": 106941,
+  "endMs": 107154,
+  "timestampMs": 107048,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " if",
+  "startMs": 107154,
+  "endMs": 107325,
+  "timestampMs": 107240,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 107325,
+  "endMs": 107517,
+  "timestampMs": 107421,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " multiple.",
+  "startMs": 107517,
+  "endMs": 107814,
+  "timestampMs": 107666,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 108693,
+  "endMs": 108885,
+  "timestampMs": 108789,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that's",
+  "startMs": 108885,
+  "endMs": 109119,
+  "timestampMs": 109002,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 109119,
+  "endMs": 109311,
+  "timestampMs": 109215,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " real",
+  "startMs": 109311,
+  "endMs": 109524,
+  "timestampMs": 109418,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " reason",
+  "startMs": 109524,
+  "endMs": 109779,
+  "timestampMs": 109652,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 109779,
+  "endMs": 109992,
+  "timestampMs": 109886,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " revenue",
+  "startMs": 109992,
+  "endMs": 110268,
+  "timestampMs": 110130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " has",
+  "startMs": 110268,
+  "endMs": 110460,
+  "timestampMs": 110364,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " plateaued",
+  "startMs": 110460,
+  "endMs": 110778,
+  "timestampMs": 110619,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " even",
+  "startMs": 110778,
+  "endMs": 110991,
+  "timestampMs": 110885,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " though",
+  "startMs": 110991,
+  "endMs": 111247,
+  "timestampMs": 111119,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 111247,
+  "endMs": 111460,
+  "timestampMs": 111354,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " work",
+  "startMs": 111460,
+  "endMs": 111673,
+  "timestampMs": 111567,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 111673,
+  "endMs": 111843,
+  "timestampMs": 111758,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " solid.",
+  "startMs": 111843,
+  "endMs": 112078,
+  "timestampMs": 111961,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " The",
+  "startMs": 112561,
+  "endMs": 112753,
+  "timestampMs": 112657,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 112753,
+  "endMs": 113029,
+  "timestampMs": 112891,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " businesses",
+  "startMs": 113029,
+  "endMs": 113368,
+  "timestampMs": 113199,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " winning",
+  "startMs": 113368,
+  "endMs": 113644,
+  "timestampMs": 113506,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " right",
+  "startMs": 113644,
+  "endMs": 113878,
+  "timestampMs": 113761,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " now",
+  "startMs": 113878,
+  "endMs": 114070,
+  "timestampMs": 113974,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 114070,
+  "endMs": 114262,
+  "timestampMs": 114166,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " not",
+  "startMs": 114262,
+  "endMs": 114454,
+  "timestampMs": 114358,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 114454,
+  "endMs": 114646,
+  "timestampMs": 114550,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ones",
+  "startMs": 114646,
+  "endMs": 114859,
+  "timestampMs": 114753,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " with",
+  "startMs": 114859,
+  "endMs": 115072,
+  "timestampMs": 114966,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 115072,
+  "endMs": 115264,
+  "timestampMs": 115168,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " biggest",
+  "startMs": 115264,
+  "endMs": 115540,
+  "timestampMs": 115402,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " budgets.",
+  "startMs": 115540,
+  "endMs": 115817,
+  "timestampMs": 115679,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " They",
+  "startMs": 116300,
+  "endMs": 116513,
+  "timestampMs": 116407,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 116513,
+  "endMs": 116705,
+  "timestampMs": 116609,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 116705,
+  "endMs": 116897,
+  "timestampMs": 116801,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ones",
+  "startMs": 116897,
+  "endMs": 117110,
+  "timestampMs": 117004,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 117110,
+  "endMs": 117323,
+  "timestampMs": 117217,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " have",
+  "startMs": 117323,
+  "endMs": 117536,
+  "timestampMs": 117430,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " built",
+  "startMs": 117536,
+  "endMs": 117770,
+  "timestampMs": 117653,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 117770,
+  "endMs": 117920,
+  "timestampMs": 117845,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " brand",
+  "startMs": 117920,
+  "endMs": 118154,
+  "timestampMs": 118037,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 118154,
+  "endMs": 118367,
+  "timestampMs": 118261,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " makes",
+  "startMs": 118367,
+  "endMs": 118601,
+  "timestampMs": 118484,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " homeowners",
+  "startMs": 118601,
+  "endMs": 118940,
+  "timestampMs": 118771,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " stop",
+  "startMs": 118940,
+  "endMs": 119153,
+  "timestampMs": 119047,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " scrolling",
+  "startMs": 119153,
+  "endMs": 119472,
+  "timestampMs": 119313,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 119472,
+  "endMs": 119663,
+  "timestampMs": 119568,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " immediately",
+  "startMs": 119663,
+  "endMs": 120024,
+  "timestampMs": 119844,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " think -",
+  "startMs": 120024,
+  "endMs": 120258,
+  "timestampMs": 120141,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 120478,
+  "endMs": 120691,
+  "timestampMs": 120585,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 120691,
+  "endMs": 120862,
+  "timestampMs": 120777,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 120862,
+  "endMs": 121053,
+  "timestampMs": 120958,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 121053,
+  "endMs": 121309,
+  "timestampMs": 121181,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " I",
+  "startMs": 121309,
+  "endMs": 121458,
+  "timestampMs": 121384,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " trust.",
+  "startMs": 121458,
+  "endMs": 121692,
+  "timestampMs": 121575,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " That",
+  "startMs": 122176,
+  "endMs": 122389,
+  "timestampMs": 122283,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 122389,
+  "endMs": 122559,
+  "timestampMs": 122474,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 122559,
+  "endMs": 122751,
+  "timestampMs": 122655,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " one",
+  "startMs": 122751,
+  "endMs": 122943,
+  "timestampMs": 122847,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " I",
+  "startMs": 122943,
+  "endMs": 123093,
+  "timestampMs": 123018,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " am",
+  "startMs": 123093,
+  "endMs": 123264,
+  "timestampMs": 123179,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calling.",
+  "startMs": 123264,
+  "endMs": 123540,
+  "timestampMs": 123402,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " That",
+  "startMs": 124023,
+  "endMs": 124236,
+  "timestampMs": 124130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 124236,
+  "endMs": 124407,
+  "timestampMs": 124322,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " exactly",
+  "startMs": 124407,
+  "endMs": 124683,
+  "timestampMs": 124545,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " what",
+  "startMs": 124683,
+  "endMs": 124896,
+  "timestampMs": 124790,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 124896,
+  "endMs": 125067,
+  "timestampMs": 124982,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " build",
+  "startMs": 125067,
+  "endMs": 125301,
+  "timestampMs": 125184,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 125301,
+  "endMs": 125493,
+  "timestampMs": 125397,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU.",
+  "startMs": 125493,
+  "endMs": 125685,
+  "timestampMs": 125589,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 126564,
+  "endMs": 126756,
+  "timestampMs": 126660,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 126756,
+  "endMs": 126926,
+  "timestampMs": 126841,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " do",
+  "startMs": 126926,
+  "endMs": 127097,
+  "timestampMs": 127012,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it",
+  "startMs": 127097,
+  "endMs": 127268,
+  "timestampMs": 127183,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " three",
+  "startMs": 127268,
+  "endMs": 127502,
+  "timestampMs": 127385,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ways.",
+  "startMs": 127502,
+  "endMs": 127715,
+  "timestampMs": 127609,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " First -",
+  "startMs": 128594,
+  "endMs": 128828,
+  "timestampMs": 128711,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 129047,
+  "endMs": 129218,
+  "timestampMs": 129133,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " build",
+  "startMs": 129218,
+  "endMs": 129452,
+  "timestampMs": 129335,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 129452,
+  "endMs": 129644,
+  "timestampMs": 129548,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " premium",
+  "startMs": 129644,
+  "endMs": 129920,
+  "timestampMs": 129782,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " video",
+  "startMs": 129920,
+  "endMs": 130154,
+  "timestampMs": 130037,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ads",
+  "startMs": 130154,
+  "endMs": 130346,
+  "timestampMs": 130250,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 130346,
+  "endMs": 130559,
+  "timestampMs": 130453,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " make",
+  "startMs": 130559,
+  "endMs": 130772,
+  "timestampMs": 130666,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " homeowners",
+  "startMs": 130772,
+  "endMs": 131112,
+  "timestampMs": 130942,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 131112,
+  "endMs": 131283,
+  "timestampMs": 131198,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 131283,
+  "endMs": 131496,
+  "timestampMs": 131390,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " area",
+  "startMs": 131496,
+  "endMs": 131709,
+  "timestampMs": 131603,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " stop",
+  "startMs": 131709,
+  "endMs": 131922,
+  "timestampMs": 131816,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " mid-scroll",
+  "startMs": 131922,
+  "endMs": 132240,
+  "timestampMs": 132081,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 132240,
+  "endMs": 132432,
+  "timestampMs": 132336,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " see",
+  "startMs": 132432,
+  "endMs": 132624,
+  "timestampMs": 132528,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 132624,
+  "endMs": 132816,
+  "timestampMs": 132720,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " as",
+  "startMs": 132816,
+  "endMs": 132987,
+  "timestampMs": 132902,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 132987,
+  "endMs": 133179,
+  "timestampMs": 133083,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " obvious",
+  "startMs": 133179,
+  "endMs": 133455,
+  "timestampMs": 133317,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " choice.",
+  "startMs": 133455,
+  "endMs": 133710,
+  "timestampMs": 133583,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Not",
+  "startMs": 134193,
+  "endMs": 134385,
+  "timestampMs": 134289,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " another",
+  "startMs": 134385,
+  "endMs": 134661,
+  "timestampMs": 134523,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " generic",
+  "startMs": 134661,
+  "endMs": 134938,
+  "timestampMs": 134800,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 134938,
+  "endMs": 135214,
+  "timestampMs": 135076,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " business.",
+  "startMs": 135214,
+  "endMs": 135511,
+  "timestampMs": 135363,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " The",
+  "startMs": 135994,
+  "endMs": 136186,
+  "timestampMs": 136090,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " one",
+  "startMs": 136186,
+  "endMs": 136378,
+  "timestampMs": 136282,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 136378,
+  "endMs": 136591,
+  "timestampMs": 136485,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " stands",
+  "startMs": 136591,
+  "endMs": 136846,
+  "timestampMs": 136719,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out.",
+  "startMs": 136846,
+  "endMs": 137038,
+  "timestampMs": 136942,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " The",
+  "startMs": 137521,
+  "endMs": 137713,
+  "timestampMs": 137617,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " one",
+  "startMs": 137713,
+  "endMs": 137905,
+  "timestampMs": 137809,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 137905,
+  "endMs": 138118,
+  "timestampMs": 138012,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looks",
+  "startMs": 138118,
+  "endMs": 138352,
+  "timestampMs": 138235,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " like",
+  "startMs": 138352,
+  "endMs": 138565,
+  "timestampMs": 138459,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 138565,
+  "endMs": 138757,
+  "timestampMs": 138661,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " most",
+  "startMs": 138757,
+  "endMs": 138970,
+  "timestampMs": 138864,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " established,",
+  "startMs": 138970,
+  "endMs": 139331,
+  "timestampMs": 139151,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " most",
+  "startMs": 139506,
+  "endMs": 139719,
+  "timestampMs": 139613,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " trusted",
+  "startMs": 139719,
+  "endMs": 139996,
+  "timestampMs": 139858,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 139996,
+  "endMs": 140251,
+  "timestampMs": 140124,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 140251,
+  "endMs": 140422,
+  "timestampMs": 140337,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " their",
+  "startMs": 140422,
+  "endMs": 140656,
+  "timestampMs": 140539,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " market.",
+  "startMs": 140656,
+  "endMs": 140911,
+  "timestampMs": 140784,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Second -",
+  "startMs": 141789,
+  "endMs": 142044,
+  "timestampMs": 141917,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 142264,
+  "endMs": 142435,
+  "timestampMs": 142350,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " build",
+  "startMs": 142435,
+  "endMs": 142669,
+  "timestampMs": 142552,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 142669,
+  "endMs": 142861,
+  "timestampMs": 142765,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 142861,
+  "endMs": 143011,
+  "timestampMs": 142936,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " website",
+  "startMs": 143011,
+  "endMs": 143287,
+  "timestampMs": 143149,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 143287,
+  "endMs": 143500,
+  "timestampMs": 143394,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " does",
+  "startMs": 143500,
+  "endMs": 143713,
+  "timestampMs": 143607,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 143713,
+  "endMs": 143905,
+  "timestampMs": 143809,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " selling",
+  "startMs": 143905,
+  "endMs": 144181,
+  "timestampMs": 144043,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " before",
+  "startMs": 144181,
+  "endMs": 144436,
+  "timestampMs": 144309,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " anyone",
+  "startMs": 144436,
+  "endMs": 144691,
+  "timestampMs": 144564,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " even",
+  "startMs": 144691,
+  "endMs": 144904,
+  "timestampMs": 144798,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " picks",
+  "startMs": 144904,
+  "endMs": 145138,
+  "timestampMs": 145021,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " up",
+  "startMs": 145138,
+  "endMs": 145309,
+  "timestampMs": 145224,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 145309,
+  "endMs": 145501,
+  "timestampMs": 145405,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " phone",
+  "startMs": 145501,
+  "endMs": 145735,
+  "timestampMs": 145618,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " sharp",
+  "startMs": 145735,
+  "endMs": 145969,
+  "timestampMs": 145852,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 145969,
+  "endMs": 146161,
+  "timestampMs": 146065,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " professional.",
+  "startMs": 146161,
+  "endMs": 146543,
+  "timestampMs": 146352,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Built",
+  "startMs": 147026,
+  "endMs": 147260,
+  "timestampMs": 147143,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " specifically",
+  "startMs": 147260,
+  "endMs": 147642,
+  "timestampMs": 147451,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 147642,
+  "endMs": 147812,
+  "timestampMs": 147727,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " convert",
+  "startMs": 147812,
+  "endMs": 148089,
+  "timestampMs": 147951,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 148089,
+  "endMs": 148238,
+  "timestampMs": 148164,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " homeowner",
+  "startMs": 148238,
+  "endMs": 148557,
+  "timestampMs": 148398,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " who",
+  "startMs": 148557,
+  "endMs": 148749,
+  "timestampMs": 148653,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 148749,
+  "endMs": 148920,
+  "timestampMs": 148835,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " comparing",
+  "startMs": 148920,
+  "endMs": 149238,
+  "timestampMs": 149079,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 149238,
+  "endMs": 149430,
+  "timestampMs": 149334,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " against",
+  "startMs": 149430,
+  "endMs": 149706,
+  "timestampMs": 149568,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " three",
+  "startMs": 149706,
+  "endMs": 149940,
+  "timestampMs": 149823,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " other",
+  "startMs": 149940,
+  "endMs": 150174,
+  "timestampMs": 150057,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofers.",
+  "startMs": 150174,
+  "endMs": 150450,
+  "timestampMs": 150312,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " By",
+  "startMs": 150934,
+  "endMs": 151104,
+  "timestampMs": 151019,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 151104,
+  "endMs": 151296,
+  "timestampMs": 151200,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " time",
+  "startMs": 151296,
+  "endMs": 151509,
+  "timestampMs": 151403,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 151509,
+  "endMs": 151722,
+  "timestampMs": 151616,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " finish",
+  "startMs": 151722,
+  "endMs": 151978,
+  "timestampMs": 151850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " reading",
+  "startMs": 151978,
+  "endMs": 152254,
+  "timestampMs": 152116,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it,",
+  "startMs": 152254,
+  "endMs": 152425,
+  "timestampMs": 152340,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 152600,
+  "endMs": 152792,
+  "timestampMs": 152696,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " decision",
+  "startMs": 152792,
+  "endMs": 153090,
+  "timestampMs": 152941,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 153090,
+  "endMs": 153260,
+  "timestampMs": 153175,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " already",
+  "startMs": 153260,
+  "endMs": 153537,
+  "timestampMs": 153399,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " made.",
+  "startMs": 153537,
+  "endMs": 153750,
+  "timestampMs": 153644,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Third -",
+  "startMs": 154628,
+  "endMs": 154862,
+  "timestampMs": 154745,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 155082,
+  "endMs": 155252,
+  "timestampMs": 155167,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " put",
+  "startMs": 155252,
+  "endMs": 155444,
+  "timestampMs": 155348,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " an",
+  "startMs": 155444,
+  "endMs": 155615,
+  "timestampMs": 155530,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " automated",
+  "startMs": 155615,
+  "endMs": 155934,
+  "timestampMs": 155775,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " follow",
+  "startMs": 155934,
+  "endMs": 156189,
+  "timestampMs": 156062,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " up",
+  "startMs": 156189,
+  "endMs": 156360,
+  "timestampMs": 156275,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " system",
+  "startMs": 156360,
+  "endMs": 156615,
+  "timestampMs": 156488,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 156615,
+  "endMs": 156807,
+  "timestampMs": 156711,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " our",
+  "startMs": 156807,
+  "endMs": 156999,
+  "timestampMs": 156903,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " customer",
+  "startMs": 156999,
+  "endMs": 157296,
+  "timestampMs": 157148,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " representative",
+  "startMs": 157296,
+  "endMs": 157720,
+  "timestampMs": 157508,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " team",
+  "startMs": 157720,
+  "endMs": 157933,
+  "timestampMs": 157827,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " behind",
+  "startMs": 157933,
+  "endMs": 158188,
+  "timestampMs": 158061,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " everything",
+  "startMs": 158188,
+  "endMs": 158527,
+  "timestampMs": 158358,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 158527,
+  "endMs": 158740,
+  "timestampMs": 158634,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " contacts",
+  "startMs": 158740,
+  "endMs": 159038,
+  "timestampMs": 158889,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 159038,
+  "endMs": 159251,
+  "timestampMs": 159145,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " leads",
+  "startMs": 159251,
+  "endMs": 159485,
+  "timestampMs": 159368,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " within",
+  "startMs": 159485,
+  "endMs": 159740,
+  "timestampMs": 159613,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 30",
+  "startMs": 159740,
+  "endMs": 159911,
+  "timestampMs": 159826,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " seconds",
+  "startMs": 159911,
+  "endMs": 160187,
+  "timestampMs": 160049,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 160187,
+  "endMs": 160358,
+  "timestampMs": 160273,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " them",
+  "startMs": 160358,
+  "endMs": 160571,
+  "timestampMs": 160465,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " filling",
+  "startMs": 160571,
+  "endMs": 160847,
+  "timestampMs": 160709,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 160847,
+  "endMs": 161039,
+  "timestampMs": 160943,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 161039,
+  "endMs": 161189,
+  "timestampMs": 161114,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " form.",
+  "startMs": 161189,
+  "endMs": 161402,
+  "timestampMs": 161296,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Not",
+  "startMs": 162280,
+  "endMs": 162472,
+  "timestampMs": 162376,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " an",
+  "startMs": 162472,
+  "endMs": 162643,
+  "timestampMs": 162558,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hour",
+  "startMs": 162643,
+  "endMs": 162856,
+  "timestampMs": 162750,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " later.",
+  "startMs": 162856,
+  "endMs": 163090,
+  "timestampMs": 162973,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Not",
+  "startMs": 163573,
+  "endMs": 163765,
+  "timestampMs": 163669,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 163765,
+  "endMs": 163957,
+  "timestampMs": 163861,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " next",
+  "startMs": 163957,
+  "endMs": 164170,
+  "timestampMs": 164064,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " morning.",
+  "startMs": 164170,
+  "endMs": 164446,
+  "timestampMs": 164308,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Thirty",
+  "startMs": 164929,
+  "endMs": 165184,
+  "timestampMs": 165057,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " seconds.",
+  "startMs": 165184,
+  "endMs": 165461,
+  "timestampMs": 165323,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Because",
+  "startMs": 165944,
+  "endMs": 166220,
+  "timestampMs": 166082,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 166220,
+  "endMs": 166412,
+  "timestampMs": 166316,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer",
+  "startMs": 166412,
+  "endMs": 166667,
+  "timestampMs": 166540,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 166667,
+  "endMs": 166880,
+  "timestampMs": 166774,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calls",
+  "startMs": 166880,
+  "endMs": 167114,
+  "timestampMs": 166997,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " first",
+  "startMs": 167114,
+  "endMs": 167348,
+  "timestampMs": 167231,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " almost",
+  "startMs": 167348,
+  "endMs": 167603,
+  "timestampMs": 167476,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " always",
+  "startMs": 167603,
+  "endMs": 167858,
+  "timestampMs": 167731,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " wins",
+  "startMs": 167858,
+  "endMs": 168071,
+  "timestampMs": 167965,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 168071,
+  "endMs": 168263,
+  "timestampMs": 168167,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " job.",
+  "startMs": 168263,
+  "endMs": 168455,
+  "timestampMs": 168359,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 169334,
+  "endMs": 169526,
+  "timestampMs": 169430,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " because",
+  "startMs": 169526,
+  "endMs": 169802,
+  "timestampMs": 169664,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 169802,
+  "endMs": 170015,
+  "timestampMs": 169909,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " brand",
+  "startMs": 170015,
+  "endMs": 170249,
+  "timestampMs": 170132,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " already",
+  "startMs": 170249,
+  "endMs": 170525,
+  "timestampMs": 170387,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looks",
+  "startMs": 170525,
+  "endMs": 170759,
+  "timestampMs": 170642,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " premium",
+  "startMs": 170759,
+  "endMs": 171035,
+  "timestampMs": 170897,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 171035,
+  "endMs": 171206,
+  "timestampMs": 171121,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 171206,
+  "endMs": 171419,
+  "timestampMs": 171313,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " point,",
+  "startMs": 171419,
+  "endMs": 171653,
+  "timestampMs": 171536,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 171829,
+  "endMs": 172042,
+  "timestampMs": 171936,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " first",
+  "startMs": 172042,
+  "endMs": 172276,
+  "timestampMs": 172159,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " conversation",
+  "startMs": 172276,
+  "endMs": 172658,
+  "timestampMs": 172467,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " starts",
+  "startMs": 172658,
+  "endMs": 172913,
+  "timestampMs": 172786,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 172913,
+  "endMs": 173126,
+  "timestampMs": 173020,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 173126,
+  "endMs": 173276,
+  "timestampMs": 173201,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " completely",
+  "startMs": 173276,
+  "endMs": 173615,
+  "timestampMs": 173446,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " different",
+  "startMs": 173615,
+  "endMs": 173933,
+  "timestampMs": 173774,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " place",
+  "startMs": 173933,
+  "endMs": 174168,
+  "timestampMs": 174051,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " than",
+  "startMs": 174168,
+  "endMs": 174381,
+  "timestampMs": 174275,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " what",
+  "startMs": 174381,
+  "endMs": 174594,
+  "timestampMs": 174488,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 174594,
+  "endMs": 174786,
+  "timestampMs": 174690,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 174786,
+  "endMs": 174977,
+  "timestampMs": 174882,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " used",
+  "startMs": 174977,
+  "endMs": 175190,
+  "timestampMs": 175084,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to.",
+  "startMs": 175190,
+  "endMs": 175361,
+  "timestampMs": 175276,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " That",
+  "startMs": 175844,
+  "endMs": 176057,
+  "timestampMs": 175951,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 176057,
+  "endMs": 176228,
+  "timestampMs": 176143,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 176228,
+  "endMs": 176420,
+  "timestampMs": 176324,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " system.",
+  "startMs": 176420,
+  "endMs": 176675,
+  "timestampMs": 176548,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " That",
+  "startMs": 177554,
+  "endMs": 177767,
+  "timestampMs": 177661,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 177767,
+  "endMs": 177938,
+  "timestampMs": 177853,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " what",
+  "startMs": 177938,
+  "endMs": 178151,
+  "timestampMs": 178045,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " took",
+  "startMs": 178151,
+  "endMs": 178364,
+  "timestampMs": 178258,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " those",
+  "startMs": 178364,
+  "endMs": 178598,
+  "timestampMs": 178481,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 178598,
+  "endMs": 178874,
+  "timestampMs": 178736,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " businesses",
+  "startMs": 178874,
+  "endMs": 179213,
+  "timestampMs": 179044,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 179213,
+  "endMs": 179426,
+  "timestampMs": 179320,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " inconsistent",
+  "startMs": 179426,
+  "endMs": 179808,
+  "timestampMs": 179617,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " months",
+  "startMs": 179808,
+  "endMs": 180063,
+  "timestampMs": 179936,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 180063,
+  "endMs": 180255,
+  "timestampMs": 180159,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 180255,
+  "endMs": 180405,
+  "timestampMs": 180330,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calendar",
+  "startMs": 180405,
+  "endMs": 180702,
+  "timestampMs": 180554,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 180702,
+  "endMs": 180915,
+  "timestampMs": 180809,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " never",
+  "startMs": 180915,
+  "endMs": 181149,
+  "timestampMs": 181032,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " felt",
+  "startMs": 181149,
+  "endMs": 181362,
+  "timestampMs": 181256,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " full -",
+  "startMs": 181362,
+  "endMs": 181575,
+  "timestampMs": 181469,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 181795,
+  "endMs": 181966,
+  "timestampMs": 181881,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " predictable,",
+  "startMs": 181966,
+  "endMs": 182326,
+  "timestampMs": 182146,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " recurring",
+  "startMs": 182502,
+  "endMs": 182820,
+  "timestampMs": 182661,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " revenue",
+  "startMs": 182820,
+  "endMs": 183096,
+  "timestampMs": 182958,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " with",
+  "startMs": 183096,
+  "endMs": 183309,
+  "timestampMs": 183203,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs",
+  "startMs": 183309,
+  "endMs": 183522,
+  "timestampMs": 183416,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " booked",
+  "startMs": 183522,
+  "endMs": 183778,
+  "timestampMs": 183650,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 183778,
+  "endMs": 183970,
+  "timestampMs": 183874,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " weeks",
+  "startMs": 183970,
+  "endMs": 184204,
+  "timestampMs": 184087,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 184204,
+  "endMs": 184374,
+  "timestampMs": 184289,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " advance.",
+  "startMs": 184374,
+  "endMs": 184651,
+  "timestampMs": 184513,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " And",
+  "startMs": 185134,
+  "endMs": 185326,
+  "timestampMs": 185230,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " here",
+  "startMs": 185326,
+  "endMs": 185539,
+  "timestampMs": 185433,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 185539,
+  "endMs": 185710,
+  "timestampMs": 185625,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 185710,
+  "endMs": 185902,
+  "timestampMs": 185806,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " thing.",
+  "startMs": 185902,
+  "endMs": 186136,
+  "timestampMs": 186019,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " The",
+  "startMs": 187014,
+  "endMs": 187206,
+  "timestampMs": 187110,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " homeowners",
+  "startMs": 187206,
+  "endMs": 187545,
+  "timestampMs": 187376,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 187545,
+  "endMs": 187737,
+  "timestampMs": 187641,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " already",
+  "startMs": 187737,
+  "endMs": 188013,
+  "timestampMs": 187875,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " there.",
+  "startMs": 188013,
+  "endMs": 188248,
+  "timestampMs": 188131,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " They",
+  "startMs": 188731,
+  "endMs": 188944,
+  "timestampMs": 188838,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 188944,
+  "endMs": 189136,
+  "timestampMs": 189040,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " already",
+  "startMs": 189136,
+  "endMs": 189412,
+  "timestampMs": 189274,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 189412,
+  "endMs": 189583,
+  "timestampMs": 189498,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 189583,
+  "endMs": 189796,
+  "timestampMs": 189690,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " area",
+  "startMs": 189796,
+  "endMs": 190009,
+  "timestampMs": 189903,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " right",
+  "startMs": 190009,
+  "endMs": 190243,
+  "timestampMs": 190126,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " now",
+  "startMs": 190243,
+  "endMs": 190435,
+  "timestampMs": 190339,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " looking",
+  "startMs": 190435,
+  "endMs": 190711,
+  "timestampMs": 190573,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 190711,
+  "endMs": 190903,
+  "timestampMs": 190807,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 190903,
+  "endMs": 191053,
+  "timestampMs": 190978,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofer.",
+  "startMs": 191053,
+  "endMs": 191308,
+  "timestampMs": 191181,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " The",
+  "startMs": 191791,
+  "endMs": 191983,
+  "timestampMs": 191887,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " only",
+  "startMs": 191983,
+  "endMs": 192196,
+  "timestampMs": 192090,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " question",
+  "startMs": 192196,
+  "endMs": 192493,
+  "timestampMs": 192345,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 192493,
+  "endMs": 192664,
+  "timestampMs": 192579,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " whether",
+  "startMs": 192664,
+  "endMs": 192940,
+  "timestampMs": 192802,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 192940,
+  "endMs": 193153,
+  "timestampMs": 193047,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " see",
+  "startMs": 193153,
+  "endMs": 193345,
+  "timestampMs": 193249,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 193345,
+  "endMs": 193537,
+  "timestampMs": 193441,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 193537,
+  "endMs": 193729,
+  "timestampMs": 193633,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " think -",
+  "startMs": 193729,
+  "endMs": 193963,
+  "timestampMs": 193846,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " that",
+  "startMs": 194183,
+  "endMs": 194396,
+  "timestampMs": 194290,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 194396,
+  "endMs": 194567,
+  "timestampMs": 194482,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 194567,
+  "endMs": 194759,
+  "timestampMs": 194663,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " one -",
+  "startMs": 194759,
+  "endMs": 194951,
+  "timestampMs": 194855,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " or",
+  "startMs": 195170,
+  "endMs": 195341,
+  "timestampMs": 195256,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " whether",
+  "startMs": 195341,
+  "endMs": 195617,
+  "timestampMs": 195479,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 195617,
+  "endMs": 195830,
+  "timestampMs": 195724,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " scroll",
+  "startMs": 195830,
+  "endMs": 196085,
+  "timestampMs": 195958,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " past",
+  "startMs": 196085,
+  "endMs": 196298,
+  "timestampMs": 196192,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 196298,
+  "endMs": 196490,
+  "timestampMs": 196394,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 196490,
+  "endMs": 196682,
+  "timestampMs": 196586,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " call",
+  "startMs": 196682,
+  "endMs": 196895,
+  "timestampMs": 196789,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " someone",
+  "startMs": 196895,
+  "endMs": 197172,
+  "timestampMs": 197034,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " else.",
+  "startMs": 197172,
+  "endMs": 197385,
+  "timestampMs": 197279,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " We",
+  "startMs": 198263,
+  "endMs": 198434,
+  "timestampMs": 198349,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " make",
+  "startMs": 198434,
+  "endMs": 198647,
+  "timestampMs": 198541,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " sure",
+  "startMs": 198647,
+  "endMs": 198860,
+  "timestampMs": 198754,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 198860,
+  "endMs": 199073,
+  "timestampMs": 198967,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " choose",
+  "startMs": 199073,
+  "endMs": 199328,
+  "timestampMs": 199201,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU.",
+  "startMs": 199328,
+  "endMs": 199520,
+  "timestampMs": 199424,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " 6-12",
+  "startMs": 200398,
+  "endMs": 200590,
+  "timestampMs": 200494,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 200590,
+  "endMs": 200803,
+  "timestampMs": 200697,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " booked",
+  "startMs": 200803,
+  "endMs": 201058,
+  "timestampMs": 200931,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs",
+  "startMs": 201058,
+  "endMs": 201271,
+  "timestampMs": 201165,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 201271,
+  "endMs": 201442,
+  "timestampMs": 201357,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 90",
+  "startMs": 201442,
+  "endMs": 201613,
+  "timestampMs": 201528,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 201613,
+  "endMs": 201826,
+  "timestampMs": 201720,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Or",
+  "startMs": 202309,
+  "endMs": 202480,
+  "timestampMs": 202395,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 202480,
+  "endMs": 202651,
+  "timestampMs": 202566,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " work",
+  "startMs": 202651,
+  "endMs": 202864,
+  "timestampMs": 202758,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 202864,
+  "endMs": 203056,
+  "timestampMs": 202960,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " free",
+  "startMs": 203056,
+  "endMs": 203269,
+  "timestampMs": 203163,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " until",
+  "startMs": 203269,
+  "endMs": 203503,
+  "timestampMs": 203386,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 203503,
+  "endMs": 203695,
+  "timestampMs": 203599,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " hit",
+  "startMs": 203695,
+  "endMs": 203887,
+  "timestampMs": 203791,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it.",
+  "startMs": 203887,
+  "endMs": 204058,
+  "timestampMs": 203973,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Book",
+  "startMs": 204541,
+  "endMs": 204754,
+  "timestampMs": 204648,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 204754,
+  "endMs": 204904,
+  "timestampMs": 204829,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " free",
+  "startMs": 204904,
+  "endMs": 205117,
+  "timestampMs": 205011,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " meeting",
+  "startMs": 205117,
+  "endMs": 205393,
+  "timestampMs": 205255,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " below",
+  "startMs": 205393,
+  "endMs": 205627,
+  "timestampMs": 205510,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 205627,
+  "endMs": 205819,
+  "timestampMs": 205723,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " my",
+  "startMs": 205819,
+  "endMs": 205990,
+  "timestampMs": 205905,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " team",
+  "startMs": 205990,
+  "endMs": 206203,
+  "timestampMs": 206097,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " will",
+  "startMs": 206203,
+  "endMs": 206416,
+  "timestampMs": 206310,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " reach",
+  "startMs": 206416,
+  "endMs": 206650,
+  "timestampMs": 206533,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 206650,
+  "endMs": 206842,
+  "timestampMs": 206746,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 206842,
+  "endMs": 207013,
+  "timestampMs": 206928,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOU",
+  "startMs": 207013,
+  "endMs": 207205,
+  "timestampMs": 207109,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " directly",
+  "startMs": 207205,
+  "endMs": 207502,
+  "timestampMs": 207354,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 207502,
+  "endMs": 207673,
+  "timestampMs": 207588,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " see",
+  "startMs": 207673,
+  "endMs": 207865,
+  "timestampMs": 207769,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " if",
+  "startMs": 207865,
+  "endMs": 208036,
+  "timestampMs": 207951,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 208036,
+  "endMs": 208206,
+  "timestampMs": 208121,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " can",
+  "startMs": 208206,
+  "endMs": 208398,
+  "timestampMs": 208302,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " help",
+  "startMs": 208398,
+  "endMs": 208611,
+  "timestampMs": 208505,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " YOUR",
+  "startMs": 208611,
+  "endMs": 208824,
+  "timestampMs": 208718,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " business.",
+  "startMs": 208824,
+  "endMs": 209122,
+  "timestampMs": 208973,
+  "confidence": null,
+  "paragraphEnd": true
+ }
+]
