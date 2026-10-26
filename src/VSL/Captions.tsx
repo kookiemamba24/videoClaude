@@ -7,7 +7,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { theme } from "./theme";
+import { accentA, theme } from "./theme";
 
 export type Word = {
   text: string;
@@ -96,7 +96,7 @@ const CaptionPage: React.FC<{ page: Page }> = ({ page }) => {
               key={i}
               style={{
                 color: spoken ? (emph ? theme.accent : theme.text) : theme.muted,
-                textShadow: spoken && emph ? "0 0 22px rgba(245,165,36,0.45)" : undefined,
+                textShadow: spoken && emph ? `0 0 22px ${accentA(0.45)}` : undefined,
                 display: "inline-block",
                 whiteSpace: "pre",
                 translate: active ? "0 -3px" : "0 0",

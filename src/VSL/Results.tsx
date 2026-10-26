@@ -10,7 +10,7 @@ import {
 } from "remotion";
 import type { Word } from "./Captions";
 import { clamp, fmtMoney, GlassPanel, Label, LogoPlate, OUT, useProgress } from "./Glass";
-import { theme } from "./theme";
+import { accentA, theme } from "./theme";
 
 const logos = {
   action: { src: staticFile("logos/action.png"), bg: "#ffffff" },
@@ -69,7 +69,7 @@ const BigNumber: React.FC<{
           letterSpacing: "-0.02em",
           color: theme.accent,
           fontVariantNumeric: "tabular-nums",
-          textShadow: `0 0 ${50 * glow}px rgba(245,165,36,${0.5 * glow})`,
+          textShadow: `0 0 ${50 * glow}px ${accentA(0.5 * glow)}`,
         }}
       >
         {format(value * count)}
@@ -142,8 +142,8 @@ const Bar: React.FC<{ label: string; value: number; width: number; color: string
             height: "100%",
             width: `${Math.max(width, 0.015) * p * 100}%`,
             borderRadius: 7,
-            background: color === theme.accent ? `linear-gradient(90deg, #c97d0e, ${theme.accent})` : color,
-            boxShadow: color === theme.accent ? `0 0 20px rgba(245,165,36,0.5)` : undefined,
+            background: color === theme.accent ? `linear-gradient(90deg, ${theme.accentDeep}, ${theme.accent})` : color,
+            boxShadow: color === theme.accent ? `0 0 20px ${accentA(0.5)}` : undefined,
           }}
         />
       </div>
@@ -172,7 +172,7 @@ const DaysRing: React.FC<{ days: number; start: number }> = ({ days, start }) =>
             strokeLinecap="round"
             strokeDasharray={c}
             strokeDashoffset={c * (1 - p)}
-            style={{ filter: "drop-shadow(0 0 8px rgba(245,165,36,0.6))" }}
+            style={{ filter: `drop-shadow(0 0 8px ${accentA(0.6)})` }}
           />
         </svg>
         <div
@@ -188,7 +188,7 @@ const DaysRing: React.FC<{ days: number; start: number }> = ({ days, start }) =>
           <div style={{ fontWeight: 800, fontSize: 52, lineHeight: 1, fontVariantNumeric: "tabular-nums" }}>
             {Math.round(days * p)}
           </div>
-          <div style={{ fontWeight: 600, fontSize: 16, letterSpacing: "0.2em", color: "rgba(246,244,239,0.6)" }}>
+          <div style={{ fontWeight: 600, fontSize: 20, letterSpacing: "0.16em", color: "rgba(246,244,239,0.6)" }}>
             DAYS
           </div>
         </div>
@@ -212,7 +212,7 @@ const CalendarFill: React.FC<{ start: number }> = ({ start }) => {
     <div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 8, marginBottom: 8 }}>
         {days.map((d, i) => (
-          <div key={i} style={{ textAlign: "center", fontSize: 16, fontWeight: 600, color: "rgba(246,244,239,0.5)" }}>
+          <div key={i} style={{ textAlign: "center", fontSize: 20, fontWeight: 600, color: "rgba(246,244,239,0.5)" }}>
             {d}
           </div>
         ))}
@@ -229,8 +229,8 @@ const CalendarFill: React.FC<{ start: number }> = ({ start }) => {
               style={{
                 height: 30,
                 borderRadius: 7,
-                background: p > 0 ? `rgba(245,165,36,${0.25 + 0.6 * p})` : "rgba(255,255,255,0.07)",
-                boxShadow: p > 0.5 ? "0 0 14px rgba(245,165,36,0.35)" : undefined,
+                background: p > 0 ? accentA(0.25 + 0.6 * p) : "rgba(255,255,255,0.07)",
+                boxShadow: p > 0.5 ? `0 0 14px ${accentA(0.35)}` : undefined,
                 scale: String(1 + 0.15 * Math.sin(p * Math.PI)),
               }}
             />
@@ -261,8 +261,8 @@ const JobTile: React.FC<{ n: number; start: number }> = ({ n, start }) => {
         flex: 1,
         height: 120,
         borderRadius: 18,
-        background: "rgba(245,165,36,0.12)",
-        border: "1px solid rgba(245,165,36,0.35)",
+        background: accentA(0.12),
+        border: `1px solid ${accentA(0.35)}`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -285,7 +285,7 @@ const JobTile: React.FC<{ n: number; start: number }> = ({ n, start }) => {
           strokeDashoffset={1 - p}
         />
       </svg>
-      <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "0.18em" }}>JOB {n}</div>
+      <div style={{ fontSize: 22, fontWeight: 700, letterSpacing: "0.14em" }}>JOB {n}</div>
     </div>
   );
 };
@@ -318,7 +318,7 @@ const Recap: React.FC<{ exitAt: number }> = ({ exitAt }) => {
               <LogoPlate {...logos[it.logo]} width={120} height={72} />
               <div>
                 <div style={{ fontWeight: 800, fontSize: 48, lineHeight: 1, color: theme.accent }}>{it.figure}</div>
-                <div style={{ fontWeight: 600, fontSize: 20, color: "rgba(246,244,239,0.75)", marginTop: 6 }}>
+                <div style={{ fontWeight: 600, fontSize: 24, color: "rgba(246,244,239,0.8)", marginTop: 6 }}>
                   {it.note}
                 </div>
               </div>
