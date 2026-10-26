@@ -1,6 +1,6 @@
 import { Composition, Folder } from "remotion";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
-import { calculateVSLMetadata, VSL } from "./VSL/VSL";
+import { VSL, VSL_DURATION_FRAMES } from "./VSL/VSL";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -78,8 +78,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="VSL"
         component={VSL}
-        calculateMetadata={calculateVSLMetadata}
-        durationInFrames={1}
+        durationInFrames={VSL_DURATION_FRAMES}
         fps={30}
         width={1920}
         height={1080}

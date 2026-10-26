@@ -19,7 +19,8 @@ const logos = {
   vista: { src: staticFile("logos/vista.png"), bg: "#ffffff" },
 };
 
-const CARD: React.CSSProperties = { right: 90, top: 110, width: 640 };
+// Right of the speaker, over the plain curtains.
+const CARD: React.CSSProperties = { right: 56, top: 120, width: 580 };
 
 const Header: React.FC<{ logo: keyof typeof logos; name: string; tag: string }> = ({
   logo,
@@ -296,7 +297,7 @@ const ResultCard: React.FC<{ exitAt: number; children: React.ReactNode }> = ({ e
   </GlassPanel>
 );
 
-// Recap row: all four results side by side while the VO generalizes.
+// Recap: all four results flank the speaker while the VO generalizes.
 const Recap: React.FC<{ exitAt: number }> = ({ exitAt }) => {
   const { fps } = useVideoConfig();
   const items = [
@@ -310,9 +311,15 @@ const Recap: React.FC<{ exitAt: number }> = ({ exitAt }) => {
       {items.map((it, i) => (
         <Sequence key={it.logo} from={Math.round(i * 0.18 * fps)} layout="none">
           <GlassPanel
-            from="up"
+            from={i % 2 === 0 ? "left" : "right"}
             exitAt={exitAt - Math.round(i * 0.18 * fps)}
-            style={{ top: 70, left: 150 + i * 420, width: 360, padding: 26 }}
+            style={{
+              // 2x2 around the speaker so nothing covers the face.
+              top: 250 + Math.floor(i / 2) * 200,
+              ...(i % 2 === 0 ? { left: 60 } : { right: 60 }),
+              width: 440,
+              padding: 26,
+            }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
               <LogoPlate {...logos[it.logo]} width={120} height={72} />

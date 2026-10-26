@@ -6,7 +6,7 @@ import { staticFile } from "remotion";
 // accentRgb together to rebrand.
 export const theme = {
   bg: "#0e1116",
-  panel: "rgba(14, 17, 22, 0.62)",
+  panel: "rgba(12, 15, 20, 0.74)",
   border: "rgba(255, 255, 255, 0.10)",
   text: "#f6f4ef",
   muted: "rgba(246, 244, 239, 0.42)",

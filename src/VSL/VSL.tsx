@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, CalculateMetadataFunction, useVideoConfig } from "remotion";
+import { AbsoluteFill, OffthreadVideo, staticFile, useVideoConfig } from "remotion";
 import { Captions, Word } from "./Captions";
 import { LowerThird } from "./LowerThird";
 import { Results } from "./Results";
@@ -8,37 +8,23 @@ import { theme } from "./theme";
 
 const words = captions as Word[];
 
-export const calculateVSLMetadata: CalculateMetadataFunction<Record<string, unknown>> = () => {
-  const fps = 30;
-  const lastMs = words[words.length - 1].endMs + 1500;
-  return { fps, durationInFrames: Math.ceil((lastMs / 1000) * fps) };
-};
+// Length of public/footage/hero-vsl.mp4 (ffprobe: 203.83s at 30fps).
+export const VSL_DURATION_FRAMES = 6115;
 
-// Stand-in for the talking-head footage until it's recorded; gives the glass
-// caption box something to blur.
-const FootagePlaceholder: React.FC = () => (
-  <AbsoluteFill
-    style={{
-      background: `radial-gradient(ellipse 40% 55% at 50% 45%, #3a3f47 0%, transparent 70%),
-        radial-gradient(ellipse 30% 40% at 18% 30%, #3a4250 0%, transparent 70%),
-        radial-gradient(ellipse 25% 35% at 85% 25%, #2f3c4d 0%, transparent 70%),
-        linear-gradient(180deg, #23272e, ${theme.bg})`,
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-  >
-    <div
+// Light grade + vignette: a touch more contrast and focus on the speaker so
+// the bright room reads as deliberate rather than flat.
+const Footage: React.FC = () => (
+  <AbsoluteFill>
+    <OffthreadVideo
+      src={staticFile("footage/hero-vsl.mp4")}
+      style={{ filter: "contrast(1.07) saturate(1.06) brightness(0.97)" }}
+    />
+    <AbsoluteFill
       style={{
-        fontFamily: theme.font,
-        fontWeight: 600,
-        fontSize: 22,
-        letterSpacing: "0.3em",
-        color: "rgba(255,255,255,0.25)",
-        marginBottom: 260,
+        background:
+          "radial-gradient(ellipse 75% 85% at 50% 42%, transparent 55%, rgba(8,10,14,0.38) 100%)",
       }}
-    >
-      SPEAKER FOOTAGE
-    </div>
+    />
   </AbsoluteFill>
 );
 
@@ -46,7 +32,7 @@ export const VSL: React.FC = () => {
   const { durationInFrames } = useVideoConfig();
   return (
     <AbsoluteFill style={{ background: theme.bg }}>
-      <FootagePlaceholder />
+      <Footage />
       <Results words={words} />
       <LowerThird words={words} totalFrames={durationInFrames} />
       <Captions words={words} />

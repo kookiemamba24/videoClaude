@@ -35,8 +35,8 @@ export const GlassPanel: React.FC<{
         borderRadius: 30,
         padding: 36,
         background:
-          "linear-gradient(160deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05) 45%, rgba(255,255,255,0.08)), rgba(14,17,22,0.35)",
-        border: "1px solid rgba(255,255,255,0.22)",
+          "linear-gradient(160deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02) 45%, rgba(255,255,255,0.05)), rgba(12,15,20,0.72)",
+        border: "1px solid rgba(255,255,255,0.18)",
         boxShadow:
           "inset 0 1px 0 rgba(255,255,255,0.25), 0 30px 80px rgba(0,0,0,0.45)",
         backdropFilter: "blur(28px) saturate(140%)",
