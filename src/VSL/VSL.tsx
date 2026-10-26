@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, CalculateMetadataFunction } from "remotion";
 import { Captions, Word } from "./Captions";
+import { Results } from "./Results";
 import captions from "./captions.json";
 import { theme } from "./theme";
 
@@ -43,6 +44,7 @@ const FootagePlaceholder: React.FC = () => (
 export const VSL: React.FC = () => (
   <AbsoluteFill style={{ background: theme.bg }}>
     <FootagePlaceholder />
+    <Results words={words} />
     <Captions words={words} />
   </AbsoluteFill>
 );
