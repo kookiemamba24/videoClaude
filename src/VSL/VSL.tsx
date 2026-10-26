@@ -3,6 +3,7 @@ import { AbsoluteFill, OffthreadVideo, staticFile, useVideoConfig } from "remoti
 import { Captions, Word } from "./Captions";
 import { LowerThird } from "./LowerThird";
 import { Results } from "./Results";
+import { Scenes } from "./Scenes";
 import captions from "./captions.json";
 import { theme } from "./theme";
 
@@ -34,6 +35,7 @@ export const VSL: React.FC = () => {
     <AbsoluteFill style={{ background: theme.bg }}>
       <Footage />
       <Results words={words} />
+      <Scenes words={words} totalFrames={durationInFrames} />
       <LowerThird words={words} totalFrames={durationInFrames} />
       <Captions words={words} />
     </AbsoluteFill>
