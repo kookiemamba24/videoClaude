@@ -1,15 +1,41 @@
-import React from "react";
-import { Easing, Img, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
+import React, { createContext, useContext } from "react";
+import { Easing, Img, interpolate, OffthreadVideo, random, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { clamp, OUT, useProgress } from "../VSL/Glass";
 import { accent, adTheme, negA } from "./adTheme";
 
 const W = 1080;
 const back = (s = 1.8) => Easing.out(Easing.back(s));
 
-// Graphics sit on the chest, below the face (mouth sits ~40% down the
-// frame) and above the captions.
-const STAGE_TOP = 900;
-const STAGE_SCALE = 0.76;
+// Over the footage, graphics sit on the chest: the mouth drops as low as
+// y≈900, so nothing starts above 1000 and the captions sit below.
+const STAGE_TOP = 1000;
+const STAGE_SCALE = 0.66;
+// Inside a full-screen overlay there's no face to avoid, so go big.
+const FULL_TOP = 560;
+const FULL_SCALE = 1.12;
+
+const FullContext = createContext(false);
+
+// Full-screen cutaway: hides the footage (the voice carries on) and gives
+// the graphic the whole frame.
+export const FullOverlay: React.FC<{ len: number; children: React.ReactNode }> = ({ len, children }) => {
+  const frame = useCurrentFrame();
+  const inP = interpolate(frame, [0, 6], [0, 1], { ...clamp, easing: OUT });
+  const out = interpolate(frame, [len - 5, len], [0, 1], clamp);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background: "radial-gradient(ellipse 90% 60% at 50% 18%, #0b47c9 0%, #072a7a 38%, #031029 72%, #01040c 100%)",
+        opacity: inP * (1 - out),
+        scale: String(1.06 - 0.06 * inP),
+      }}
+    >
+      <FullContext.Provider value>{children}</FullContext.Provider>
+    </div>
+  );
+};
 
 // Centred stage for one graphic: pops in, and out before `len`. `top` nudges
 // it relative to the default band position.
@@ -20,6 +46,7 @@ export const Stage: React.FC<{ len: number; top?: number; width: number; childre
   children,
 }) => {
   const frame = useCurrentFrame();
+  const full = useContext(FullContext);
   const enter = useProgress(0, 12, back(1.4));
   const exit = interpolate(frame, [len - 8, len], [0, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
   return (
@@ -27,13 +54,13 @@ export const Stage: React.FC<{ len: number; top?: number; width: number; childre
       style={{
         position: "absolute",
         left: (W - width) / 2,
-        top: STAGE_TOP + Math.max(0, top - 600) * 0.15,
+        top: full ? FULL_TOP : STAGE_TOP + Math.max(0, top - 600) * 0.15,
         width,
         transformOrigin: "50% 0",
         fontFamily: adTheme.font,
         color: adTheme.text,
         opacity: Math.min(1, enter * 1.4) * (1 - exit),
-        scale: String(STAGE_SCALE * (0.8 + 0.2 * enter) * (1 - 0.1 * exit)),
+        scale: String((full ? FULL_SCALE : STAGE_SCALE) * (0.8 + 0.2 * enter) * (1 - 0.1 * exit)),
         filter: `blur(${(1 - Math.min(1, enter)) * 8 + exit * 8}px)`,
       }}
     >
@@ -210,7 +237,7 @@ export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, 
     const r = 70 + Math.sqrt(random(`fr${i}`)) * 300;
     return { x: Math.cos(a) * r, y: Math.sin(a) * r, a, lit: random(`fl${i}`) < 0.35 };
   });
-  const left = houses.filter((_, i) => frame < fleeAt + i * 1.2 + 6).length;
+  const left = houses.filter((_, i) => frame < fleeAt + i * 1.2).length;
   const cx = 540;
   const cy = 900;
   return (
@@ -360,7 +387,7 @@ export const SameRoofers: React.FC<{ len: number; stickerAt: number }> = ({ len,
               strokeWidth={2}
             />
           </svg>
-          <div style={{ position: "relative", textAlign: "center", fontFamily: "Impact, 'Arial Black', sans-serif", color: "#e00000", fontSize: 50, lineHeight: 0.95 }}>
+          <div style={{ position: "relative", textAlign: "center", fontFamily: adTheme.font, fontWeight: 900, letterSpacing: "-0.03em", color: "#e00000", fontSize: 54, lineHeight: 0.95 }}>
             CHEAPEST
             <br />
             QUOTE IN
@@ -417,11 +444,24 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
       <Phone>
         {/* Feed flicking past your ad */}
         <div style={{ position: "absolute", inset: 0, translate: `0 ${-scroll * 1500}px`, filter: `blur(${Math.sin(scroll * Math.PI) * 6}px)`, opacity: 1 - call }}>
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} style={{ margin: "70px 22px 0", borderRadius: 18, background: i === 1 ? "#ffe600" : "#1a1f27", height: 300, padding: 16, color: i === 1 ? "#e00000" : "#888", fontFamily: i === 1 ? "Impact, sans-serif" : adTheme.font, fontSize: i === 1 ? 38 : 22 }}>
-              {i === 1 ? "YOUR AD: CHEAP ROOFS!!" : "Post"}
-            </div>
-          ))}
+          {Array.from({ length: 9 }).map((_, i) =>
+            i === 0 ? (
+              <div key={i} style={{ margin: "66px 0 0", background: "#0d1117" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px" }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 20, background: "#555" }} />
+                  <div style={{ fontSize: 20, fontWeight: 700 }}>
+                    Local Roofer
+                    <div style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.55)" }}>Sponsored</div>
+                  </div>
+                </div>
+                <OffthreadVideo src={staticFile("ads/cheap-ad.mp4")} muted style={{ width: "100%", display: "block" }} />
+              </div>
+            ) : (
+              <div key={i} style={{ margin: "70px 22px 0", borderRadius: 18, background: "#1a1f27", height: 300, padding: 16, color: "#888", fontFamily: adTheme.font, fontSize: 22 }}>
+                Post
+              </div>
+            ),
+          )}
         </div>
         {/* Incoming call */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(#1b2433, #0a0d13)", opacity: call, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 110 }}>
@@ -639,24 +679,33 @@ const Chip: React.FC<{ text: string; p: number }> = ({ text, p }) => (
 
 // --- Premium ad, cheapest vs best -----------------------------------------
 
-const MockPremiumAd: React.FC = () => (
-  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(170deg, #0e1a2e, #05080d)", padding: "80px 26px 26px", display: "flex", flexDirection: "column" }}>
-    <div style={{ flex: 1, borderRadius: 24, background: `linear-gradient(160deg, ${adTheme.accentDeep}, #0b1630)`, display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-      <div style={{ width: 96, height: 96, borderRadius: 48, background: "rgba(255,255,255,0.9)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ width: 0, height: 0, borderTop: "20px solid transparent", borderBottom: "20px solid transparent", borderLeft: `32px solid ${adTheme.accentDeep}`, marginLeft: 8 }} />
+const PremiumPost: React.FC<{ image: string }> = ({ image }) => (
+  <div style={{ position: "absolute", inset: 0, background: "#000", paddingTop: 66 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 16px" }}>
+      <div style={{ width: 44, height: 44, borderRadius: 22, background: `linear-gradient(135deg, ${adTheme.accent}, #9be7b0)` }} />
+      <div style={{ fontSize: 20, fontWeight: 700 }}>
+        Your Roofing Co.
+        <div style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.55)" }}>Sponsored</div>
       </div>
     </div>
-    <div style={{ color: "#ffd84d", fontSize: 30, marginTop: 20, letterSpacing: 4 }}>★★★★★</div>
-    <div style={{ fontWeight: 800, fontSize: 38, lineHeight: 1.1, marginTop: 8 }}>The roofer your street trusts</div>
-    <div style={{ marginTop: 18, padding: "16px", borderRadius: 16, background: adTheme.accent, textAlign: "center", fontWeight: 800, fontSize: 26 }}>Get your free inspection</div>
+    <Img src={image} style={{ width: "100%", display: "block" }} />
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 16px", background: adTheme.accentDeep, fontWeight: 800, fontSize: 22 }}>
+      Book a free inspection <span>›</span>
+    </div>
+    <div style={{ padding: "12px 16px", fontSize: 20, fontWeight: 700 }}>
+      ♥ 1,284 &nbsp; 💬 96
+      <div style={{ fontWeight: 500, fontSize: 18, color: "rgba(255,255,255,0.75)", marginTop: 4 }}>“Best roofers we've ever used.”</div>
+    </div>
   </div>
 );
 
-export const PremiumAd: React.FC<{ len: number; trustAt: number; image?: string }> = ({ len, trustAt, image }) => {
+export const PremiumAd: React.FC<{ len: number; trustAt: number; image: string }> = ({ len, trustAt, image }) => {
   const t = useProgress(trustAt, 12, back(2));
   return (
     <Stage len={len} width={760} top={480}>
-      <Phone>{image ? <Img src={image} style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : <MockPremiumAd />}</Phone>
+      <Phone>
+        <PremiumPost image={image} />
+      </Phone>
       <div style={{ position: "absolute", left: -40, top: 330, padding: "18px 26px", borderRadius: "28px 28px 28px 6px", background: "#fff", color: "#111", fontWeight: 800, fontSize: 34, boxShadow: "0 16px 40px rgba(0,0,0,0.45)", scale: String(t), rotate: "-4deg", display: "flex", alignItems: "center", gap: 10 }}>
         <Check p={t} size={36} color={adTheme.accentDeep} />
         That's the roofer
@@ -674,7 +723,7 @@ export const CheapVsBest: React.FC<{ len: number; bestAt: number }> = ({ len, be
   return (
     <Stage len={len} width={900} top={640}>
       <div style={{ position: "relative", height: 460 }}>
-        <div style={{ position: "absolute", left: 120, top: 40 + drop * 700, rotate: `${-8 + drop * 40}deg`, padding: "26px 36px", background: "#ffe600", border: "6px solid #e00000", fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 72, color: "#e00000", boxShadow: "0 18px 40px rgba(0,0,0,0.45)" }}>
+        <div style={{ position: "absolute", left: 120, top: 40 + drop * 700, rotate: `${-8 + drop * 40}deg`, padding: "26px 36px", background: "#ffe600", border: "6px solid #e00000", fontFamily: adTheme.font, fontWeight: 900, letterSpacing: "-0.03em", fontSize: 72, color: "#e00000", boxShadow: "0 18px 40px rgba(0,0,0,0.45)" }}>
           THE CHEAPEST
           <svg width="100%" height="100%" viewBox="0 0 100 40" preserveAspectRatio="none" style={{ position: "absolute", inset: 0 }}>
             <path d="M5 5 L95 35 M95 5 L5 35" stroke="#111" strokeWidth={3} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - cross} fill="none" />
