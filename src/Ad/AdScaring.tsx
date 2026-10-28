@@ -5,11 +5,12 @@ import { makeCue } from "../VSL/cue";
 import { BigCaptions } from "./BigCaptions";
 import captions from "./captions.json";
 import {
+  AdImage,
   BadAdsFan,
   CheapVsBest,
   CTA,
   FollowUpPhone,
-  LeadsFlee,
+  LeadsFleeFull,
   LogoRow,
   NoTyreKickers,
   Offer,
@@ -27,9 +28,8 @@ const words = captions as Word[];
 export const AD_SCARING_FRAMES = 2308;
 
 export type AdScaringProps = {
-  // Screenshots of typical bad roofing ads (public/ paths). Parody mocks are
-  // shown until these are supplied.
-  badAds?: string[];
+  // Screenshots of typical bad roofing ads. Parody mocks show if omitted.
+  badAds?: AdImage[];
   // One of our premium ads, shown in the phone mockup.
   premiumAd?: string;
 };
@@ -39,6 +39,15 @@ const logos = {
   action: { src: staticFile("logos/action.png"), bg: "#ffffff" },
   braga: { src: staticFile("logos/braga.png"), bg: "#1a1a18" },
 };
+
+const BAD_ADS: AdImage[] = [
+  { src: staticFile("ads/bad-doors.png"), aspect: 1206 / 1165 },
+  { src: staticFile("ads/bad-righton.png"), aspect: 399 / 501 },
+  { src: staticFile("ads/bad-collage.png"), aspect: 1206 / 1184 },
+];
+
+// Fingertip position while pointing up during "...look like these".
+const FINGER = { x: 830, y: 905 };
 
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 
@@ -66,7 +75,7 @@ const Scene: React.FC<{ from: number; to: number; children: (len: number) => Rea
   </Sequence>
 );
 
-export const AdScaring: React.FC<AdScaringProps> = ({ badAds, premiumAd }) => {
+export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumAd }) => {
   const { fps, durationInFrames } = useVideoConfig();
   const { find, frameOf } = makeCue(words, fps);
   const at = (phrase: string, after = 0) => frameOf(find(phrase, after));
@@ -93,12 +102,11 @@ export const AdScaring: React.FC<AdScaringProps> = ({ badAds, premiumAd }) => {
 
   return (
     <AbsoluteFill style={{ background: "#000" }}>
-      <Footage punches={[at("scaring"), at("cheapest"), at("beat"), at("The best one"), at("No tyre")]} />
+      <Footage punches={[at("cheapest"), at("beat"), at("The best one"), at("No tyre")]} />
       {/* Soft darkening behind the graphics band and captions. */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, transparent 22%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0.32) 85%)" }} />
 
-      <Scene from={0} to={c.flee}>{(len) => <BadAdsFan len={len} images={badAds} />}</Scene>
-      <Scene from={c.flee} to={c.same}>{(len) => <LeadsFlee len={len} fleeAt={at("scaring") - c.flee} />}</Scene>
+      <Scene from={at("look like these")} to={c.flee}>{(len) => <BadAdsFan len={len} images={badAds} anchor={FINGER} />}</Scene>
       <Scene from={c.same} to={c.phone}>{(len) => <SameRoofers len={len} stickerAt={at("cheapest") - c.same} />}</Scene>
       <Scene from={c.phone} to={c.offer}>
         {(len) => (
@@ -178,6 +186,9 @@ export const AdScaring: React.FC<AdScaringProps> = ({ badAds, premiumAd }) => {
         {(len) => <NoTyreKickers len={len} secondAt={at("No time") - c.tyre} bookedAt={at("Just booked") - c.tyre} />}
       </Scene>
       <Scene from={c.cta} to={durationInFrames}>{(len) => <CTA len={len} badge={staticFile("brand/av-logo.png")} />}</Scene>
+
+      {/* Full-screen cutaway: the footage is hidden but the voice carries on. */}
+      <Scene from={c.flee} to={c.same}>{(len) => <LeadsFleeFull len={len} fleeAt={at("scaring") - c.flee + 4} />}</Scene>
 
       <BigCaptions words={words} />
     </AbsoluteFill>

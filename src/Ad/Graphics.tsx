@@ -145,128 +145,156 @@ const MockBadAd: React.FC<{ v: number }> = ({ v }) => {
   );
 };
 
-export const BadAdsFan: React.FC<{ len: number; images?: string[] }> = ({ len, images }) => {
+export type AdImage = { src: string; aspect: number };
+
+// The bad ads burst out of the raised finger and fan out above it.
+export const BadAdsFan: React.FC<{ len: number; images?: AdImage[]; anchor: { x: number; y: number } }> = ({
+  len,
+  images,
+  anchor,
+}) => {
   const frame = useCurrentFrame();
+  const exit = interpolate(frame, [len - 6, len], [0, 1], clamp);
+  const cardW = 230;
+  // Fanned just above the fingertip, kept inside the frame and off the face.
+  const spots = [
+    { dx: -115, dy: -200, rot: -11 },
+    { dx: 0, dy: -250, rot: 0 },
+    { dx: 110, dy: -200, rot: 11 },
+  ];
   return (
-    <Stage len={len} width={940} top={600}>
-      <div style={{ position: "relative", height: 560 }}>
-        {[0, 1, 2].map((i) => {
-          const p = interpolate(frame, [i * 4, i * 4 + 14], [0, 1], { ...clamp, easing: back(1.6) });
-          const wobble = Math.sin((frame + i * 9) / 7) * 1.5;
-          return (
-            <div
-              key={i}
-              style={{
-                position: "absolute",
-                left: 80 + i * 250,
-                top: i === 1 ? 0 : 40,
-                width: 330,
-                height: 480,
-                borderRadius: 22,
-                overflow: "hidden",
-                border: "5px solid #fff",
-                boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
-                rotate: `${(i - 1) * 9 * p + wobble}deg`,
-                translate: `0 ${(1 - p) * 300}px`,
-                opacity: p,
-                zIndex: i === 1 ? 2 : 1,
-              }}
-            >
-              {images?.[i] ? (
-                <Img src={images[i]} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              ) : (
-                <MockBadAd v={i} />
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </Stage>
+    <>
+      {spots.map((sp, i) => {
+        const p = interpolate(frame, [i * 3, i * 3 + 12], [0, 1], { ...clamp, easing: back(1.7) });
+        const bob = Math.sin((frame + i * 11) / 9) * 6;
+        const img = images?.[i];
+        const h = img ? cardW / img.aspect : 340;
+        // Fly from the fingertip to the card's spot.
+        const x = anchor.x + sp.dx * p - cardW / 2;
+        const y = anchor.y + sp.dy * p - h / 2 + bob;
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: x,
+              top: y,
+              width: cardW,
+              height: h,
+              borderRadius: 18,
+              overflow: "hidden",
+              border: "5px solid #fff",
+              boxShadow: "0 24px 60px rgba(0,0,0,0.5)",
+              rotate: `${sp.rot * p + Math.sin((frame + i * 7) / 8) * 1.5}deg`,
+              scale: String(Math.max(0.05, p) * (1 - 0.3 * exit)),
+              opacity: Math.min(1, p * 2) * (1 - exit),
+              zIndex: i === 1 ? 2 : 1,
+              background: "#fff",
+            }}
+          >
+            {img ? <Img src={img.src} style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : <MockBadAd v={i} />}
+          </div>
+        );
+      })}
+    </>
   );
 };
 
-// Homeowners (houses) bolting out of the circle.
-export const LeadsFlee: React.FC<{ len: number; fleeAt: number }> = ({ len, fleeAt }) => {
+// Full-screen cutaway: homeowners (houses) bolting out of the circle.
+export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, fleeAt }) => {
   const frame = useCurrentFrame();
-  const houses = Array.from({ length: 14 }, (_, i) => {
-    const a = random(`h${i}`) * Math.PI * 2;
-    const r = 60 + random(`r${i}`) * 230;
-    return { x: Math.cos(a) * r, y: Math.sin(a) * r * 0.9, a };
+  const inP = interpolate(frame, [0, 6], [0, 1], { ...clamp, easing: OUT });
+  const out = interpolate(frame, [len - 5, len], [0, 1], clamp);
+  const houses = Array.from({ length: 16 }, (_, i) => {
+    const a = random(`fa${i}`) * Math.PI * 2;
+    const r = 70 + Math.sqrt(random(`fr${i}`)) * 300;
+    return { x: Math.cos(a) * r, y: Math.sin(a) * r, a, lit: random(`fl${i}`) < 0.35 };
   });
-  const left = houses.filter((_, i) => frame < fleeAt + i * 1.5 + 4).length;
+  const left = houses.filter((_, i) => frame < fleeAt + i * 1.2 + 6).length;
+  const cx = 540;
+  const cy = 900;
   return (
-    <Stage len={len} width={760} top={560}>
-      <div style={{ position: "relative", height: 680 }}>
-        <div
-          style={{
-            position: "absolute",
-            left: 30,
-            top: 20,
-            width: 700,
-            height: 620,
-            borderRadius: "50%",
-            border: `3px dashed ${accent(0.6)}`,
-            background: `radial-gradient(circle, ${accent(0.18)}, rgba(10,14,22,0.55) 75%)`,
-            backdropFilter: "blur(10px)",
-          }}
-        />
-        {houses.map((h, i) => {
-          const t = Math.max(0, frame - fleeAt - i * 1.5);
-          const run = t * t * 1.4;
-          const jitter = frame < fleeAt ? Math.sin((frame + i * 5) / 2.5) * 2 : 0;
-          return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background: "radial-gradient(ellipse 90% 60% at 50% 18%, #0b47c9 0%, #072a7a 38%, #031029 72%, #01040c 100%)",
+        opacity: inP * (1 - out),
+        fontFamily: adTheme.font,
+        color: "#fff",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          left: cx - 420,
+          top: cy - 420,
+          width: 840,
+          height: 840,
+          borderRadius: "50%",
+          border: `3px dashed ${accent(0.7)}`,
+          background: `radial-gradient(circle, ${accent(0.16)}, ${accent(0.05)} 70%)`,
+          scale: String(0.9 + 0.1 * inP),
+        }}
+      />
+      {houses.map((h, i) => {
+        const t = Math.max(0, frame - fleeAt - i * 1.2);
+        const run = t * t * 1.6;
+        const jitter = frame < fleeAt ? Math.sin((frame + i * 5) / 2.2) * 2.5 : 0;
+        const fleeing = t > 0;
+        const col = fleeing ? adTheme.neg : h.lit ? adTheme.accent : "rgba(220,228,240,0.85)";
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: cx + h.x + Math.cos(h.a) * run - 34 + jitter,
+              top: cy + h.y + Math.sin(h.a) * run - 56,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              rotate: `${Math.min(35, t * 3) * (h.x > 0 ? 1 : -1)}deg`,
+              opacity: interpolate(t, [0, 14], [1, 0], clamp),
+              filter: h.lit && !fleeing ? `drop-shadow(0 0 10px ${accent(0.8)})` : undefined,
+            }}
+          >
             <div
-              key={i}
               style={{
-                position: "absolute",
-                left: 380 + h.x + Math.cos(h.a) * run - 26 + jitter,
-                top: 330 + h.y + Math.sin(h.a) * run - 40,
+                width: 44,
+                height: 44,
+                borderRadius: 22,
+                border: `3px solid ${col}`,
+                color: col,
                 display: "flex",
-                flexDirection: "column",
                 alignItems: "center",
-                rotate: `${Math.min(30, t * 3) * (h.x > 0 ? 1 : -1)}deg`,
-                opacity: interpolate(t, [0, 12], [1, 0], clamp),
+                justifyContent: "center",
+                fontWeight: 800,
+                fontSize: 24,
+                marginBottom: 6,
               }}
             >
-              <div
-                style={{
-                  width: 34,
-                  height: 34,
-                  borderRadius: 17,
-                  border: `2.5px solid ${t > 0 ? adTheme.neg : "rgba(255,255,255,0.8)"}`,
-                  color: t > 0 ? adTheme.neg : "#fff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: 20,
-                  marginBottom: 4,
-                }}
-              >
-                {t > 0 ? "!" : "$"}
-              </div>
-              <House size={52} color={t > 0 ? adTheme.neg : "#fff"} />
+              {fleeing ? "!" : "$"}
             </div>
-          );
-        })}
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            right: 0,
-            bottom: -10,
-            textAlign: "center",
-            fontWeight: 800,
-            fontSize: 34,
-            letterSpacing: "0.1em",
-            color: left > 4 ? "#fff" : adTheme.neg,
-            textShadow: "0 3px 12px rgba(0,0,0,0.6)",
-          }}
-        >
-          LEADS: {left}
-        </div>
+            <House size={68} color={col} stroke={2.6} />
+          </div>
+        );
+      })}
+      <div
+        style={{
+          position: "absolute",
+          top: cy + 470,
+          width: "100%",
+          textAlign: "center",
+          fontWeight: 800,
+          fontSize: 40,
+          letterSpacing: "0.14em",
+          color: left > 5 ? "#fff" : adTheme.neg,
+        }}
+      >
+        LEADS: {left}
       </div>
-    </Stage>
+    </div>
   );
 };
 
@@ -389,7 +417,7 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
       <Phone>
         {/* Feed flicking past your ad */}
         <div style={{ position: "absolute", inset: 0, translate: `0 ${-scroll * 1500}px`, filter: `blur(${Math.sin(scroll * Math.PI) * 6}px)`, opacity: 1 - call }}>
-          {Array.from({ length: 5 }).map((_, i) => (
+          {Array.from({ length: 9 }).map((_, i) => (
             <div key={i} style={{ margin: "70px 22px 0", borderRadius: 18, background: i === 1 ? "#ffe600" : "#1a1f27", height: 300, padding: 16, color: i === 1 ? "#e00000" : "#888", fontFamily: i === 1 ? "Impact, sans-serif" : adTheme.font, fontSize: i === 1 ? 38 : 22 }}>
               {i === 1 ? "YOUR AD: CHEAP ROOFS!!" : "Post"}
             </div>
