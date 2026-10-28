@@ -1,6 +1,7 @@
 import { Composition, Folder } from "remotion";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
 import { VSL, VSL_DURATION_FRAMES } from "./VSL/VSL";
+import { AD_SCARING_FRAMES, AdScaring } from "./Ad/AdScaring";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -82,6 +83,15 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="AdScaringAway"
+        component={AdScaring}
+        durationInFrames={AD_SCARING_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{}}
       />
     </>
   );

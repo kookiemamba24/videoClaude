@@ -15,10 +15,10 @@ SPOKEN = {
     "$20,000": "twenty thousand dollars", "6-12": "six to twelve", "90": "ninety",
     "$190,000": "one hundred ninety thousand dollars", "$3,200": "three thousand two hundred dollars",
     "$1.2M": "one point two million", "70": "seventy", "$150,000": "one hundred fifty thousand dollars",
-    "$96,000": "ninety six thousand dollars", "10": "ten", "30": "thirty",
+    "$96,000": "ninety six thousand dollars", "10": "ten", "30": "thirty", "$118,000": "one hundred eighteen thousand dollars", "60": "sixty",
 }
 EXTRA = {"braga": "B R AA G AH", "plateaued": "P L AE T OW D", "mid": "M IH D",
-         "facebook": "F EY S B UH K", "website": "W EH B S AY T"}
+         "facebook": "F EY S B UH K", "website": "W EH B S AY T", "tyre": "T AY ER"}
 
 transcript, raw_path, out_path = sys.argv[1:4]
 paras = [p.split() for p in re.split(r"\n\s*\n", open(transcript).read()) if p.strip()]
