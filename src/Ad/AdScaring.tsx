@@ -32,7 +32,7 @@ export const AD_SCARING_FRAMES = 2308;
 export type AdScaringProps = {
   // Screenshots of typical bad roofing ads. Parody mocks show if omitted.
   badAds?: AdImage[];
-  // One of our premium ads, shown as a sponsored post in the phone.
+  // One of our premium video ads, played muted as a sponsored post.
   premiumAd?: string;
 };
 
@@ -77,7 +77,7 @@ const Scene: React.FC<{ from: number; to: number; children: (len: number) => Rea
   </Sequence>
 );
 
-export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumAd = staticFile("ads/premium-ad.jpg") }) => {
+export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumAd = staticFile("ads/premium-ad.mp4") }) => {
   const { fps, durationInFrames } = useVideoConfig();
   const { find, frameOf } = makeCue(words, fps);
   const at = (phrase: string, after = 0) => frameOf(find(phrase, after));
@@ -232,7 +232,7 @@ export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumA
             <Unpredictable len={len} secondAt={at("no predictable", iMid) - c.unpred} />
           </FullOverlay>
         )}</Scene>
-      <Scene from={c.premium} to={c.cheap}>{(len) => <PremiumAd len={len} trustAt={at("that is the roofer") - c.premium} image={premiumAd} />}</Scene>
+      <Scene from={c.premium} to={c.cheap}>{(len) => <PremiumAd len={len} trustAt={at("that is the roofer") - c.premium} video={premiumAd} />}</Scene>
       <Scene from={c.cheap} to={c.web}>{(len) => (
           <FullOverlay len={len}>
             <CheapVsBest len={len} bestAt={at("The best one") - c.cheap} />

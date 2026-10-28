@@ -454,7 +454,7 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
                     <div style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.55)" }}>Sponsored</div>
                   </div>
                 </div>
-                <OffthreadVideo src={staticFile("ads/cheap-ad.mp4")} muted style={{ width: "100%", display: "block" }} />
+                <Img src={staticFile("ads/static-ad.jpg")} style={{ width: "100%", display: "block" }} />
               </div>
             ) : (
               <div key={i} style={{ margin: "70px 22px 0", borderRadius: 18, background: "#1a1f27", height: 300, padding: 16, color: "#888", fontFamily: adTheme.font, fontSize: 22 }}>
@@ -628,21 +628,37 @@ const DaysBar: React.FC<{ days: number }> = ({ days }) => {
   );
 };
 
+// Client logos spanning the vest: full size (no stage scaling), below the mouth.
 export const LogoRow: React.FC<{ len: number; logos: { src: string; bg: string }[] }> = ({ len, logos }) => {
   const frame = useCurrentFrame();
+  const exit = interpolate(frame, [len - 6, len], [0, 1], clamp);
   return (
-    <Stage len={len} width={980} top={640}>
-      <div style={{ display: "flex", gap: 20, justifyContent: "center" }}>
-        {logos.map((l, i) => {
-          const p = interpolate(frame, [i * 4, i * 4 + 12], [0, 1], { ...clamp, easing: back(1.8) });
-          return (
-            <div key={l.src} style={{ width: 300, height: 170, borderRadius: 26, background: l.bg, padding: 18, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 20px 50px rgba(0,0,0,0.45)", opacity: p, scale: String(p), border: "3px solid rgba(255,255,255,0.7)" }}>
-              <Img src={l.src} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
-            </div>
-          );
-        })}
-      </div>
-    </Stage>
+    <div style={{ position: "absolute", left: 30, right: 30, top: 1010, display: "flex", gap: 18, justifyContent: "center" }}>
+      {logos.map((l, i) => {
+        const p = interpolate(frame, [i * 4, i * 4 + 12], [0, 1], { ...clamp, easing: back(1.8) });
+        return (
+          <div
+            key={l.src}
+            style={{
+              flex: 1,
+              height: 190,
+              borderRadius: 28,
+              background: l.bg,
+              padding: 20,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 20px 50px rgba(0,0,0,0.45)",
+              border: "3px solid rgba(255,255,255,0.75)",
+              opacity: p * (1 - exit),
+              scale: String(p * (1 - 0.15 * exit)),
+            }}
+          >
+            <Img src={l.src} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+          </div>
+        );
+      })}
+    </div>
   );
 };
 
@@ -679,7 +695,7 @@ const Chip: React.FC<{ text: string; p: number }> = ({ text, p }) => (
 
 // --- Premium ad, cheapest vs best -----------------------------------------
 
-const PremiumPost: React.FC<{ image: string }> = ({ image }) => (
+const PremiumPost: React.FC<{ video: string }> = ({ video }) => (
   <div style={{ position: "absolute", inset: 0, background: "#000", paddingTop: 66 }}>
     <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 16px" }}>
       <div style={{ width: 44, height: 44, borderRadius: 22, background: `linear-gradient(135deg, ${adTheme.accent}, #9be7b0)` }} />
@@ -688,7 +704,7 @@ const PremiumPost: React.FC<{ image: string }> = ({ image }) => (
         <div style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.55)" }}>Sponsored</div>
       </div>
     </div>
-    <Img src={image} style={{ width: "100%", display: "block" }} />
+    <OffthreadVideo src={video} muted style={{ width: "100%", display: "block" }} />
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 16px", background: adTheme.accentDeep, fontWeight: 800, fontSize: 22 }}>
       Book a free inspection <span>›</span>
     </div>
@@ -699,12 +715,12 @@ const PremiumPost: React.FC<{ image: string }> = ({ image }) => (
   </div>
 );
 
-export const PremiumAd: React.FC<{ len: number; trustAt: number; image: string }> = ({ len, trustAt, image }) => {
+export const PremiumAd: React.FC<{ len: number; trustAt: number; video: string }> = ({ len, trustAt, video }) => {
   const t = useProgress(trustAt, 12, back(2));
   return (
     <Stage len={len} width={760} top={480}>
       <Phone>
-        <PremiumPost image={image} />
+        <PremiumPost video={video} />
       </Phone>
       <div style={{ position: "absolute", left: -40, top: 330, padding: "18px 26px", borderRadius: "28px 28px 28px 6px", background: "#fff", color: "#111", fontWeight: 800, fontSize: 34, boxShadow: "0 16px 40px rgba(0,0,0,0.45)", scale: String(t), rotate: "-4deg", display: "flex", alignItems: "center", gap: 10 }}>
         <Check p={t} size={36} color={adTheme.accentDeep} />
