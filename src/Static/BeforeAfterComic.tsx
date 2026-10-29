@@ -18,7 +18,7 @@ const Panel: React.FC<{
   labelBg: string;
   caption: string;
 }> = ({ src, left, rotate, label, labelBg, caption }) => (
-  <div style={{ position: "absolute", left, top: 70, width: 470, height: 860, rotate: `${rotate}deg` }}>
+  <div style={{ position: "absolute", left, top: 166, width: 470, height: 770, rotate: `${rotate}deg` }}>
     <div style={{ position: "absolute", inset: 0, overflow: "hidden", background: "#fff", ...inked(12) }}>
       <Img src={staticFile(src)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "70% 55%" }} />
     </div>
@@ -75,6 +75,28 @@ export const BeforeAfterComic: React.FC = () => (
         "radial-gradient(circle, rgba(255,255,255,0.28) 2.6px, transparent 3px) 0 0 / 20px 20px, radial-gradient(ellipse 80% 70% at 50% 40%, #5aa9ff 0%, #2f86f6 55%, #1c5fc4 100%)",
     }}
   >
+    {/* ICP callout */}
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        right: 0,
+        top: 30,
+        textAlign: "center",
+        fontWeight: 900,
+        fontSize: 68,
+        lineHeight: 1,
+        letterSpacing: "-0.02em",
+        color: "#fff",
+        WebkitTextStroke: `5px ${INK}`,
+        paintOrder: "stroke fill",
+        textShadow: `6px 6px 0 ${INK}`,
+        rotate: "-1deg",
+      }}
+    >
+      FOR ROOFING BUSINESSES
+    </div>
+
     <Panel
       src="static/ba-before.jpg"
       left={42}
@@ -88,17 +110,17 @@ export const BeforeAfterComic: React.FC = () => (
     {/* Speech bubble from the mouth in the AFTER panel */}
     <svg width={1080} height={1350} style={{ position: "absolute", inset: 0 }}>
       <g style={{ filter: "drop-shadow(8px 8px 0 #111)" }}>
-        <path d="M806 318 L898 402 L842 310 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
-        <ellipse cx={745} cy={250} rx={170} ry={78} fill="#fff" stroke={INK} strokeWidth={7} />
+        <path d="M806 398 L902 472 L842 390 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+        <ellipse cx={745} cy={330} rx={170} ry={78} fill="#fff" stroke={INK} strokeWidth={7} />
         {/* Cover the tail's join so bubble and tail read as one shape */}
-        <path d="M810 314 L894 394 L838 306 Z" fill="#fff" />
+        <path d="M810 394 L898 464 L838 386 Z" fill="#fff" />
       </g>
     </svg>
     <div
       style={{
         position: "absolute",
         left: 745 - 170,
-        top: 250 - 27,
+        top: 330 - 27,
         width: 340,
         textAlign: "center",
         fontWeight: 900,
