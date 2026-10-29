@@ -2,6 +2,7 @@ import { Composition, Folder, Still } from "remotion";
 import { TweetAd, tweetAdSchema } from "./Static/TweetAd";
 import { ResultPost } from "./Static/ResultPost";
 import { BeforeAfter } from "./Static/BeforeAfter";
+import { BeforeAfterComic } from "./Static/BeforeAfterComic";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
 import { VSL, VSL_DURATION_FRAMES } from "./VSL/VSL";
 import { AD_SCARING_FRAMES, AdScaring } from "./Ad/AdScaring";
@@ -100,6 +101,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="TweetAd90" component={TweetAd} schema={tweetAdSchema} width={1080} height={1080} defaultProps={{ jobs: "6-12", period: "in 90 days" }} />
       <Still id="ResultPost" component={ResultPost} width={1080} height={1350} />
       <Still id="BeforeAfter" component={BeforeAfter} width={2000} height={2000} />
+      <Still id="BeforeAfterComic" component={BeforeAfterComic} width={1080} height={1350} />
     </>
   );
 };
