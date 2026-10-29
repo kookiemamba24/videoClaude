@@ -2,7 +2,8 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import "../Ad/adTheme";
 
-const RED = "#d93a2b";
+// Brand blue: readable on both the white pills and the black headline.
+const BLUE = "#2f86f6";
 
 // Screenshot on a white card, like a pasted dashboard crop.
 const Shot: React.FC<{ src: string; left: number; top: number; width: number; aspect: number; rotate: number }> = ({
@@ -41,7 +42,7 @@ const Pill: React.FC<{ left: number; top: number; lines: [string, string] }> = (
       padding: "16px 26px",
       borderRadius: 20,
       background: "#fff",
-      color: RED,
+      color: BLUE,
       fontSize: 40,
       fontWeight: 600,
       lineHeight: 1.12,
@@ -76,8 +77,8 @@ const Arrow: React.FC<{ x1: number; y1: number; x2: number; y2: number; bend: nu
   const head = `M${x2 - ux * h - uy * w} ${y2 - uy * h + ux * w} L${x2} ${y2} L${x2 - ux * h + uy * w} ${y2 - uy * h - ux * w}`;
   return (
     <>
-      <path d={`M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}`} fill="none" stroke={RED} strokeWidth={8} strokeLinecap="round" />
-      <path d={head} fill="none" stroke={RED} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}`} fill="none" stroke={BLUE} strokeWidth={8} strokeLinecap="round" />
+      <path d={head} fill="none" stroke={BLUE} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
     </>
   );
 };
@@ -131,13 +132,13 @@ export const ResultPost: React.FC = () => (
         position: "absolute",
         left: 80,
         right: 80,
-        top: 868,
-        padding: "40px 30px 46px",
+        top: 822,
+        padding: "30px 30px 36px",
         borderRadius: 34,
         background: "#0b0b0b",
         textAlign: "center",
         fontWeight: 800,
-        fontSize: 98,
+        fontSize: 80,
         lineHeight: 0.96,
         letterSpacing: "-0.035em",
       }}
@@ -146,9 +147,30 @@ export const ResultPost: React.FC = () => (
       <br />
       CLIENT MADE
       <br />
-      <span style={{ color: RED }}>$1.2M</span>
+      <span style={{ color: BLUE }}>$1.2M</span>
       <br />
       IN 70 DAYS
+    </div>
+
+    {/* Call to action */}
+    <div
+      style={{
+        position: "absolute",
+        left: 80,
+        right: 80,
+        bottom: 30,
+        padding: "18px 24px",
+        borderRadius: 20,
+        background: BLUE,
+        textAlign: "center",
+        fontWeight: 700,
+        fontSize: 34,
+        whiteSpace: "nowrap",
+        letterSpacing: "-0.01em",
+        boxShadow: "0 12px 30px rgba(0,0,0,0.35)",
+      }}
+    >
+      Want results like these? Get in touch with us today
     </div>
   </AbsoluteFill>
 );
