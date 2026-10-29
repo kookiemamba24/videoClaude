@@ -327,70 +327,120 @@ export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, 
 
 // --- Lookalikes + cheapest sticker ----------------------------------------
 
-// Made-up bargain-bin roofers: clashing colours, shouty copy, clip-art.
+// Made-up bargain-bin roofers, styled like the cheap AI-generated flyers:
+// stormy photo, yellow-on-black shouting, chevron-roof logo, fake 5 stars.
 type CheapRoofer = {
   name: string;
+  sub: string;
+  headline: string;
   tag: string;
-  line: string;
   bg: string;
-  ink: string;
   accent: string;
-  font: string;
+  badge: string;
   you?: boolean;
 };
 
 const CHEAP_ROOFERS: CheapRoofer[] = [
-  { name: "BARGAIN BAZZA'S ROOFING", tag: "$99!!", line: "WE BEAT ANY QUOTE*", bg: "#ffe600", ink: "#d40000", accent: "#d40000", font: "Impact, 'Arial Black', sans-serif" },
-  { name: "Kwik Kev Roofs & Gutters", tag: "CHEAP!", line: "Roofs • Gutters • Fences • Pools", bg: "#2bd62b", ink: "#0a0a7a", accent: "#ff00aa", font: "'Comic Sans MS', 'Comic Neue', cursive" },
-  { name: "YOUR ROOFING CO.", tag: "LOW PRICE", line: "Call now for a free quote!!", bg: "#1c3fbf", ink: "#ffffff", accent: "#ffef00", font: "'Times New Roman', serif", you: true },
-  { name: "Roof-O-Rama Discount", tag: "10% OFF", line: "THIS WEEK ONLY!!!", bg: "#ff6a00", ink: "#ffffff", accent: "#000000", font: "'Arial Black', Arial, sans-serif" },
+  { name: "BARGAIN BAZZA'S", sub: "ROOFING", headline: "ROOF LEAKS?", tag: "$99!!", bg: "linear-gradient(160deg,#2b2f36,#0c0d10)", accent: "#ffd400", badge: "#e3161b" },
+  { name: "KWIK KEV", sub: "ROOFS & GUTTERS", headline: "LEAKY ROOF?", tag: "CHEAP!", bg: "linear-gradient(160deg,#123a7a,#071a3d)", accent: "#ffd400", badge: "#ff2d8a" },
+  { name: "YOUR ROOFING", sub: "CO. PTY LTD", headline: "WINTER READY?", tag: "20% OFF", bg: "linear-gradient(160deg,#1c1c1c,#000)", accent: "#ffc61a", badge: "#e3161b", you: true },
+  { name: "ROOF-O-RAMA", sub: "DISCOUNT ROOFING", headline: "WE DO IT ALL!", tag: "10% OFF", bg: "linear-gradient(160deg,#8a0f12,#2a0304)", accent: "#ffd400", badge: "#111" },
 ];
+
+// Chevron roof + chimney + window grid: the house mark every AI flyer uses.
+const AiLogo: React.FC<{ r: CheapRoofer }> = ({ r }) => (
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+    <svg width={118} height={40} viewBox="0 0 118 40" style={{ marginBottom: -4 }}>
+      <path d="M6 36 L59 6 L112 36" fill="none" stroke={r.accent} strokeWidth={7} strokeLinejoin="miter" />
+      <path d="M22 36 L59 15 L96 36" fill="none" stroke="#fff" strokeWidth={3} />
+      <rect x={82} y={8} width={9} height={16} fill={r.accent} />
+      <g fill="#fff">
+        <rect x={52} y={24} width={6} height={6} />
+        <rect x={60} y={24} width={6} height={6} />
+        <rect x={52} y={32} width={6} height={6} />
+        <rect x={60} y={32} width={6} height={6} />
+      </g>
+    </svg>
+    <div
+      style={{
+        fontFamily: adTheme.font,
+        fontWeight: 900,
+        fontSize: 30,
+        lineHeight: 0.95,
+        letterSpacing: "-0.02em",
+        color: "#fff",
+        WebkitTextStroke: "1.5px #000",
+        paintOrder: "stroke fill",
+        textShadow: "0 3px 0 rgba(0,0,0,0.6)",
+        fontStyle: "italic",
+      }}
+    >
+      {r.name}
+    </div>
+    <div style={{ fontFamily: adTheme.font, fontWeight: 800, fontSize: 15, letterSpacing: "0.12em", color: r.accent, marginTop: 2 }}>
+      {r.sub}
+    </div>
+  </div>
+);
 
 const CheapTile: React.FC<{ r: CheapRoofer }> = ({ r }) => (
   <div
     style={{
       position: "relative",
-      height: 210,
+      height: 232,
       borderRadius: 12,
       overflow: "hidden",
       background: r.bg,
-      border: `4px solid ${r.accent}`,
-      fontFamily: r.font,
-      color: r.ink,
+      border: `3px solid ${r.accent}`,
       padding: "12px 14px",
     }}
   >
-    <div style={{ fontSize: 28, fontWeight: 900, lineHeight: 0.95, textShadow: r.bg === "#ffe600" ? "2px 2px 0 #000" : undefined, width: "66%" }}>{r.name}</div>
-    <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginTop: 8 }}>
-      <div
-        style={{
-          width: 96,
-          height: 70,
-          background: "repeating-linear-gradient(45deg,#c9c9c9 0 10px,#b3b3b3 10px 20px)",
-          border: "3px solid #fff",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
-        }}
-      >
-        <House size={46} color="#555" stroke={3.5} />
-      </div>
-      <div style={{ fontSize: 19, fontWeight: 700, lineHeight: 1.1 }}>{r.line}</div>
-    </div>
-    <div style={{ position: "absolute", bottom: 8, left: 14, fontSize: 18, fontWeight: 700, opacity: 0.9 }}>☎ 0400 000 000</div>
+    {/* Fake "stock photo" of a wet tiled roof, top right */}
     <div
       style={{
         position: "absolute",
-        right: -8,
-        top: 10,
-        padding: "8px 14px",
-        background: r.accent,
-        color: r.accent === "#000000" || r.accent === "#d40000" || r.accent === "#ff00aa" ? "#fff" : "#000",
-        fontSize: 24,
+        right: 0,
+        top: 0,
+        width: 150,
+        height: 140,
+        background:
+          "repeating-linear-gradient(160deg, transparent 0 9px, rgba(180,210,255,0.35) 9px 10px), repeating-linear-gradient(20deg,#3c4148 0 14px,#2a2e33 14px 28px)",
+        maskImage: "linear-gradient(to left, #000 55%, transparent)",
+      }}
+    />
+    <AiLogo r={r} />
+    <div
+      style={{
+        fontFamily: adTheme.font,
         fontWeight: 900,
-        rotate: "12deg",
-        border: "3px dashed #fff",
+        fontSize: 32,
+        lineHeight: 1,
+        color: r.accent,
+        marginTop: 10,
+        letterSpacing: "-0.02em",
+        textShadow: "0 3px 0 #000",
+      }}
+    >
+      {r.headline}
+    </div>
+    <div style={{ position: "absolute", left: 14, bottom: 10, display: "flex", alignItems: "center", gap: 10, fontFamily: adTheme.font }}>
+      <span style={{ color: "#ffd84d", fontSize: 18, letterSpacing: 1 }}>★★★★★</span>
+      <span style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>☎ 0400 000 000</span>
+    </div>
+    <div
+      style={{
+        position: "absolute",
+        right: 8,
+        bottom: 34,
+        padding: "8px 14px",
+        background: r.badge,
+        color: "#fff",
+        fontFamily: adTheme.font,
+        fontWeight: 900,
+        fontSize: 26,
+        rotate: "-8deg",
+        boxShadow: "0 4px 0 rgba(0,0,0,0.5)",
+        border: "2px solid #fff",
       }}
     >
       {r.tag}
@@ -484,6 +534,22 @@ export const Phone: React.FC<{ children: React.ReactNode; width?: number; height
   </div>
 );
 
+// Typical bad roofing ads filling the rest of the feed (real names blurred).
+const FEED_ADS = ["ads/feed-trustbro.png", "ads/feed-winter.png", "ads/feed-leaks.png", "ads/feed-leaky.png"];
+
+const FeedPost: React.FC<{ src: string }> = ({ src }) => (
+  <div style={{ marginTop: 14, background: "#0d1117" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px" }}>
+      <div style={{ width: 40, height: 40, borderRadius: 20, background: "#555" }} />
+      <div style={{ fontSize: 20, fontWeight: 700 }}>
+        Roofing Deals
+        <div style={{ fontSize: 15, fontWeight: 500, color: "rgba(255,255,255,0.55)" }}>Sponsored</div>
+      </div>
+    </div>
+    <Img src={staticFile(src)} style={{ width: "100%", display: "block" }} />
+  </div>
+);
+
 export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt: number; beatAt: number }> = ({
   len,
   scrollAt,
@@ -492,7 +558,7 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const scroll = interpolate(frame, [scrollAt, scrollAt + 0.8 * fps], [0, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) });
+  const scroll = interpolate(frame, [scrollAt, scrollAt + 1.0 * fps], [0, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   const call = useProgress(callAt, 10);
   const prices = [14500, 11000, 8900];
   const step = Math.min(2, Math.max(0, Math.floor((frame - beatAt) / 9)));
@@ -502,7 +568,7 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
     <Stage len={len} width={760} top={500}>
       <Phone>
         {/* Feed flicking past your ad */}
-        <div style={{ position: "absolute", inset: 0, translate: `0 ${-scroll * 1500}px`, filter: `blur(${Math.sin(scroll * Math.PI) * 6}px)`, opacity: 1 - call }}>
+        <div style={{ position: "absolute", inset: 0, translate: `0 ${-scroll * 3200}px`, filter: `blur(${Math.sin(scroll * Math.PI) * 6}px)`, opacity: 1 - call }}>
           {Array.from({ length: 9 }).map((_, i) =>
             i === 0 ? (
               <div key={i} style={{ margin: "66px 0 0", background: "#0d1117" }}>
@@ -516,9 +582,7 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
                 <Img src={staticFile("ads/static-ad.jpg")} style={{ width: "100%", display: "block" }} />
               </div>
             ) : (
-              <div key={i} style={{ margin: "70px 22px 0", borderRadius: 18, background: "#1a1f27", height: 300, padding: 16, color: "#888", fontFamily: adTheme.font, fontSize: 22 }}>
-                Post
-              </div>
+              <FeedPost key={i} src={FEED_ADS[(i - 1) % FEED_ADS.length]} />
             ),
           )}
         </div>
