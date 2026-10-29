@@ -85,6 +85,33 @@ export const BeforeAfterComic: React.FC = () => (
     />
     <Panel src="static/ba-after.jpg" left={556} rotate={1.6} label="AFTER" labelBg={BLUE} caption="WORKING WITH US" />
 
+    {/* Speech bubble from the mouth in the AFTER panel */}
+    <svg width={1080} height={1350} style={{ position: "absolute", inset: 0 }}>
+      <g style={{ filter: "drop-shadow(8px 8px 0 #111)" }}>
+        <path d="M842 318 L922 430 L872 312 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+        <ellipse cx={770} cy={258} rx={200} ry={92} fill="#fff" stroke={INK} strokeWidth={7} />
+        {/* Cover the tail's join so bubble and tail read as one shape */}
+        <path d="M846 322 L918 420 L868 316 Z" fill="#fff" />
+      </g>
+    </svg>
+    <div
+      style={{
+        position: "absolute",
+        left: 770 - 200,
+        top: 258 - 40,
+        width: 400,
+        textAlign: "center",
+        fontWeight: 900,
+        fontSize: 60,
+        lineHeight: 1,
+        letterSpacing: "-0.03em",
+        color: INK,
+        rotate: "-4deg",
+      }}
+    >
+      OH <span style={{ color: BLUE }}>YEAH!!!</span>
+    </div>
+
     {/* Guarantee banner */}
     <div
       style={{
