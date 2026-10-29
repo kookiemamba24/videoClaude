@@ -64,12 +64,23 @@ export const BeforeAfter: React.FC = () => {
     <AbsoluteFill style={{ fontFamily: "Inter", background: "#fff" }}>
       <Img src={staticFile("static/before-after.jpg")} style={{ width: 2000, height: 2000 }} />
 
-      {/* Bottom shade on the left so the caption reads over the bedding. */}
+      {/* Bottom shade on both panels so the captions read over the bedding. */}
       <div
         style={{
           position: "absolute",
           left: LEFT.x0,
           width: LEFT.x1 - LEFT.x0,
+          top: 1440,
+          height: 1983 - 1440,
+          background: "linear-gradient(180deg, transparent, rgba(0,0,0,0.72) 55%)",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          left: RIGHT.x0,
+          width: RIGHT.x1 - RIGHT.x0,
           top: 1440,
           height: 1983 - 1440,
           background: "linear-gradient(180deg, transparent, rgba(0,0,0,0.72) 55%)",
@@ -82,7 +93,7 @@ export const BeforeAfter: React.FC = () => {
       </Line>
 
       <Tag text="AFTER" bg={BLUE} cx={rc} top={110} />
-      <Line cx={rc} top={290} width={960} size={100} nowrap>
+      <Line cx={rc} top={1600} width={960} size={96} nowrap>
         WORKING WITH US
       </Line>
     </AbsoluteFill>
