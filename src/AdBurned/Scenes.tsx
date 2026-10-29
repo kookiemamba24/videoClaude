@@ -1,7 +1,7 @@
 import React from "react";
 import { Easing, Img, interpolate, OffthreadVideo, random, staticFile, useCurrentFrame } from "remotion";
 import { accent, adTheme } from "../Ad/adTheme";
-import { Check, Glass, Kicker, Phone, Stage } from "../Ad/Graphics";
+import { Check, Kicker, Phone, Stage } from "../Ad/Graphics";
 import { blend, POSES, StickFigure } from "./Poses";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -156,34 +156,66 @@ export const AgencyChat: React.FC<{ len: number; promiseAt: number; moneyAt: num
   );
 };
 
-// "Proven with 20 roofing companies": counter + grid of houses.
+// "Proven with 20 roofing companies": counter + wall of client logos
+// (full overlay layout).
+const CLIENT_LOGOS = [
+  { src: "logos/happy.png", bg: "#95c241" },
+  { src: "logos/action.png", bg: "#ffffff" },
+  { src: "logos/vista.png", bg: "#ffffff" },
+  { src: "logos/braga.png", bg: "#1a1a18" },
+  { src: "logos/allseasons.png", bg: "#ffffff" },
+  { src: "logos/apex.png", bg: "#000000" },
+  { src: "logos/bontrager.png", bg: "#ffffff" },
+];
+
 export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len, countAt }) => {
   const frame = useCurrentFrame();
+  const out = interpolate(frame, [len - 6, len], [1, 0], clamp);
   const n = Math.round(interpolate(frame, [countAt - 6, countAt + 18], [0, 20], clamp));
+  const head = interpolate(frame, [0, 10], [0, 1], { ...clamp, easing: back(1.4) });
   return (
-    <Stage len={len} width={880} top={600}>
-      <Glass>
-        <Kicker>Proven with</Kicker>
-        <div style={{ display: "flex", alignItems: "flex-end", gap: 20, marginTop: 14 }}>
-          <div style={{ fontWeight: 900, fontSize: 170, lineHeight: 0.85, color: adTheme.accent, letterSpacing: "-0.04em", fontVariantNumeric: "tabular-nums", textShadow: `0 0 40px ${accent(0.45)}` }}>{n}</div>
-          <div style={{ fontWeight: 900, fontSize: 48, lineHeight: 1.02, paddingBottom: 12 }}>
+    <div style={{ position: "absolute", inset: 0, opacity: out, fontFamily: adTheme.font, color: "#fff" }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 380, textAlign: "center", opacity: head, scale: String(0.85 + 0.15 * head) }}>
+        <div style={{ display: "inline-block" }}>
+          <Kicker>Proven with</Kicker>
+        </div>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 22, marginTop: 10 }}>
+          <div style={{ fontWeight: 900, fontSize: 200, lineHeight: 0.85, color: adTheme.accent, letterSpacing: "-0.04em", fontVariantNumeric: "tabular-nums", textShadow: `0 0 50px ${accent(0.5)}`, width: 230, textAlign: "right" }}>{n}</div>
+          <div style={{ fontWeight: 900, fontSize: 64, lineHeight: 1, paddingBottom: 14, textAlign: "left" }}>
             ROOFING
             <br />
             COMPANIES
           </div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(10, 1fr)", gap: 10, marginTop: 26 }}>
-          {Array.from({ length: 20 }).map((_, i) => {
-            const on = i < n;
-            return (
-              <svg key={i} viewBox="0 0 44 40" style={{ width: "100%", opacity: on ? 1 : 0.18, filter: on ? `drop-shadow(0 0 6px ${accent(0.8)})` : undefined }}>
-                <path d="M4 20 L22 5 L40 20 M9 16 V36 H35 V16" fill="none" stroke={on ? adTheme.accent : "#fff"} strokeWidth={3.4} strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            );
-          })}
-        </div>
-      </Glass>
-    </Stage>
+      </div>
+      <div style={{ position: "absolute", left: 90, right: 90, top: 720, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
+        {[...CLIENT_LOGOS, null].map((l, i) => {
+          const p = interpolate(frame, [8 + i * 3, 20 + i * 3], [0, 1], { ...clamp, easing: back(1.8) });
+          return (
+            <div
+              key={i}
+              style={{
+                height: 150,
+                borderRadius: 24,
+                background: l ? l.bg : `linear-gradient(135deg, ${adTheme.accentDeep}, ${adTheme.accent})`,
+                border: "3px solid rgba(255,255,255,0.8)",
+                boxShadow: "0 16px 40px rgba(0,0,0,0.45)",
+                padding: 18,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                opacity: p,
+                scale: String(p),
+                fontWeight: 900,
+                fontSize: 52,
+              }}
+            >
+              {l ? <Img src={staticFile(l.src)} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} /> : "+13 MORE"}
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 

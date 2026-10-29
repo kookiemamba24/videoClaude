@@ -69,8 +69,9 @@ export const AdBurned: React.FC = () => {
     { at: at("weak"), name: "notify" },
     { at: at("ghost"), name: "pop" },
     { at: at("ghost") + 8, name: "fall", volume: 0.8 },
-    { at: c.proven, name: "whoosh" },
+    { at: c.proven, name: "whoosh-big" },
     ...Array.from({ length: 8 }, (_, k) => ({ at: at("20") - 6 + k * 3, name: "tick" as const, volume: 0.7 })),
+    ...Array.from({ length: 8 }, (_, k) => ({ at: c.proven + 8 + k * 3, name: "pop" as const, volume: 0.6 })),
     { at: at("20") + 18, name: "confirm" },
     { at: c.happy, name: "whoosh-big" },
     ...[c.happy, c.vista, c.action].flatMap((f) => [
@@ -115,7 +116,7 @@ export const AdBurned: React.FC = () => {
           />
         )}
       </Full>
-      <Scene from={c.proven} to={c.happy}>{(len) => <TwentyRoofers len={len} countAt={at("20") - c.proven} />}</Scene>
+      <Full from={c.proven} to={c.happy}>{(len) => <TwentyRoofers len={len} countAt={at("20") - c.proven} />}</Full>
 
       {/* Results as one full-screen run */}
       <Full from={c.happy} to={c.same}>
