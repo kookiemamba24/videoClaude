@@ -33,8 +33,8 @@ export const TweetAd: React.FC<z.infer<typeof tweetAdSchema>> = ({ jobs, period 
     >
       <div style={{ position: "absolute", right: 56, top: 52, fontSize: 52, fontWeight: 300, lineHeight: 1, color: "#e7e9ea" }}>✕</div>
       <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
-        <div style={{ width: 132, height: 132, borderRadius: 66, background: "#111", border: "2px solid #2a2f36", overflow: "hidden", flexShrink: 0 }}>
-          <Img src={staticFile("brand/av-logo.png")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <div style={{ width: 132, height: 132, borderRadius: 66, background: "#000", border: "2px solid #2a2f36", overflow: "hidden", flexShrink: 0 }}>
+          <Img src={staticFile("brand/av-logo-dark.png")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, fontWeight: 800, fontSize: 44 }}>
