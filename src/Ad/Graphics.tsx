@@ -327,34 +327,93 @@ export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, 
 
 // --- Lookalikes + cheapest sticker ----------------------------------------
 
+// Made-up bargain-bin roofers: clashing colours, shouty copy, clip-art.
+type CheapRoofer = {
+  name: string;
+  tag: string;
+  line: string;
+  bg: string;
+  ink: string;
+  accent: string;
+  font: string;
+  you?: boolean;
+};
+
+const CHEAP_ROOFERS: CheapRoofer[] = [
+  { name: "BARGAIN BAZZA'S ROOFING", tag: "$99!!", line: "WE BEAT ANY QUOTE*", bg: "#ffe600", ink: "#d40000", accent: "#d40000", font: "Impact, 'Arial Black', sans-serif" },
+  { name: "Kwik Kev Roofs & Gutters", tag: "CHEAP!", line: "Roofs • Gutters • Fences • Pools", bg: "#2bd62b", ink: "#0a0a7a", accent: "#ff00aa", font: "'Comic Sans MS', 'Comic Neue', cursive" },
+  { name: "YOUR ROOFING CO.", tag: "LOW PRICE", line: "Call now for a free quote!!", bg: "#1c3fbf", ink: "#ffffff", accent: "#ffef00", font: "'Times New Roman', serif", you: true },
+  { name: "Roof-O-Rama Discount", tag: "10% OFF", line: "THIS WEEK ONLY!!!", bg: "#ff6a00", ink: "#ffffff", accent: "#000000", font: "'Arial Black', Arial, sans-serif" },
+];
+
+const CheapTile: React.FC<{ r: CheapRoofer }> = ({ r }) => (
+  <div
+    style={{
+      position: "relative",
+      height: 210,
+      borderRadius: 12,
+      overflow: "hidden",
+      background: r.bg,
+      border: `4px solid ${r.accent}`,
+      fontFamily: r.font,
+      color: r.ink,
+      padding: "12px 14px",
+    }}
+  >
+    <div style={{ fontSize: 28, fontWeight: 900, lineHeight: 0.95, textShadow: r.bg === "#ffe600" ? "2px 2px 0 #000" : undefined, width: "66%" }}>{r.name}</div>
+    <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginTop: 8 }}>
+      <div
+        style={{
+          width: 96,
+          height: 70,
+          background: "repeating-linear-gradient(45deg,#c9c9c9 0 10px,#b3b3b3 10px 20px)",
+          border: "3px solid #fff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+        }}
+      >
+        <House size={46} color="#555" stroke={3.5} />
+      </div>
+      <div style={{ fontSize: 19, fontWeight: 700, lineHeight: 1.1 }}>{r.line}</div>
+    </div>
+    <div style={{ position: "absolute", bottom: 8, left: 14, fontSize: 18, fontWeight: 700, opacity: 0.9 }}>☎ 0400 000 000</div>
+    <div
+      style={{
+        position: "absolute",
+        right: -8,
+        top: 10,
+        padding: "8px 14px",
+        background: r.accent,
+        color: r.accent === "#000000" || r.accent === "#d40000" || r.accent === "#ff00aa" ? "#fff" : "#000",
+        fontSize: 24,
+        fontWeight: 900,
+        rotate: "12deg",
+        border: "3px dashed #fff",
+      }}
+    >
+      {r.tag}
+    </div>
+  </div>
+);
+
 export const SameRoofers: React.FC<{ len: number; stickerAt: number }> = ({ len, stickerAt }) => {
   const frame = useCurrentFrame();
   const s = interpolate(frame, [stickerAt, stickerAt + 8], [0, 1], { ...clamp, easing: back(2.4) });
-  const labels = ["Roofer", "Roofer", "YOU", "Roofer"];
   return (
     <Stage len={len} width={900} top={600}>
       <Glass style={{ padding: 32, position: "relative" }}>
         <Kicker>What homeowners see</Kicker>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 24 }}>
-          {labels.map((l, i) => {
+          {CHEAP_ROOFERS.map((r, i) => {
             const p = interpolate(frame, [4 + i * 3, 16 + i * 3], [0, 1], { ...clamp, easing: OUT });
             return (
-              <div
-                key={i}
-                style={{
-                  borderRadius: 20,
-                  padding: 16,
-                  background: "rgba(255,255,255,0.07)",
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  opacity: p,
-                  scale: String(0.9 + 0.1 * p),
-                }}
-              >
-                <div style={{ height: 110, borderRadius: 12, background: "linear-gradient(135deg,#555b63,#3a3e44)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <House size={56} color="rgba(255,255,255,0.55)" />
+              <div key={r.name} style={{ opacity: p, scale: String(0.9 + 0.1 * p) }}>
+                <CheapTile r={r} />
+                <div style={{ fontWeight: 800, fontSize: 26, marginTop: 10, color: r.you ? "#fff" : "rgba(255,255,255,0.6)" }}>
+                  {r.you ? "YOU" : "Another roofer"}
                 </div>
-                <div style={{ height: 10, borderRadius: 5, background: "rgba(255,255,255,0.25)", marginTop: 12, width: "80%" }} />
-                <div style={{ fontWeight: 800, fontSize: 28, marginTop: 10, color: l === "YOU" ? "#fff" : "rgba(255,255,255,0.6)" }}>{l}</div>
               </div>
             );
           })}
