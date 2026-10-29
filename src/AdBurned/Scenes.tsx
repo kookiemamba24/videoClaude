@@ -170,6 +170,9 @@ const CLIENT_LOGOS = [
   { src: "logos/georgia.png", bg: "#ffffff" },
   { src: "logos/greencountry.png", bg: "#ffffff" },
   { src: "logos/roofco.png", bg: "#ffffff" },
+  { src: "logos/dhkraft.png", bg: "#000000" },
+  { src: "logos/trueworks.png", bg: "#ffffff" },
+  { src: "logos/valiant.png", bg: "#ffffff" },
 ];
 
 export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len, countAt }) => {
@@ -179,7 +182,7 @@ export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len,
   const head = interpolate(frame, [0, 10], [0, 1], { ...clamp, easing: back(1.4) });
   return (
     <div style={{ position: "absolute", inset: 0, opacity: out, fontFamily: adTheme.font, color: "#fff" }}>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 380, textAlign: "center", opacity: head, scale: String(0.85 + 0.15 * head) }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 360, textAlign: "center", opacity: head, scale: String(0.85 + 0.15 * head) }}>
         <div style={{ display: "inline-block" }}>
           <Kicker>Proven with</Kicker>
         </div>
@@ -192,14 +195,14 @@ export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len,
           </div>
         </div>
       </div>
-      <div style={{ position: "absolute", left: 70, right: 70, top: 720, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18 }}>
+      <div style={{ position: "absolute", left: 70, right: 70, top: 690, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
         {[...CLIENT_LOGOS, null].map((l, i) => {
           const p = interpolate(frame, [6 + i * 2, 18 + i * 2], [0, 1], { ...clamp, easing: back(1.8) });
           return (
             <div
               key={i}
               style={{
-                height: 128,
+                height: 118,
                 borderRadius: 20,
                 background: l ? l.bg : `linear-gradient(135deg, ${adTheme.accentDeep}, ${adTheme.accent})`,
                 border: "3px solid rgba(255,255,255,0.8)",
@@ -214,7 +217,7 @@ export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len,
                 fontSize: 40,
               }}
             >
-              {l ? <Img src={staticFile(l.src)} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} /> : "+9 MORE"}
+              {l ? <Img src={staticFile(l.src)} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} /> : "+6 MORE"}
             </div>
           );
         })}
