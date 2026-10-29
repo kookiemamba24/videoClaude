@@ -166,6 +166,10 @@ const CLIENT_LOGOS = [
   { src: "logos/allseasons.png", bg: "#ffffff" },
   { src: "logos/apex.png", bg: "#000000" },
   { src: "logos/bontrager.png", bg: "#ffffff" },
+  { src: "logos/bumble.png", bg: "#ffffff" },
+  { src: "logos/georgia.png", bg: "#ffffff" },
+  { src: "logos/greencountry.png", bg: "#ffffff" },
+  { src: "logos/roofco.png", bg: "#ffffff" },
 ];
 
 export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len, countAt }) => {
@@ -188,29 +192,29 @@ export const TwentyRoofers: React.FC<{ len: number; countAt: number }> = ({ len,
           </div>
         </div>
       </div>
-      <div style={{ position: "absolute", left: 90, right: 90, top: 720, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 22 }}>
+      <div style={{ position: "absolute", left: 70, right: 70, top: 720, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18 }}>
         {[...CLIENT_LOGOS, null].map((l, i) => {
-          const p = interpolate(frame, [8 + i * 3, 20 + i * 3], [0, 1], { ...clamp, easing: back(1.8) });
+          const p = interpolate(frame, [6 + i * 2, 18 + i * 2], [0, 1], { ...clamp, easing: back(1.8) });
           return (
             <div
               key={i}
               style={{
-                height: 150,
-                borderRadius: 24,
+                height: 128,
+                borderRadius: 20,
                 background: l ? l.bg : `linear-gradient(135deg, ${adTheme.accentDeep}, ${adTheme.accent})`,
                 border: "3px solid rgba(255,255,255,0.8)",
                 boxShadow: "0 16px 40px rgba(0,0,0,0.45)",
-                padding: 18,
+                padding: 14,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 opacity: p,
                 scale: String(p),
                 fontWeight: 900,
-                fontSize: 52,
+                fontSize: 40,
               }}
             >
-              {l ? <Img src={staticFile(l.src)} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} /> : "+13 MORE"}
+              {l ? <Img src={staticFile(l.src)} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} /> : "+9 MORE"}
             </div>
           );
         })}

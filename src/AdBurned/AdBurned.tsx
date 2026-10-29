@@ -71,7 +71,7 @@ export const AdBurned: React.FC = () => {
     { at: at("ghost") + 8, name: "fall", volume: 0.8 },
     { at: c.proven, name: "whoosh-big" },
     ...Array.from({ length: 8 }, (_, k) => ({ at: at("20") - 6 + k * 3, name: "tick" as const, volume: 0.7 })),
-    ...Array.from({ length: 8 }, (_, k) => ({ at: c.proven + 8 + k * 3, name: "pop" as const, volume: 0.6 })),
+    ...Array.from({ length: 12 }, (_, k) => ({ at: c.proven + 6 + k * 2, name: "pop" as const, volume: 0.5 })),
     { at: at("20") + 18, name: "confirm" },
     { at: c.happy, name: "whoosh-big" },
     ...[c.happy, c.vista, c.action].flatMap((f) => [
