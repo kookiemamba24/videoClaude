@@ -70,9 +70,9 @@ export const BeforeAfterComic: React.FC = () => (
   <AbsoluteFill
     style={{
       fontFamily: "Inter",
-      // Halftone dots on warm paper.
+      // Comic-book blue: halftone dots over a radial burst of light.
       background:
-        "radial-gradient(circle, rgba(47,134,246,0.22) 2.2px, transparent 2.6px) 0 0 / 18px 18px, #fbf7ee",
+        "radial-gradient(circle, rgba(255,255,255,0.28) 2.6px, transparent 3px) 0 0 / 20px 20px, radial-gradient(ellipse 80% 70% at 50% 40%, #5aa9ff 0%, #2f86f6 55%, #1c5fc4 100%)",
     }}
   >
     <Panel
