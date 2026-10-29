@@ -14,7 +14,7 @@ const STAGE_SCALE = 0.66;
 const FULL_TOP = 560;
 const FULL_SCALE = 1.12;
 
-const FullContext = createContext(false);
+export const FullContext = createContext(false);
 
 // Full-screen cutaway: hides the footage (the voice carries on) and gives
 // the graphic the whole frame.
@@ -230,6 +230,8 @@ export const BadAdsFan: React.FC<{ len: number; images?: AdImage[]; anchor: { x:
 // Full-screen cutaway: homeowners (houses) bolting out of the circle.
 export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, fleeAt }) => {
   const frame = useCurrentFrame();
+  // Inside a host overlay (the VSL), the host draws the background.
+  const hosted = useContext(FullContext);
   const inP = interpolate(frame, [0, 6], [0, 1], { ...clamp, easing: OUT });
   const out = interpolate(frame, [len - 5, len], [0, 1], clamp);
   const houses = Array.from({ length: 16 }, (_, i) => {
@@ -245,7 +247,7 @@ export const LeadsFleeFull: React.FC<{ len: number; fleeAt: number }> = ({ len, 
       style={{
         position: "absolute",
         inset: 0,
-        background: "radial-gradient(ellipse 90% 60% at 50% 18%, #0b47c9 0%, #072a7a 38%, #031029 72%, #01040c 100%)",
+        background: hosted ? "transparent" : "radial-gradient(ellipse 90% 60% at 50% 18%, #0b47c9 0%, #072a7a 38%, #031029 72%, #01040c 100%)",
         opacity: inP * (1 - out),
         fontFamily: adTheme.font,
         color: "#fff",
