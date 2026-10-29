@@ -110,18 +110,18 @@ export const BeforeAfterComic: React.FC = () => (
     {/* Speech bubble from the mouth in the AFTER panel */}
     <svg width={1080} height={1350} style={{ position: "absolute", inset: 0 }}>
       <g style={{ filter: "drop-shadow(8px 8px 0 #111)" }}>
-        <path d="M806 398 L902 472 L842 390 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
-        <ellipse cx={745} cy={330} rx={170} ry={78} fill="#fff" stroke={INK} strokeWidth={7} />
+        <path d="M816 430 L904 476 L852 420 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+        <ellipse cx={760} cy={345} rx={196} ry={98} fill="#fff" stroke={INK} strokeWidth={7} />
         {/* Cover the tail's join so bubble and tail read as one shape */}
-        <path d="M810 394 L898 464 L838 386 Z" fill="#fff" />
+        <path d="M820 425 L898 470 L848 416 Z" fill="#fff" />
       </g>
     </svg>
     <div
       style={{
         position: "absolute",
-        left: 745 - 170,
-        top: 330 - 27,
-        width: 340,
+        left: 760 - 196,
+        top: 345 - 48,
+        width: 392,
         textAlign: "center",
         fontWeight: 900,
         fontSize: 52,
@@ -132,6 +132,7 @@ export const BeforeAfterComic: React.FC = () => (
       }}
     >
       OH <span style={{ color: BLUE }}>YEAH!!!</span>
+      <div style={{ fontSize: 32, marginTop: 10, letterSpacing: "-0.01em" }}>MAKE EM COME!!!</div>
     </div>
 
     {/* Guarantee banner */}
