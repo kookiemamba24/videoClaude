@@ -56,6 +56,20 @@ export const VslSfx: React.FC<{ words: Word[] }> = ({ words }) => {
     ...[4, 7, 10, 13].map((d) => ({ at: o.brand.from + d, name: "pop" as const, volume: 0.6 })),
     { at: o.brand.sticker, name: "slap", volume: 1.2 },
 
+    // Crowd shrugs and walks off
+    { at: o.brand.leave - 6, name: "pop", volume: 0.7 },
+    { at: o.brand.leave + 2, name: "whoosh", volume: 0.8 },
+
+    // Overlay: stick figure spamming ads, then raging
+    { at: o.spam.from, name: "whoosh-big" },
+    ...Array.from({ length: Math.max(0, Math.floor((o.spam.rage - o.spam.from) / 3)) }, (_, k) => ({
+      at: o.spam.from + k * 3,
+      name: (k % 3 === 0 ? "pop" : "click") as "pop" | "click",
+      volume: k % 3 === 0 ? 0.5 : 1.3,
+    })),
+    { at: o.spam.rage, name: "error" },
+    { at: o.spam.rage + 2, name: "slap", volume: 1.1 },
+
     // Overlay: feed of bad ads, then the leak list
     { at: o.feed.from, name: "whoosh-big" },
     { at: o.feed.scroll, name: "scroll" },

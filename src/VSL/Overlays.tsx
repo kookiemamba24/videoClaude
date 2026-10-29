@@ -10,6 +10,7 @@ import {
   ScrollThenHaggle,
 } from "../Ad/Graphics";
 import type { Word } from "./Captions";
+import { AdSpammer, WalkingCrowd } from "./StickFigures";
 import { makeCue } from "./cue";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -17,16 +18,19 @@ const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 // The ad's graphics are laid out on a 1080x1920 portrait canvas. Here that
 // canvas is cropped to the rows [y0, y1] the graphic uses, scaled to fit
 // above the caption box, and centred on a full-bleed blue cutaway.
-const PortraitOverlay: React.FC<{ len: number; y0: number; y1: number; children: React.ReactNode }> = ({
-  len,
-  y0,
-  y1,
-  children,
-}) => {
+const PortraitOverlay: React.FC<{
+  len: number;
+  y0: number;
+  y1: number;
+  // Optional fixed scale (e.g. to leave room below for a landscape layer).
+  k?: number;
+  landscape?: React.ReactNode;
+  children?: React.ReactNode;
+}> = ({ len, y0, y1, k: kFixed, landscape, children }) => {
   const frame = useCurrentFrame();
   const inP = interpolate(frame, [0, 7], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) });
   const out = interpolate(frame, [len - 6, len], [0, 1], clamp);
-  const k = Math.min(0.95, 850 / (y1 - y0));
+  const k = kFixed ?? Math.min(0.95, 850 / (y1 - y0));
   return (
     <AbsoluteFill
       style={{
@@ -49,20 +53,23 @@ const PortraitOverlay: React.FC<{ len: number; y0: number; y1: number; children:
       >
         <FullContext.Provider value>{children}</FullContext.Provider>
       </div>
+      {landscape}
     </AbsoluteFill>
   );
 };
 
-const Cut: React.FC<{ from: number; to: number; y0: number; y1: number; children: (len: number) => React.ReactNode }> = ({
-  from,
-  to,
-  y0,
-  y1,
-  children,
-}) => (
+const Cut: React.FC<{
+  from: number;
+  to: number;
+  y0: number;
+  y1: number;
+  k?: number;
+  landscape?: (len: number) => React.ReactNode;
+  children?: (len: number) => React.ReactNode;
+}> = ({ from, to, y0, y1, k, landscape, children }) => (
   <Sequence from={from} durationInFrames={Math.max(1, to - from)} layout="none">
-    <PortraitOverlay len={to - from} y0={y0} y1={y1}>
-      {children(to - from)}
+    <PortraitOverlay len={to - from} y0={y0} y1={y1} k={k} landscape={landscape?.(to - from)}>
+      {children?.(to - from)}
     </PortraitOverlay>
   </Sequence>
 );
@@ -74,7 +81,8 @@ export const useOverlayCues = (words: Word[], fps: number) => {
   const iEnd = find("The only question");
   return {
     at,
-    brand: { from: at("It is based on how"), to: at("So you think"), sticker: at("every other roofer showing") },
+    brand: { from: at("It is based on how"), to: at("So you think"), sticker: at("every other roofer showing"), leave: at("showing up in front") },
+    spam: { from: at("So you think"), to: at("The problem is"), rage: at("but it's NOT") },
     feed: { from: at("The problem is"), to: at("YOUR website looks"), scroll: at("running cheap") },
     premium: { from: at("First, we build"), to: at("Not another generic"), trust: at("obvious choice") },
     web: {
@@ -93,9 +101,17 @@ export const Overlays: React.FC<{ words: Word[]; fps: number }> = ({ words, fps 
   const c = useOverlayCues(words, fps);
   return (
     <>
-      <Cut from={c.brand.from} to={c.brand.to} y0={540} y1={1290}>
+      <Cut
+        from={c.brand.from}
+        to={c.brand.to}
+        y0={540}
+        y1={1290}
+        k={0.7}
+        landscape={() => <WalkingCrowd leaveAt={c.brand.leave - c.brand.from} />}
+      >
         {(len) => <SameRoofers len={len} stickerAt={c.brand.sticker - c.brand.from} />}
       </Cut>
+      <Cut from={c.spam.from} to={c.spam.to} y0={0} y1={1920} landscape={() => <AdSpammer rageAt={c.spam.rage - c.spam.from} />} />
       <Cut from={c.feed.from} to={c.feed.to} y0={540} y1={1520}>
         {/* Scroll only: the call/haggle beat is pushed past the end. */}
         {(len) => <ScrollThenHaggle len={len} scrollAt={c.feed.scroll - c.feed.from} callAt={len + 999} beatAt={len + 999} />}
