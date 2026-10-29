@@ -926,6 +926,168 @@ export const WebsiteForm: React.FC<{ len: number; sellAt: number }> = ({ len, se
   );
 };
 
+// Laptop flicking through sites we built, then a homeowner filling in the
+// quote form with the trust signals front and centre. Full-frame layout
+// (used inside a FullOverlay), positioned in absolute frame coordinates.
+// Crop anchor per screenshot so each site's headline stays in frame.
+const SITES = [
+  { src: "sites/happy.jpg", pos: "50% 0%" },
+  { src: "sites/kraft.jpg", pos: "12% 0%" },
+  { src: "sites/action.jpg", pos: "35% 0%" },
+];
+
+export const LaptopSites: React.FC<{ len: number; siteAt: number[]; formAt: number; submitAt: number }> = ({
+  len,
+  siteAt,
+  formAt,
+  submitAt,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const enter = useProgress(0, 12, back(1.3));
+  const exit = interpolate(frame, [len - 6, len], [0, 1], clamp);
+  const lift = interpolate(frame, [formAt, formAt + 12], [0, 1], { ...clamp, easing: OUT });
+  const form = useProgress(formAt, 14, back(1.2));
+  const fields = [
+    { label: "Name", text: "Sarah Mitchell" },
+    { label: "Suburb", text: "Riverside" },
+    { label: "Job", text: "Full roof replacement" },
+  ];
+  const typeStart = formAt + 6;
+  const typeEnd = submitAt - 8;
+  const per = (typeEnd - typeStart) / fields.length;
+  const press = interpolate(frame, [submitAt - 4, submitAt, submitAt + 4], [1, 0.94, 1], clamp);
+  const sent = useProgress(submitAt + 2, 12, back(1.8));
+  const W = 900;
+  const screenH = 520;
+  return (
+    <div style={{ position: "absolute", inset: 0, fontFamily: adTheme.font, color: "#fff", opacity: Math.min(1, enter * 1.4) * (1 - exit) }}>
+      {/* Laptop */}
+      <div
+        style={{
+          position: "absolute",
+          left: (1080 - W) / 2,
+          top: 300,
+          width: W,
+          scale: String((0.85 + 0.15 * enter) * (1 - 0.18 * lift)),
+          translate: `0 ${-lift * 150}px`,
+          transformOrigin: "50% 0",
+        }}
+      >
+        <div style={{ borderRadius: "26px 26px 0 0", background: "#15181d", padding: "22px 22px 26px", border: "2px solid #3a3f47" }}>
+          <div style={{ position: "relative", height: screenH, borderRadius: 8, overflow: "hidden", background: "#fff" }}>
+            {SITES.map(({ src, pos }, i) => {
+              const start = siteAt[i];
+              const next = siteAt[i + 1] ?? len + 999;
+              const inX = i === 0 ? 0 : interpolate(frame, [start, start + 8], [1, 0], { ...clamp, easing: OUT });
+              const outX = interpolate(frame, [next, next + 8], [0, -0.3], { ...clamp, easing: OUT });
+              const visible = frame >= start - 1 && frame < next + 9;
+              // Slow push-in while each site is on screen.
+              const zoom = interpolate(frame, [start, start + 2 * fps], [1, 1.06], clamp);
+              return visible ? (
+                <Img
+                  key={src}
+                  src={staticFile(src)}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: pos,
+                    translate: `${(inX + outX) * 100}% 0`,
+                    scale: String(zoom),
+                    zIndex: i,
+                    boxShadow: "-20px 0 40px rgba(0,0,0,0.4)",
+                  }}
+                />
+              ) : null;
+            })}
+          </div>
+        </div>
+        <div style={{ height: 26, margin: "0 -40px", borderRadius: "0 0 30px 30px", background: "linear-gradient(#c9ced6, #8a9099)", boxShadow: "0 30px 60px rgba(0,0,0,0.5)" }} />
+      </div>
+
+      {/* Quote form, trust first */}
+      <div
+        style={{
+          position: "absolute",
+          left: 90,
+          right: 90,
+          top: 640,
+          borderRadius: 34,
+          padding: "34px 40px 40px",
+          background: "#fff",
+          color: "#0d1420",
+          boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
+          opacity: form,
+          translate: `0 ${(1 - form) * 260}px`,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+          <div style={{ fontWeight: 900, fontSize: 96, lineHeight: 0.9, letterSpacing: "-0.04em" }}>4.9</div>
+          <div>
+            <div style={{ color: "#f5b301", fontSize: 46, letterSpacing: 2, lineHeight: 1 }}>★★★★★</div>
+            <div style={{ fontWeight: 700, fontSize: 28, color: "#4a5565", marginTop: 6 }}>from 200+ local reviews</div>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" }}>
+          {["Licensed & insured", "Fixed-price quotes", "Workmanship guarantee"].map((t, i) => {
+            const p = interpolate(frame, [formAt + 6 + i * 4, formAt + 16 + i * 4], [0, 1], { ...clamp, easing: back(1.8) });
+            return (
+              <div key={t} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 16px", borderRadius: 999, background: "#eaf3ff", color: adTheme.accentDeep, fontWeight: 800, fontSize: 22, scale: String(p), opacity: p }}>
+                <Check p={p} size={24} color={adTheme.accentDeep} />
+                {t}
+              </div>
+            );
+          })}
+        </div>
+        <div style={{ fontWeight: 900, fontSize: 36, marginTop: 26 }}>Get your free roof quote</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 16 }}>
+          {fields.map((f, i) => {
+            const st = typeStart + i * per;
+            const n = Math.floor(interpolate(frame, [st, st + per * 0.85], [0, f.text.length], clamp));
+            const active = frame >= st && frame < st + per;
+            return (
+              <div key={f.label} style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 20px", borderRadius: 14, border: `2.5px solid ${active ? adTheme.accent : "#d6dbe3"}`, fontSize: 28, fontWeight: 600 }}>
+                <span style={{ color: "#8a94a3", fontWeight: 700, fontSize: 22, width: 76 }}>{f.label}</span>
+                {f.text.slice(0, n)}
+                <span style={{ opacity: active && frame % 10 < 5 ? 1 : 0, color: adTheme.accentDeep }}>|</span>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{ marginTop: 18, padding: "22px", borderRadius: 16, background: `linear-gradient(135deg, ${adTheme.accentDeep}, ${adTheme.accent})`, color: "#fff", textAlign: "center", fontWeight: 900, fontSize: 34, scale: String(press) }}>
+          Book my free inspection
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: -40,
+            translate: "-50% 0",
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            padding: "16px 28px",
+            borderRadius: 999,
+            background: "#0d1420",
+            color: "#fff",
+            fontWeight: 800,
+            fontSize: 30,
+            whiteSpace: "nowrap",
+            boxShadow: "0 16px 40px rgba(0,0,0,0.45)",
+            scale: String(sent),
+          }}
+        >
+          <Check p={sent} size={34} />
+          Request sent. Sold before the call
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const FollowUpPhone: React.FC<{ len: number; contactAt: number; qualifyAt: number; bookedAt: number }> = ({
   len,
   contactAt,

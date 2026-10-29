@@ -21,7 +21,7 @@ import {
   SameRoofers,
   ScrollThenHaggle,
   Unpredictable,
-  WebsiteForm,
+  LaptopSites,
 } from "./Graphics";
 
 const words = captions as Word[];
@@ -138,11 +138,14 @@ export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumA
     { at: c.cheap + 8, name: "zap", volume: 0.7 },
     { at: at("The best one") - 4, name: "fall", volume: 0.7 },
     { at: at("The best one"), name: "success" },
-    { at: c.web, name: "whoosh" },
+    { at: c.web, name: "whoosh-big" },
+    { at: at("website"), name: "whoosh", volume: 0.8 },
+    { at: at("sharp"), name: "whoosh", volume: 0.8 },
+    { at: at("it does the selling"), name: "card" },
     // Typing into the three form fields.
-    ...[10, 24, 38].flatMap((st) => [0, 2, 4, 6, 8, 10].map((d) => ({ at: c.web + st + d, name: "click" as const, volume: 1.4 }))),
-    { at: at("does the selling") - 8, name: "click", volume: 2 },
-    { at: at("does the selling"), name: "confirm" },
+    ...Array.from({ length: 22 }, (_, k) => ({ at: at("it does the selling") + 8 + k * 2.6, name: "click" as const, volume: 1.4 })),
+    { at: at("phone"), name: "click", volume: 2.2 },
+    { at: at("phone") + 3, name: "success" },
     { at: c.follow, name: "whoosh" },
     { at: at("contacts"), name: "notify" },
     ...[0, 6, 12].map((d) => ({ at: at("qualifying") + d, name: "pop" as const, volume: 0.8 })),
@@ -238,7 +241,18 @@ export const AdScaring: React.FC<AdScaringProps> = ({ badAds = BAD_ADS, premiumA
             <CheapVsBest len={len} bestAt={at("The best one") - c.cheap} />
           </FullOverlay>
         )}</Scene>
-      <Scene from={c.web} to={c.follow}>{(len) => <WebsiteForm len={len} sellAt={at("does the selling") - c.web} />}</Scene>
+      <Scene from={c.web} to={c.follow}>
+        {(len) => (
+          <FullOverlay len={len}>
+            <LaptopSites
+              len={len}
+              siteAt={[0, at("website") - c.web, at("sharp") - c.web]}
+              formAt={at("it does the selling") - c.web}
+              submitAt={at("phone") - c.web}
+            />
+          </FullOverlay>
+        )}
+      </Scene>
       <Scene from={c.follow} to={c.tyre}>
         {(len) => (
           <FollowUpPhone
