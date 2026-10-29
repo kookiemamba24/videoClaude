@@ -1,0 +1,1658 @@
+[
+ {
+  "text": "Roofers,",
+  "startMs": 0,
+  "endMs": 550,
+  "timestampMs": 275,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " have",
+  "startMs": 780,
+  "endMs": 1000,
+  "timestampMs": 890,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 1000,
+  "endMs": 1080,
+  "timestampMs": 1040,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " been",
+  "startMs": 1080,
+  "endMs": 1270,
+  "timestampMs": 1175,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " burned",
+  "startMs": 1270,
+  "endMs": 1410,
+  "timestampMs": 1340,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 1410,
+  "endMs": 1480,
+  "timestampMs": 1445,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " marketing",
+  "startMs": 1480,
+  "endMs": 1970,
+  "timestampMs": 1725,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " agencies",
+  "startMs": 1970,
+  "endMs": 2430,
+  "timestampMs": 2200,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " before?",
+  "startMs": 2430,
+  "endMs": 2770,
+  "timestampMs": 2600,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " They",
+  "startMs": 3000,
+  "endMs": 3100,
+  "timestampMs": 3050,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " promise",
+  "startMs": 3100,
+  "endMs": 3550,
+  "timestampMs": 3325,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 3550,
+  "endMs": 3640,
+  "timestampMs": 3595,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 3640,
+  "endMs": 3710,
+  "timestampMs": 3675,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " world",
+  "startMs": 3710,
+  "endMs": 3990,
+  "timestampMs": 3850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 3990,
+  "endMs": 4080,
+  "timestampMs": 4035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 4080,
+  "endMs": 4170,
+  "timestampMs": 4125,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 4170,
+  "endMs": 4230,
+  "timestampMs": 4200,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " time",
+  "startMs": 4230,
+  "endMs": 4420,
+  "timestampMs": 4325,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 4420,
+  "endMs": 4510,
+  "timestampMs": 4465,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " take",
+  "startMs": 4510,
+  "endMs": 4870,
+  "timestampMs": 4690,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " your",
+  "startMs": 4870,
+  "endMs": 5000,
+  "timestampMs": 4935,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " money",
+  "startMs": 5000,
+  "endMs": 5330,
+  "timestampMs": 5165,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 5550,
+  "endMs": 5680,
+  "timestampMs": 5615,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 5680,
+  "endMs": 5710,
+  "timestampMs": 5695,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " left",
+  "startMs": 5710,
+  "endMs": 5890,
+  "timestampMs": 5800,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " with",
+  "startMs": 5890,
+  "endMs": 5980,
+  "timestampMs": 5935,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 5980,
+  "endMs": 6020,
+  "timestampMs": 6000,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " bunch",
+  "startMs": 6020,
+  "endMs": 6260,
+  "timestampMs": 6140,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 6260,
+  "endMs": 6320,
+  "timestampMs": 6290,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " weak",
+  "startMs": 6320,
+  "endMs": 6650,
+  "timestampMs": 6485,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " creatives",
+  "startMs": 6650,
+  "endMs": 7150,
+  "timestampMs": 6900,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 7150,
+  "endMs": 7320,
+  "timestampMs": 7235,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " then",
+  "startMs": 7320,
+  "endMs": 7450,
+  "timestampMs": 7385,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 7450,
+  "endMs": 7550,
+  "timestampMs": 7500,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ghost",
+  "startMs": 7550,
+  "endMs": 7930,
+  "timestampMs": 7740,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you?",
+  "startMs": 7930,
+  "endMs": 8070,
+  "timestampMs": 8000,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Well",
+  "startMs": 8200,
+  "endMs": 8450,
+  "timestampMs": 8325,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 8450,
+  "endMs": 8510,
+  "timestampMs": 8480,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " difference",
+  "startMs": 8510,
+  "endMs": 8860,
+  "timestampMs": 8685,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 8860,
+  "endMs": 9030,
+  "timestampMs": 8945,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 9030,
+  "endMs": 9180,
+  "timestampMs": 9105,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " genuinely",
+  "startMs": 9180,
+  "endMs": 9580,
+  "timestampMs": 9380,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " care",
+  "startMs": 9580,
+  "endMs": 9680,
+  "timestampMs": 9630,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " about",
+  "startMs": 9680,
+  "endMs": 9870,
+  "timestampMs": 9775,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " our",
+  "startMs": 9870,
+  "endMs": 9930,
+  "timestampMs": 9900,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " clients",
+  "startMs": 9930,
+  "endMs": 10310,
+  "timestampMs": 10120,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " winning",
+  "startMs": 10310,
+  "endMs": 10710,
+  "timestampMs": 10510,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 10710,
+  "endMs": 10990,
+  "timestampMs": 10850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " our",
+  "startMs": 10990,
+  "endMs": 11150,
+  "timestampMs": 11070,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " results",
+  "startMs": 11150,
+  "endMs": 11490,
+  "timestampMs": 11320,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 11490,
+  "endMs": 11600,
+  "timestampMs": 11545,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " proven",
+  "startMs": 11600,
+  "endMs": 11950,
+  "timestampMs": 11775,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " based",
+  "startMs": 11950,
+  "endMs": 12230,
+  "timestampMs": 12090,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " on",
+  "startMs": 12230,
+  "endMs": 12340,
+  "timestampMs": 12285,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " working",
+  "startMs": 12340,
+  "endMs": 12650,
+  "timestampMs": 12495,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " with",
+  "startMs": 12650,
+  "endMs": 12750,
+  "timestampMs": 12700,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 20",
+  "startMs": 12750,
+  "endMs": 13380,
+  "timestampMs": 13065,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " different",
+  "startMs": 13380,
+  "endMs": 13840,
+  "timestampMs": 13610,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " roofing",
+  "startMs": 13840,
+  "endMs": 14190,
+  "timestampMs": 14015,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " companies.",
+  "startMs": 14190,
+  "endMs": 14860,
+  "timestampMs": 14525,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Happy",
+  "startMs": 14860,
+  "endMs": 15090,
+  "timestampMs": 14975,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 15090,
+  "endMs": 15460,
+  "timestampMs": 15275,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " doing",
+  "startMs": 15460,
+  "endMs": 15670,
+  "timestampMs": 15565,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $1.2M",
+  "startMs": 15670,
+  "endMs": 16550,
+  "timestampMs": 16110,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 16770,
+  "endMs": 16880,
+  "timestampMs": 16825,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 70",
+  "startMs": 16880,
+  "endMs": 17240,
+  "timestampMs": 17060,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 17240,
+  "endMs": 17540,
+  "timestampMs": 17390,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Vista",
+  "startMs": 17770,
+  "endMs": 18080,
+  "timestampMs": 17925,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 18080,
+  "endMs": 18410,
+  "timestampMs": 18245,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " doing",
+  "startMs": 18410,
+  "endMs": 18610,
+  "timestampMs": 18510,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $96K",
+  "startMs": 18610,
+  "endMs": 19530,
+  "timestampMs": 19070,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 19670,
+  "endMs": 19770,
+  "timestampMs": 19720,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " under",
+  "startMs": 19770,
+  "endMs": 19970,
+  "timestampMs": 19870,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 30",
+  "startMs": 19970,
+  "endMs": 20290,
+  "timestampMs": 20130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days",
+  "startMs": 20290,
+  "endMs": 20510,
+  "timestampMs": 20400,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " from",
+  "startMs": 20510,
+  "endMs": 20650,
+  "timestampMs": 20580,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " just",
+  "startMs": 20650,
+  "endMs": 21020,
+  "timestampMs": 20835,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 3",
+  "startMs": 21020,
+  "endMs": 21390,
+  "timestampMs": 21205,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " jobs.",
+  "startMs": 21390,
+  "endMs": 21710,
+  "timestampMs": 21550,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Action",
+  "startMs": 22040,
+  "endMs": 22370,
+  "timestampMs": 22205,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " Roofing",
+  "startMs": 22370,
+  "endMs": 22670,
+  "timestampMs": 22520,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " doing",
+  "startMs": 22670,
+  "endMs": 22820,
+  "timestampMs": 22745,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " $190,000",
+  "startMs": 22820,
+  "endMs": 24100,
+  "timestampMs": 23460,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 24100,
+  "endMs": 24170,
+  "timestampMs": 24135,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " under",
+  "startMs": 24170,
+  "endMs": 24390,
+  "timestampMs": 24280,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " 90",
+  "startMs": 24390,
+  "endMs": 24680,
+  "timestampMs": 24535,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " days.",
+  "startMs": 24680,
+  "endMs": 24960,
+  "timestampMs": 24820,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 25150,
+  "endMs": 25320,
+  "timestampMs": 25235,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 25320,
+  "endMs": 25380,
+  "timestampMs": 25350,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " all",
+  "startMs": 25380,
+  "endMs": 25580,
+  "timestampMs": 25480,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " went",
+  "startMs": 25580,
+  "endMs": 25770,
+  "timestampMs": 25675,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " through",
+  "startMs": 25770,
+  "endMs": 25930,
+  "timestampMs": 25850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 25930,
+  "endMs": 25990,
+  "timestampMs": 25960,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " same",
+  "startMs": 25990,
+  "endMs": 26180,
+  "timestampMs": 26085,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " system",
+  "startMs": 26180,
+  "endMs": 26460,
+  "timestampMs": 26320,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 26460,
+  "endMs": 26580,
+  "timestampMs": 26520,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " put",
+  "startMs": 26580,
+  "endMs": 26780,
+  "timestampMs": 26680,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " them",
+  "startMs": 26780,
+  "endMs": 27030,
+  "timestampMs": 26905,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " under.",
+  "startMs": 27030,
+  "endMs": 27240,
+  "timestampMs": 27135,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " High",
+  "startMs": 27400,
+  "endMs": 27590,
+  "timestampMs": 27495,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " quality",
+  "startMs": 27590,
+  "endMs": 27920,
+  "timestampMs": 27755,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " ad",
+  "startMs": 27920,
+  "endMs": 28100,
+  "timestampMs": 28010,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " creatives",
+  "startMs": 28100,
+  "endMs": 28460,
+  "timestampMs": 28280,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " we",
+  "startMs": 28460,
+  "endMs": 28610,
+  "timestampMs": 28535,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " filmed",
+  "startMs": 28610,
+  "endMs": 28860,
+  "timestampMs": 28735,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 28860,
+  "endMs": 28960,
+  "timestampMs": 28910,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " person",
+  "startMs": 28960,
+  "endMs": 29290,
+  "timestampMs": 29125,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 29290,
+  "endMs": 29380,
+  "timestampMs": 29335,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " edited",
+  "startMs": 29380,
+  "endMs": 29710,
+  "timestampMs": 29545,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 29710,
+  "endMs": 29870,
+  "timestampMs": 29790,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " our",
+  "startMs": 29870,
+  "endMs": 29990,
+  "timestampMs": 29930,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " team.",
+  "startMs": 29990,
+  "endMs": 30290,
+  "timestampMs": 30140,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " Our",
+  "startMs": 30290,
+  "endMs": 30450,
+  "timestampMs": 30370,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " customer",
+  "startMs": 30450,
+  "endMs": 30830,
+  "timestampMs": 30640,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " service",
+  "startMs": 30830,
+  "endMs": 31160,
+  "timestampMs": 30995,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " team",
+  "startMs": 31160,
+  "endMs": 31350,
+  "timestampMs": 31255,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " qualifying",
+  "startMs": 31350,
+  "endMs": 31870,
+  "timestampMs": 31610,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 31870,
+  "endMs": 31930,
+  "timestampMs": 31900,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " leads",
+  "startMs": 31930,
+  "endMs": 32250,
+  "timestampMs": 32090,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 32250,
+  "endMs": 32390,
+  "timestampMs": 32320,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " be",
+  "startMs": 32390,
+  "endMs": 32470,
+  "timestampMs": 32430,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " booked",
+  "startMs": 32470,
+  "endMs": 32720,
+  "timestampMs": 32595,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " into",
+  "startMs": 32870,
+  "endMs": 33130,
+  "timestampMs": 33000,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " your",
+  "startMs": 33130,
+  "endMs": 33220,
+  "timestampMs": 33175,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " calendar",
+  "startMs": 33220,
+  "endMs": 33620,
+  "timestampMs": 33420,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " after",
+  "startMs": 33860,
+  "endMs": 34100,
+  "timestampMs": 33980,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " they",
+  "startMs": 34100,
+  "endMs": 34160,
+  "timestampMs": 34130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " submit",
+  "startMs": 34160,
+  "endMs": 34440,
+  "timestampMs": 34300,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 34440,
+  "endMs": 34470,
+  "timestampMs": 34455,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " form",
+  "startMs": 34470,
+  "endMs": 34780,
+  "timestampMs": 34625,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " or",
+  "startMs": 34900,
+  "endMs": 35160,
+  "timestampMs": 35030,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " give",
+  "startMs": 35350,
+  "endMs": 35520,
+  "timestampMs": 35435,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " your",
+  "startMs": 35520,
+  "endMs": 35630,
+  "timestampMs": 35575,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " company",
+  "startMs": 35630,
+  "endMs": 36000,
+  "timestampMs": 35815,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " a",
+  "startMs": 36110,
+  "endMs": 36150,
+  "timestampMs": 36130,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " call.",
+  "startMs": 36150,
+  "endMs": 36550,
+  "timestampMs": 36350,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " And",
+  "startMs": 36660,
+  "endMs": 36780,
+  "timestampMs": 36720,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " all",
+  "startMs": 36780,
+  "endMs": 36890,
+  "timestampMs": 36835,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 36890,
+  "endMs": 37000,
+  "timestampMs": 36945,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " gotta",
+  "startMs": 37000,
+  "endMs": 37200,
+  "timestampMs": 37100,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " do",
+  "startMs": 37200,
+  "endMs": 37350,
+  "timestampMs": 37275,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " is",
+  "startMs": 37350,
+  "endMs": 37630,
+  "timestampMs": 37490,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " be",
+  "startMs": 37630,
+  "endMs": 37720,
+  "timestampMs": 37675,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " good",
+  "startMs": 37720,
+  "endMs": 37880,
+  "timestampMs": 37800,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " at",
+  "startMs": 37880,
+  "endMs": 37980,
+  "timestampMs": 37930,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " your",
+  "startMs": 37980,
+  "endMs": 38090,
+  "timestampMs": 38035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " job!",
+  "startMs": 38090,
+  "endMs": 38370,
+  "timestampMs": 38230,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " So",
+  "startMs": 38610,
+  "endMs": 38690,
+  "timestampMs": 38650,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 38690,
+  "endMs": 38760,
+  "timestampMs": 38725,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " can",
+  "startMs": 38760,
+  "endMs": 38880,
+  "timestampMs": 38820,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " finally",
+  "startMs": 38880,
+  "endMs": 39190,
+  "timestampMs": 39035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " KICK",
+  "startMs": 39190,
+  "endMs": 39650,
+  "timestampMs": 39420,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " THOSE",
+  "startMs": 39650,
+  "endMs": 39930,
+  "timestampMs": 39790,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " AGENCIES",
+  "startMs": 39930,
+  "endMs": 40410,
+  "timestampMs": 40170,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 40410,
+  "endMs": 40530,
+  "timestampMs": 40470,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " the",
+  "startMs": 40530,
+  "endMs": 40610,
+  "timestampMs": 40570,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " kerb!",
+  "startMs": 40610,
+  "endMs": 40910,
+  "timestampMs": 40760,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " No",
+  "startMs": 41030,
+  "endMs": 41190,
+  "timestampMs": 41110,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 41190,
+  "endMs": 41310,
+  "timestampMs": 41250,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " second",
+  "startMs": 41310,
+  "endMs": 41600,
+  "timestampMs": 41455,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " guessing",
+  "startMs": 41600,
+  "endMs": 41890,
+  "timestampMs": 41745,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " whether",
+  "startMs": 41890,
+  "endMs": 42050,
+  "timestampMs": 41970,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " it",
+  "startMs": 42050,
+  "endMs": 42110,
+  "timestampMs": 42080,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " works",
+  "startMs": 42110,
+  "endMs": 42370,
+  "timestampMs": 42240,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " out",
+  "startMs": 42370,
+  "endMs": 42600,
+  "timestampMs": 42485,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 42600,
+  "endMs": 42820,
+  "timestampMs": 42710,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " no",
+  "startMs": 42820,
+  "endMs": 43000,
+  "timestampMs": 42910,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " more",
+  "startMs": 43000,
+  "endMs": 43180,
+  "timestampMs": 43090,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " inconsistent",
+  "startMs": 43180,
+  "endMs": 43790,
+  "timestampMs": 43485,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " months.",
+  "startMs": 43790,
+  "endMs": 44080,
+  "timestampMs": 43935,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " If",
+  "startMs": 44340,
+  "endMs": 44520,
+  "timestampMs": 44430,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 44520,
+  "endMs": 44720,
+  "timestampMs": 44620,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " win,",
+  "startMs": 44720,
+  "endMs": 44970,
+  "timestampMs": 44845,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " WE",
+  "startMs": 45240,
+  "endMs": 45510,
+  "timestampMs": 45375,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " WIN!",
+  "startMs": 45510,
+  "endMs": 45820,
+  "timestampMs": 45665,
+  "confidence": null,
+  "paragraphEnd": true
+ },
+ {
+  "text": " So",
+  "startMs": 45880,
+  "endMs": 45980,
+  "timestampMs": 45930,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " if",
+  "startMs": 45980,
+  "endMs": 46090,
+  "timestampMs": 46035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " you",
+  "startMs": 46090,
+  "endMs": 46230,
+  "timestampMs": 46160,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " are",
+  "startMs": 46230,
+  "endMs": 46270,
+  "timestampMs": 46250,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " sick",
+  "startMs": 46270,
+  "endMs": 46470,
+  "timestampMs": 46370,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 46470,
+  "endMs": 46590,
+  "timestampMs": 46530,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " tired",
+  "startMs": 46590,
+  "endMs": 46730,
+  "timestampMs": 46660,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " of",
+  "startMs": 46730,
+  "endMs": 46800,
+  "timestampMs": 46765,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " being",
+  "startMs": 46800,
+  "endMs": 46950,
+  "timestampMs": 46875,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " burned",
+  "startMs": 46950,
+  "endMs": 47120,
+  "timestampMs": 47035,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " by",
+  "startMs": 47120,
+  "endMs": 47290,
+  "timestampMs": 47205,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " other",
+  "startMs": 47290,
+  "endMs": 47450,
+  "timestampMs": 47370,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " agencies",
+  "startMs": 47450,
+  "endMs": 47990,
+  "timestampMs": 47720,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " and",
+  "startMs": 47990,
+  "endMs": 48110,
+  "timestampMs": 48050,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " want",
+  "startMs": 48110,
+  "endMs": 48250,
+  "timestampMs": 48180,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " to",
+  "startMs": 48250,
+  "endMs": 48320,
+  "timestampMs": 48285,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " actually",
+  "startMs": 48320,
+  "endMs": 48740,
+  "timestampMs": 48530,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " get",
+  "startMs": 48740,
+  "endMs": 48920,
+  "timestampMs": 48830,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " results",
+  "startMs": 48920,
+  "endMs": 49220,
+  "timestampMs": 49070,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " for",
+  "startMs": 49220,
+  "endMs": 49320,
+  "timestampMs": 49270,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " your",
+  "startMs": 49320,
+  "endMs": 49470,
+  "timestampMs": 49395,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " business",
+  "startMs": 49470,
+  "endMs": 49740,
+  "timestampMs": 49605,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " like",
+  "startMs": 49740,
+  "endMs": 49880,
+  "timestampMs": 49810,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " my",
+  "startMs": 49880,
+  "endMs": 50000,
+  "timestampMs": 49940,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " clients,",
+  "startMs": 50000,
+  "endMs": 50350,
+  "timestampMs": 50175,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " then",
+  "startMs": 50350,
+  "endMs": 50680,
+  "timestampMs": 50515,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " get",
+  "startMs": 50680,
+  "endMs": 50820,
+  "timestampMs": 50750,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " in",
+  "startMs": 50820,
+  "endMs": 50880,
+  "timestampMs": 50850,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " touch",
+  "startMs": 50880,
+  "endMs": 51030,
+  "timestampMs": 50955,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " with",
+  "startMs": 51030,
+  "endMs": 51180,
+  "timestampMs": 51105,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " us",
+  "startMs": 51180,
+  "endMs": 51320,
+  "timestampMs": 51250,
+  "confidence": null,
+  "paragraphEnd": false
+ },
+ {
+  "text": " today!",
+  "startMs": 51320,
+  "endMs": 51700,
+  "timestampMs": 51510,
+  "confidence": null,
+  "paragraphEnd": true
+ }
+]

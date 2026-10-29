@@ -6,6 +6,7 @@ import { BeforeAfterComic } from "./Static/BeforeAfterComic";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
 import { VSL, VSL_DURATION_FRAMES } from "./VSL/VSL";
 import { AD_SCARING_FRAMES, AdScaring } from "./Ad/AdScaring";
+import { AD_BURNED_FRAMES, AdBurned } from "./AdBurned/AdBurned";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
@@ -102,6 +103,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="ResultPost" component={ResultPost} width={1080} height={1350} />
       <Still id="BeforeAfter" component={BeforeAfter} width={2000} height={2000} />
       <Still id="BeforeAfterComic" component={BeforeAfterComic} width={1080} height={1350} />
+      <Composition id="AdBurned" component={AdBurned} durationInFrames={AD_BURNED_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
