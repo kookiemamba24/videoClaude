@@ -88,21 +88,21 @@ export const BeforeAfterComic: React.FC = () => (
     {/* Speech bubble from the mouth in the AFTER panel */}
     <svg width={1080} height={1350} style={{ position: "absolute", inset: 0 }}>
       <g style={{ filter: "drop-shadow(8px 8px 0 #111)" }}>
-        <path d="M842 318 L922 430 L872 312 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
-        <ellipse cx={770} cy={258} rx={200} ry={92} fill="#fff" stroke={INK} strokeWidth={7} />
+        <path d="M806 318 L898 402 L842 310 Z" fill="#fff" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+        <ellipse cx={745} cy={250} rx={170} ry={78} fill="#fff" stroke={INK} strokeWidth={7} />
         {/* Cover the tail's join so bubble and tail read as one shape */}
-        <path d="M846 322 L918 420 L868 316 Z" fill="#fff" />
+        <path d="M810 314 L894 394 L838 306 Z" fill="#fff" />
       </g>
     </svg>
     <div
       style={{
         position: "absolute",
-        left: 770 - 200,
-        top: 258 - 40,
-        width: 400,
+        left: 745 - 170,
+        top: 250 - 27,
+        width: 340,
         textAlign: "center",
         fontWeight: 900,
-        fontSize: 60,
+        fontSize: 52,
         lineHeight: 1,
         letterSpacing: "-0.03em",
         color: INK,
