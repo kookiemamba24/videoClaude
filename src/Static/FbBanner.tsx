@@ -193,6 +193,7 @@ export const FbBanner: React.FC = () => (
         </radialGradient>
       </defs>
 
+      <g transform="translate(108 52) scale(0.9)">
       {/* conifers behind the right wing */}
       <path d="M1060 452 L1092 300 L1124 452 Z" fill="#0b2a2a" />
       <path d="M1110 452 L1150 270 L1192 452 Z" fill="#0d3330" />
@@ -263,6 +264,7 @@ export const FbBanner: React.FC = () => (
         <path key={k} d={`M${700 + k * 120} ${558 + (k % 2) * 8} q20 -4 40 0 t40 0`} stroke="rgba(255,255,255,0.55)" strokeWidth={2} fill="none" />
       ))}
       <rect x={860} y={552} width={70} height={22} fill="rgba(255,210,140,0.35)" style={{ filter: "blur(3px)" }} />
+      </g>
     </svg>
 
     {/* Left: wordmark + headline */}
