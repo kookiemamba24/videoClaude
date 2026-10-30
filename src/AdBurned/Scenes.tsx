@@ -9,6 +9,45 @@ const back = (s = 1.8) => Easing.out(Easing.back(s));
 const OUT = Easing.bezier(0.16, 1, 0.3, 1);
 const FLAME = ["#ff3b1f", "#ff7a00", "#ffc21a"];
 
+// Shows rows [y0, y1] of a full-frame (1080x1920) layout, scaled by k and
+// placed with its top at `top` — used to sit graphics on the chest, clear of
+// the face. Fades in/out over `len`.
+export const OnChest: React.FC<{ len: number; y0: number; y1: number; k: number; top: number; children: React.ReactNode }> = ({
+  len,
+  y0,
+  y1,
+  k,
+  top,
+  children,
+}) => {
+  const frame = useCurrentFrame();
+  const inP = interpolate(frame, [0, 10], [0, 1], { ...clamp, easing: back(1.3) });
+  const out = interpolate(frame, [len - 6, len], [1, 0], clamp);
+  const w = 1080 * k;
+  const h = (y1 - y0) * k;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: (1080 - w) / 2 - 24,
+        top: top - 20,
+        width: w + 48,
+        height: h + 40,
+        borderRadius: 32,
+        background: "rgba(8,12,20,0.72)",
+        border: "1.5px solid rgba(255,255,255,0.18)",
+        boxShadow: "0 24px 60px rgba(0,0,0,0.45)",
+        backdropFilter: "blur(24px)",
+        overflow: "hidden",
+        opacity: Math.min(1, inP * 1.3) * out,
+        scale: String(0.9 + 0.1 * inP),
+      }}
+    >
+      <div style={{ position: "absolute", left: 24, top: 20 - y0 * k, width: 1080, height: 1920, scale: String(k), transformOrigin: "0 0" }}>{children}</div>
+    </div>
+  );
+};
+
 // Wobbling cartoon flame rooted at (x, y).
 const Flame: React.FC<{ x: number; y: number; h: number; seed: number }> = ({ x, y, h, seed }) => {
   const frame = useCurrentFrame();
@@ -288,13 +327,14 @@ export const CreativesShowcase: React.FC<{ len: number }> = ({ len }) => {
 };
 
 // Ronaldo-style kick: power stance, run-up, huge strike, ball labelled
-// "another marketing agency" rockets off and lands on the kerb, then SIUUU.
+// "another marketing agency" rockets into the back of the net, then SIUUU.
 export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number }> = ({ len, kickAt, landAt }) => {
   const frame = useCurrentFrame();
   const out = interpolate(frame, [len - 6, len], [1, 0], clamp);
   const GROUND = 1330;
   const ballStart: [number, number] = [600, GROUND - 86];
-  const kerb: [number, number] = [905, GROUND - 6];
+  // Where the ball ends up: inside the goal.
+  const net: [number, number] = [960, GROUND + 4];
 
   // Player pose + position over time.
   const runStart = 10;
@@ -326,15 +366,18 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
   }
   const spinFlip = frame >= landAt + 2 && frame < landAt + 16 ? Math.floor((frame - landAt) / 3) % 2 === 0 : false;
 
-  // Ball flight: shoots up off the top, then drops onto the kerb.
+  // Ball flight: a rising rocket straight into the top of the net.
   const flight = interpolate(frame, [kickAt, landAt], [0, 1], clamp);
-  const bx = (1 - flight) ** 2 * ballStart[0] + 2 * (1 - flight) * flight * 1150 + flight ** 2 * kerb[0];
-  const by = (1 - flight) ** 2 * ballStart[1] + 2 * (1 - flight) * flight * -700 + flight ** 2 * (kerb[1] - 90);
+  const bx = (1 - flight) ** 2 * ballStart[0] + 2 * (1 - flight) * flight * 780 + flight ** 2 * net[0];
+  const by = (1 - flight) ** 2 * ballStart[1] + 2 * (1 - flight) * flight * (GROUND - 560) + flight ** 2 * (net[1] - 230);
   const settled = frame >= landAt;
   const bounce = settled ? Math.abs(Math.sin((frame - landAt) / 2.2)) * Math.max(0, 40 - (frame - landAt) * 4) : 0;
-  const ballPos: [number, number] = frame < kickAt ? ballStart : settled ? [kerb[0], kerb[1] - 90 - bounce] : [bx, by];
+  // After hitting the net it drops to the grass inside the goal.
+  const drop = settled ? interpolate(frame, [landAt, landAt + 8], [0, 1], { ...clamp, easing: Easing.in(Easing.quad) }) : 0;
+  const ballPos: [number, number] = frame < kickAt ? ballStart : settled ? [net[0] + 20 * drop, net[1] - 230 + drop * 156 - bounce] : [bx, by];
+  const bulge = interpolate(frame, [landAt - 1, landAt + 2, landAt + 12], [0, 1, 0.2], clamp);
   const spin = frame < kickAt ? 0 : (frame - kickAt) * 38;
-  const ballScale = settled ? 0.85 : 1 - Math.sin(flight * Math.PI) * 0.35;
+  const ballScale = settled ? 0.8 : 1 - flight * 0.2;
   const trail = !settled && frame >= kickAt;
 
   const impact = interpolate(frame, [kickAt, kickAt + 2, kickAt + 10], [0, 1, 0], clamp);
@@ -344,15 +387,37 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
   return (
     <div style={{ position: "absolute", inset: 0, opacity: out, translate: `${shake}px ${shake * 0.6}px` }}>
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
-        {/* Pitch + kerb */}
+        {/* Pitch */}
         <rect x={0} y={GROUND} width={1080} height={20} fill="rgba(255,255,255,0.18)" />
         <line x1={0} x2={1080} y1={GROUND} y2={GROUND} stroke="#fff" strokeWidth={5} />
-        <rect x={800} y={GROUND - 6} width={280} height={44} fill="#8d939c" stroke="#111" strokeWidth={5} />
-        <line x1={990} x2={990} y1={GROUND - 6} y2={GROUND - 250} stroke="#fff" strokeWidth={8} />
-        <rect x={922} y={GROUND - 330} width={136} height={84} rx={8} fill="#1e8f3e" stroke="#fff" strokeWidth={5} />
-        <text x={990} y={GROUND - 276} textAnchor="middle" fontFamily="Inter" fontWeight={900} fontSize={40} fill="#fff">
-          KERB
-        </text>
+
+        {/* Goal: front frame, net receding to the right, bulging on impact */}
+        <g>
+          {(() => {
+            const fx = 830;
+            const top = GROUND - 340;
+            const bx2 = 1050 + bulge * 40;
+            const btop = GROUND - 290 - bulge * 10;
+            const netLines: React.ReactNode[] = [];
+            for (let k = 0; k <= 8; k++) {
+              const t = k / 8;
+              netLines.push(<line key={`h${k}`} x1={fx} y1={top + (GROUND - top) * t} x2={bx2} y2={btop + (GROUND - btop) * t} stroke="rgba(255,255,255,0.45)" strokeWidth={3} />);
+            }
+            for (let k = 0; k <= 6; k++) {
+              const t = k / 6;
+              const x = fx + (bx2 - fx) * t;
+              const y0 = top + (btop - top) * t;
+              netLines.push(<line key={`v${k}`} x1={x} y1={y0} x2={x} y2={GROUND} stroke="rgba(255,255,255,0.45)" strokeWidth={3} />);
+            }
+            return (
+              <>
+                {netLines}
+                <path d={`M${fx} ${top} L${bx2} ${btop} L${bx2} ${GROUND}`} fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth={5} />
+                <path d={`M${fx} ${GROUND} L${fx} ${top} L${fx + 230} ${top}`} fill="none" stroke="#fff" strokeWidth={14} strokeLinecap="round" />
+              </>
+            );
+          })()}
+        </g>
 
         {/* Speed lines during the run-up */}
         {frame >= runStart && frame < kickAt
@@ -370,8 +435,8 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
         {trail
           ? Array.from({ length: 6 }, (_, k) => {
               const f2 = interpolate(frame - (k + 1) * 1.5, [kickAt, landAt], [0, 1], clamp);
-              const tx = (1 - f2) ** 2 * ballStart[0] + 2 * (1 - f2) * f2 * 1150 + f2 ** 2 * kerb[0];
-              const ty = (1 - f2) ** 2 * ballStart[1] + 2 * (1 - f2) * f2 * -700 + f2 ** 2 * (kerb[1] - 90);
+              const tx = (1 - f2) ** 2 * ballStart[0] + 2 * (1 - f2) * f2 * 780 + f2 ** 2 * net[0];
+              const ty = (1 - f2) ** 2 * ballStart[1] + 2 * (1 - f2) * f2 * (GROUND - 560) + f2 ** 2 * (net[1] - 230);
               return <circle key={k} cx={tx} cy={ty} r={80 * ballScale * (1 - k * 0.12)} fill="#fff" opacity={0.22 - k * 0.03} />;
             })
           : null}
@@ -435,7 +500,27 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
         </div>
       </div>
       {settled ? (
-        <div style={{ position: "absolute", left: kerb[0] - 60, top: kerb[1] - 230, fontSize: 44, rotate: `${(frame - landAt) * 12}deg`, opacity: interpolate(frame, [landAt, landAt + 4], [0, 1], clamp) }}>💫</div>
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: 560,
+            textAlign: "center",
+            fontFamily: adTheme.font,
+            fontWeight: 900,
+            fontSize: 120,
+            color: "#ffd400",
+            WebkitTextStroke: "7px #111",
+            paintOrder: "stroke fill",
+            textShadow: "8px 8px 0 #111",
+            scale: String(interpolate(frame, [landAt, landAt + 5], [0, 1], { ...clamp, easing: back(2.4) })),
+            opacity: interpolate(frame, [landAt + 12, landAt + 16], [1, 0], clamp),
+            rotate: "4deg",
+          }}
+        >
+          GOAL!
+        </div>
       ) : null}
 
       <div

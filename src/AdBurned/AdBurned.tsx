@@ -6,7 +6,7 @@ import { Sfx, SfxEvent } from "../Ad/Sfx";
 import type { Word } from "../VSL/Captions";
 import { makeCue } from "../VSL/cue";
 import captions from "./captions.json";
-import { AgencyChat, BurnedScene, CreativesShowcase, HighFive, SoccerKick, TwentyRoofers } from "./Scenes";
+import { AgencyChat, BurnedScene, CreativesShowcase, HighFive, OnChest, SoccerKick, TwentyRoofers } from "./Scenes";
 
 const words = captions as Word[];
 
@@ -104,8 +104,15 @@ export const AdBurned: React.FC = () => {
       <OffthreadVideo src={staticFile("footage/burned-ad.mp4")} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, transparent 22%, rgba(0,0,0,0.16) 50%, rgba(0,0,0,0.3) 88%)" }} />
 
-      <Full from={0} to={c.they}>{(len) => <BurnedScene len={len} burnAt={at("burned")} />}</Full>
-      <Full from={c.they} to={c.well}>
+      {/* Opening beats sit on the chest over the footage, clear of the face. */}
+      <Scene from={0} to={c.they}>
+        {(len) => (
+          <OnChest len={len} y0={770} y1={1470} k={0.7} top={1040}>
+            <BurnedScene len={len + 30} burnAt={at("burned")} />
+          </OnChest>
+        )}
+      </Scene>
+      <Scene from={c.they} to={c.well}>
         {(len) => (
           <AgencyChat
             len={len}
@@ -115,8 +122,14 @@ export const AdBurned: React.FC = () => {
             ghostAt={at("ghost") - c.they}
           />
         )}
-      </Full>
-      <Full from={c.proven} to={c.happy}>{(len) => <TwentyRoofers len={len} countAt={at("20") - c.proven} />}</Full>
+      </Scene>
+      <Scene from={c.proven} to={c.happy}>
+        {(len) => (
+          <OnChest len={len} y0={340} y1={1360} k={0.46} top={950}>
+            <TwentyRoofers len={len + 30} countAt={at("20") - c.proven} />
+          </OnChest>
+        )}
+      </Scene>
 
       {/* Results as one full-screen run */}
       <Full from={c.happy} to={c.same}>
