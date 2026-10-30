@@ -154,25 +154,86 @@ export const FbBanner: React.FC = () => (
         );
       })()}
 
-      {/* Premium white roof (gable, three-quarter view) */}
-      <ellipse cx={905} cy={560} rx={250} ry={20} fill="rgba(0,0,0,0.45)" style={{ filter: "blur(12px)" }} />
-      {/* gable end facing left, ridge running back to the right */}
-      <path d="M700 552 L700 452 L790 380 L880 452 L880 552 Z" fill="url(#wall)" />
-      <path d="M880 552 L880 452 L1110 452 L1110 552 Z" fill="#a9bbd0" />
-      {/* main roof slope */}
-      <path d="M790 372 L1020 372 L1128 462 L898 462 Z" fill="url(#roofL)" />
-      {Array.from({ length: 11 }, (_, k) => {
-        const t = (k + 1) / 12;
-        return <line key={k} x1={790 + 230 * t} y1={372} x2={898 + 230 * t} y2={462} stroke="rgba(110,130,160,0.32)" strokeWidth={2} />;
+      {/* Premium modern home, three-quarter view, lit from the upper left */}
+      <defs>
+        <linearGradient id="gableFace" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#d5e0ec" />
+        </linearGradient>
+        <linearGradient id="sideFace" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#b9c9db" />
+          <stop offset="1" stopColor="#8296ae" />
+        </linearGradient>
+        <linearGradient id="roofTop" x1="0" y1="0" x2="0.4" y2="1">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="0.6" stopColor="#e6edf5" />
+          <stop offset="1" stopColor="#c2cfde" />
+        </linearGradient>
+        <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#ffe3a8" />
+          <stop offset="1" stopColor="#f39a3d" />
+        </linearGradient>
+        <linearGradient id="ao" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#000" stopOpacity="0" />
+          <stop offset="1" stopColor="#000" stopOpacity="0.28" />
+        </linearGradient>
+        <radialGradient id="spill" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stopColor="#ffb85c" stopOpacity="0.55" />
+          <stop offset="1" stopColor="#ffb85c" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* ground: shadow + warm light spill from the windows */}
+      <ellipse cx={915} cy={566} rx={290} ry={26} fill="rgba(0,0,0,0.55)" style={{ filter: "blur(14px)" }} />
+      <ellipse cx={985} cy={575} rx={180} ry={30} fill="url(#spill)" />
+      <ellipse cx={790} cy={575} rx={110} ry={24} fill="url(#spill)" />
+
+      {/* plinth */}
+      <path d="M692 556 L908 556 L1130 556 L1130 568 L692 568 Z" fill="#2a3a52" />
+
+      {/* gable wall (lit) */}
+      <path d="M700 556 L700 440 L800 356 L900 440 L900 556 Z" fill="url(#gableFace)" />
+      {/* tall gable glazing with warm interior glow */}
+      <path d="M752 552 L752 446 L800 408 L848 446 L848 552 Z" fill="url(#warm)" />
+      <path d="M752 552 L752 446 L800 408 L848 446 L848 552 Z" fill="none" stroke="#1b2a3f" strokeWidth={5} strokeLinejoin="round" />
+      <path d="M800 410 L800 552 M752 498 L848 498" stroke="#1b2a3f" strokeWidth={4} />
+      <path d="M760 452 L790 428 L790 470 L760 490 Z" fill="rgba(255,255,255,0.35)" />
+
+      {/* side wall (in shade) */}
+      <path d="M900 556 L900 440 L1120 440 L1120 556 Z" fill="url(#sideFace)" />
+      {/* long ribbon window + door */}
+      <rect x={930} y={468} width={118} height={52} rx={2} fill="url(#warm)" stroke="#1b2a3f" strokeWidth={4} />
+      <path d="M969 468 V520 M1009 468 V520" stroke="#1b2a3f" strokeWidth={3} />
+      <rect x={1066} y={478} width={36} height={78} rx={2} fill="#3b2a1e" stroke="#1b2a3f" strokeWidth={3} />
+      <circle cx={1094} cy={518} r={2.5} fill="#e7c27d" />
+      {/* shade under the eave + ambient occlusion at the base */}
+      <path d="M900 440 L1120 440 L1120 462 L900 456 Z" fill="rgba(10,20,40,0.35)" />
+      <rect x={700} y={520} width={420} height={36} fill="url(#ao)" />
+
+      {/* sleek chimney */}
+      <path d="M1040 318 L1066 318 L1066 380 L1040 380 Z" fill="#d7e1ec" />
+      <path d="M1066 318 L1078 326 L1078 388 L1066 380 Z" fill="#8a9db4" />
+      <path d="M1036 314 L1070 314 L1082 322 L1048 322 Z" fill="#ffffff" />
+
+      {/* roof: slope surface, standing seams, thickness, crisp white trims */}
+      <path d="M800 350 L1024 350 L1144 450 L920 450 Z" fill="url(#roofTop)" />
+      {Array.from({ length: 13 }, (_, k) => {
+        const t = (k + 1) / 14;
+        const x1 = 800 + 224 * t;
+        const x2 = 920 + 224 * t;
+        return (
+          <g key={k}>
+            <line x1={x1} y1={350} x2={x2} y2={450} stroke="rgba(90,110,140,0.35)" strokeWidth={2} />
+            <line x1={x1 + 2} y1={350} x2={x2 + 2} y2={450} stroke="rgba(255,255,255,0.8)" strokeWidth={1.2} />
+          </g>
+        );
       })}
-      {/* eave fascia + gable verge trims */}
-      <path d="M898 462 L1128 462 L1128 472 L898 472 Z" fill="#8fa4bd" />
-      <path d="M684 466 L790 372 L898 466" fill="none" stroke="#ffffff" strokeWidth={12} strokeLinejoin="round" strokeLinecap="round" />
-      <path d="M790 372 L1020 372" stroke="#ffffff" strokeWidth={7} strokeLinecap="round" />
-      {/* windows + door */}
-      <rect x={770} y={470} width={40} height={34} rx={3} fill="#1d4f97" stroke="#fff" strokeWidth={3} />
-      <rect x={930} y={482} width={46} height={34} rx={3} fill="#1d4f97" stroke="#fff" strokeWidth={3} />
-      <rect x={1010} y={480} width={40} height={72} rx={3} fill="#21324a" />
+      <path d="M920 450 L1144 450 L1144 462 L920 462 Z" fill="#7d91aa" />
+      <path d="M680 456 L800 348 L920 456" fill="none" stroke="#ffffff" strokeWidth={14} strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M686 466 L800 362 L914 466" fill="none" stroke="rgba(30,50,80,0.35)" strokeWidth={4} strokeLinejoin="round" />
+      <path d="M800 348 L1026 348" stroke="#ffffff" strokeWidth={8} strokeLinecap="round" />
+      {/* cool rim light from the blue backdrop */}
+      <path d="M1026 348 L1146 450" stroke="rgba(140,190,255,0.9)" strokeWidth={3} strokeLinecap="round" />
     </svg>
 
     {/* Left: wordmark + headline */}
