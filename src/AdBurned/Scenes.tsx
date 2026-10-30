@@ -334,7 +334,7 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
   const GROUND = 1330;
   const ballStart: [number, number] = [600, GROUND - 86];
   // Where the ball ends up: inside the goal.
-  const net: [number, number] = [960, GROUND + 4];
+  const net: [number, number] = [905, GROUND + 4];
 
   // Player pose + position over time.
   const runStart = 10;
@@ -369,12 +369,12 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
   // Ball flight: a rising rocket straight into the top of the net.
   const flight = interpolate(frame, [kickAt, landAt], [0, 1], clamp);
   const bx = (1 - flight) ** 2 * ballStart[0] + 2 * (1 - flight) * flight * 780 + flight ** 2 * net[0];
-  const by = (1 - flight) ** 2 * ballStart[1] + 2 * (1 - flight) * flight * (GROUND - 560) + flight ** 2 * (net[1] - 230);
+  const by = (1 - flight) ** 2 * ballStart[1] + 2 * (1 - flight) * flight * (GROUND - 330) + flight ** 2 * (net[1] - 200);
   const settled = frame >= landAt;
   const bounce = settled ? Math.abs(Math.sin((frame - landAt) / 2.2)) * Math.max(0, 40 - (frame - landAt) * 4) : 0;
   // After hitting the net it drops to the grass inside the goal.
   const drop = settled ? interpolate(frame, [landAt, landAt + 8], [0, 1], { ...clamp, easing: Easing.in(Easing.quad) }) : 0;
-  const ballPos: [number, number] = frame < kickAt ? ballStart : settled ? [net[0] + 20 * drop, net[1] - 230 + drop * 156 - bounce] : [bx, by];
+  const ballPos: [number, number] = frame < kickAt ? ballStart : settled ? [net[0] + 20 * drop, net[1] - 200 + drop * 126 - bounce] : [bx, by];
   const bulge = interpolate(frame, [landAt - 1, landAt + 2, landAt + 12], [0, 1, 0.2], clamp);
   const spin = frame < kickAt ? 0 : (frame - kickAt) * 38;
   const ballScale = settled ? 0.8 : 1 - flight * 0.2;
@@ -391,29 +391,50 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
         <rect x={0} y={GROUND} width={1080} height={20} fill="rgba(255,255,255,0.18)" />
         <line x1={0} x2={1080} y1={GROUND} y2={GROUND} stroke="#fff" strokeWidth={5} />
 
-        {/* Goal: front frame, net receding to the right, bulging on impact */}
+        {/* Soccer goal, three-quarter view: white posts + crossbar in front,
+            net box receding behind, bulging on impact. */}
         <g>
           {(() => {
-            const fx = 830;
-            const top = GROUND - 340;
-            const bx2 = 1050 + bulge * 40;
-            const btop = GROUND - 290 - bulge * 10;
-            const netLines: React.ReactNode[] = [];
-            for (let k = 0; k <= 8; k++) {
-              const t = k / 8;
-              netLines.push(<line key={`h${k}`} x1={fx} y1={top + (GROUND - top) * t} x2={bx2} y2={btop + (GROUND - btop) * t} stroke="rgba(255,255,255,0.45)" strokeWidth={3} />);
+            const L = 720;
+            const R = 1050;
+            const T = GROUND - 400;
+            const dx = 40 + bulge * 26;
+            const dy = 70;
+            const bL = L + dx;
+            const bR = R + dx;
+            const bT = T + dy * 0.55;
+            const bG = GROUND - dy;
+            const net = "rgba(255,255,255,0.5)";
+            const lines: React.ReactNode[] = [];
+            // back face grid
+            for (let k = 0; k <= 10; k++) {
+              const x = bL + ((bR - bL) * k) / 10;
+              lines.push(<line key={`bv${k}`} x1={x} y1={bT} x2={x} y2={bG} stroke={net} strokeWidth={2.5} />);
+            }
+            for (let k = 0; k <= 6; k++) {
+              const y = bT + ((bG - bT) * k) / 6;
+              lines.push(<line key={`bh${k}`} x1={bL} y1={y} x2={bR} y2={y} stroke={net} strokeWidth={2.5} />);
+            }
+            // roof + side nets joining front frame to back
+            for (let k = 0; k <= 10; k++) {
+              const t = k / 10;
+              lines.push(<line key={`r${k}`} x1={L + (R - L) * t} y1={T} x2={bL + (bR - bL) * t} y2={bT} stroke={net} strokeWidth={2.5} />);
             }
             for (let k = 0; k <= 6; k++) {
               const t = k / 6;
-              const x = fx + (bx2 - fx) * t;
-              const y0 = top + (btop - top) * t;
-              netLines.push(<line key={`v${k}`} x1={x} y1={y0} x2={x} y2={GROUND} stroke="rgba(255,255,255,0.45)" strokeWidth={3} />);
+              lines.push(<line key={`sl${k}`} x1={L} y1={T + (GROUND - T) * t} x2={bL} y2={bT + (bG - bT) * t} stroke={net} strokeWidth={2.5} />);
+              lines.push(<line key={`sr${k}`} x1={R} y1={T + (GROUND - T) * t} x2={bR} y2={bT + (bG - bT) * t} stroke={net} strokeWidth={2.5} />);
             }
             return (
               <>
-                {netLines}
-                <path d={`M${fx} ${top} L${bx2} ${btop} L${bx2} ${GROUND}`} fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth={5} />
-                <path d={`M${fx} ${GROUND} L${fx} ${top} L${fx + 230} ${top}`} fill="none" stroke="#fff" strokeWidth={14} strokeLinecap="round" />
+                {/* pitch markings: goal line + six-yard box */}
+                <path d={`M${L - 60} ${GROUND + 18} L${R + 60} ${GROUND + 18}`} stroke="#fff" strokeWidth={4} opacity={0.7} />
+                {lines}
+                <path d={`M${bL} ${bG} L${bL} ${bT} L${bR} ${bT} L${bR} ${bG}`} fill="none" stroke="rgba(255,255,255,0.75)" strokeWidth={4} />
+                <path d={`M${L} ${GROUND} L${bL} ${bG} M${R} ${GROUND} L${bR} ${bG}`} stroke="rgba(255,255,255,0.75)" strokeWidth={4} />
+                {/* posts and crossbar */}
+                <path d={`M${L} ${GROUND} L${L} ${T} L${R} ${T} L${R} ${GROUND}`} fill="none" stroke="#111" strokeWidth={22} strokeLinejoin="round" />
+                <path d={`M${L} ${GROUND} L${L} ${T} L${R} ${T} L${R} ${GROUND}`} fill="none" stroke="#fff" strokeWidth={14} strokeLinejoin="round" strokeLinecap="round" />
               </>
             );
           })()}
@@ -436,7 +457,7 @@ export const SoccerKick: React.FC<{ len: number; kickAt: number; landAt: number 
           ? Array.from({ length: 6 }, (_, k) => {
               const f2 = interpolate(frame - (k + 1) * 1.5, [kickAt, landAt], [0, 1], clamp);
               const tx = (1 - f2) ** 2 * ballStart[0] + 2 * (1 - f2) * f2 * 780 + f2 ** 2 * net[0];
-              const ty = (1 - f2) ** 2 * ballStart[1] + 2 * (1 - f2) * f2 * (GROUND - 560) + f2 ** 2 * (net[1] - 230);
+              const ty = (1 - f2) ** 2 * ballStart[1] + 2 * (1 - f2) * f2 * (GROUND - 330) + f2 ** 2 * (net[1] - 200);
               return <circle key={k} cx={tx} cy={ty} r={80 * ballScale * (1 - k * 0.12)} fill="#fff" opacity={0.22 - k * 0.03} />;
             })
           : null}
