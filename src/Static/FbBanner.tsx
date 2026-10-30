@@ -7,8 +7,9 @@ loadFont({ family: "Cormorant", url: staticFile("fonts/Cormorant-700.woff2"), we
 loadFont({ family: "Barlow", url: staticFile("fonts/Barlow-600.woff2"), weight: "600" });
 loadFont({ family: "Barlow", url: staticFile("fonts/Barlow-700.woff2"), weight: "700" });
 
-const INK = "#1b2838";
-const SOFT = "#3d4b5c";
+const INK = "#f4f7fb";
+const SOFT = "rgba(214,226,242,0.82)";
+const BLUE = "#4da3ff";
 
 const Icon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <svg width={64} height={64} viewBox="0 0 48 48" fill="none" stroke={INK} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
@@ -75,46 +76,112 @@ export const FbBanner: React.FC = () => (
   <AbsoluteFill
     style={{
       background:
-        "repeating-linear-gradient(92deg, rgba(255,255,255,0.05) 0 2px, rgba(0,0,0,0.012) 2px 4px), radial-gradient(ellipse 60% 90% at 52% 45%, #f7f9fc 0%, #e3eaf2 45%, #c9d5e1 100%)",
+        "repeating-linear-gradient(92deg, rgba(255,255,255,0.018) 0 2px, rgba(0,0,0,0.02) 2px 4px), radial-gradient(ellipse 55% 95% at 56% 40%, #1d4f97 0%, #0f2f63 45%, #071733 80%, #040c1d 100%)",
       overflow: "hidden",
     }}
   >
-    {/* Soft sweeping light arcs */}
-    <div style={{ position: "absolute", left: 560, top: -520, width: 900, height: 900, borderRadius: "50%", border: "60px solid rgba(255,255,255,0.45)", filter: "blur(2px)" }} />
-    <div style={{ position: "absolute", left: -260, bottom: -380, width: 760, height: 520, rotate: "-18deg", background: "linear-gradient(100deg, rgba(255,255,255,0.0), rgba(255,255,255,0.55) 50%, rgba(255,255,255,0))" }} />
+    {/* Soft light sweeps */}
+    <div style={{ position: "absolute", left: 560, top: -560, width: 920, height: 920, borderRadius: "50%", border: "50px solid rgba(120,170,255,0.08)", filter: "blur(3px)" }} />
+    <div style={{ position: "absolute", left: -260, bottom: -380, width: 760, height: 520, rotate: "-18deg", background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(140,185,255,0.12) 50%, rgba(255,255,255,0))" }} />
 
-    {/* Glass roofline behind the badge */}
     <svg width={1640} height={624} style={{ position: "absolute", inset: 0 }}>
       <defs>
-        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#ffffff" stopOpacity="0.85" />
-          <stop offset="0.5" stopColor="#dbe6f1" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#a9bccf" stopOpacity="0.55" />
+        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#4da3ff" stopOpacity="0.45" />
+          <stop offset="1" stopColor="#4da3ff" stopOpacity="0" />
         </linearGradient>
-        <linearGradient id="glass2" x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#ffffff" stopOpacity="0.7" />
-          <stop offset="1" stopColor="#9fb3c8" stopOpacity="0.5" />
+        <linearGradient id="roofL" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#c9d6e6" />
         </linearGradient>
+        <linearGradient id="roofR" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#e9f0f8" />
+          <stop offset="1" stopColor="#9fb2c9" />
+        </linearGradient>
+        <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#f2f6fb" />
+          <stop offset="1" stopColor="#c3d0df" />
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="6" result="b" />
+          <feMerge>
+            <feMergeNode in="b" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
       </defs>
-      {/* left and right roof slabs, with thickness */}
-      <path d="M640 470 L930 150 L960 178 L688 480 Z" fill="url(#glass)" stroke="rgba(255,255,255,0.9)" strokeWidth={2} />
-      <path d="M640 470 L688 480 L688 500 L640 490 Z" fill="#b8c7d6" opacity={0.8} />
-      <path d="M930 150 L1220 470 L1172 480 L900 178 Z" fill="url(#glass2)" stroke="rgba(255,255,255,0.9)" strokeWidth={2} />
-      <path d="M1220 470 L1172 480 L1172 500 L1220 490 Z" fill="#a9bacb" opacity={0.8} />
-      {/* contact shadow */}
-      <ellipse cx={930} cy={548} rx={260} ry={22} fill="rgba(40,60,85,0.22)" style={{ filter: "blur(10px)" }} />
-    </svg>
 
-    {/* Chrome AV badge; multiply drops its white field into the background */}
-    <Img
-      src={staticFile("brand/av-logo.png")}
-      style={{ position: "absolute", left: 930 - 165, top: 205, width: 330, height: 333, mixBlendMode: "multiply" }}
-    />
+      {/* Rising market chart behind the roof */}
+      {(() => {
+        const x0 = 720;
+        const x1 = 1190;
+        const yb = 520;
+        const gridYs = [140, 220, 300, 380, 460];
+        const pts = [0.08, 0.14, 0.11, 0.22, 0.19, 0.3, 0.27, 0.4, 0.36, 0.5, 0.47, 0.6, 0.58, 0.72, 0.69, 0.86, 0.95];
+        const xy = pts.map((v, i) => [x0 + ((x1 - x0) * i) / (pts.length - 1), yb - v * 400] as const);
+        const line = xy.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
+        const [ex, ey] = xy[xy.length - 1];
+        const [px, py] = xy[xy.length - 2];
+        const ang = Math.atan2(ey - py, ex - px);
+        const h = 26;
+        return (
+          <g>
+            {gridYs.map((y) => (
+              <line key={y} x1={x0} x2={x1} y1={y} y2={y} stroke="rgba(160,195,255,0.13)" strokeWidth={1.5} />
+            ))}
+            {xy.map(([x], i) =>
+              i % 2 === 0 ? <line key={`v${i}`} x1={x} x2={x} y1={120} y2={yb} stroke="rgba(160,195,255,0.08)" strokeWidth={1.5} /> : null,
+            )}
+            {/* candles */}
+            {xy.slice(1).map(([x, y], i) => {
+              const up = y < xy[i][1];
+              const top = Math.min(y, xy[i][1]);
+              const hgt = Math.abs(y - xy[i][1]) + 6;
+              return <rect key={`c${i}`} x={x - 8} y={top - 3} width={16} height={hgt} rx={2} fill={up ? "rgba(77,163,255,0.35)" : "rgba(255,255,255,0.18)"} />;
+            })}
+            <path d={`${line} L${x1} ${yb} L${x0} ${yb} Z`} fill="url(#area)" />
+            <path d={line} fill="none" stroke={BLUE} strokeWidth={5} strokeLinejoin="round" strokeLinecap="round" filter="url(#glow)" />
+            <path
+              d={`M${ex - Math.cos(ang - 0.5) * h} ${ey - Math.sin(ang - 0.5) * h} L${ex} ${ey} L${ex - Math.cos(ang + 0.5) * h} ${ey - Math.sin(ang + 0.5) * h}`}
+              fill="none"
+              stroke={BLUE}
+              strokeWidth={6}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              filter="url(#glow)"
+            />
+          </g>
+        );
+      })()}
+
+      {/* Premium white roof (gable, three-quarter view) */}
+      <ellipse cx={905} cy={560} rx={250} ry={20} fill="rgba(0,0,0,0.45)" style={{ filter: "blur(12px)" }} />
+      {/* gable end facing left, ridge running back to the right */}
+      <path d="M700 552 L700 452 L790 380 L880 452 L880 552 Z" fill="url(#wall)" />
+      <path d="M880 552 L880 452 L1110 452 L1110 552 Z" fill="#a9bbd0" />
+      {/* main roof slope */}
+      <path d="M790 372 L1020 372 L1128 462 L898 462 Z" fill="url(#roofL)" />
+      {Array.from({ length: 11 }, (_, k) => {
+        const t = (k + 1) / 12;
+        return <line key={k} x1={790 + 230 * t} y1={372} x2={898 + 230 * t} y2={462} stroke="rgba(110,130,160,0.32)" strokeWidth={2} />;
+      })}
+      {/* eave fascia + gable verge trims */}
+      <path d="M898 462 L1128 462 L1128 472 L898 472 Z" fill="#8fa4bd" />
+      <path d="M684 466 L790 372 L898 466" fill="none" stroke="#ffffff" strokeWidth={12} strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M790 372 L1020 372" stroke="#ffffff" strokeWidth={7} strokeLinecap="round" />
+      {/* windows + door */}
+      <rect x={770} y={470} width={40} height={34} rx={3} fill="#1d4f97" stroke="#fff" strokeWidth={3} />
+      <rect x={930} y={482} width={46} height={34} rx={3} fill="#1d4f97" stroke="#fff" strokeWidth={3} />
+      <rect x={1010} y={480} width={40} height={72} rx={3} fill="#21324a" />
+    </svg>
 
     {/* Left: wordmark + headline */}
     <div style={{ position: "absolute", left: 110, top: 86, width: 660 }}>
-      <div style={{ fontFamily: "Barlow", fontWeight: 700, fontSize: 22, letterSpacing: "0.32em", color: SOFT }}>ALVOLUTION ENTERPRISES</div>
-      <div style={{ width: 70, height: 2, background: SOFT, margin: "16px 0 18px", opacity: 0.6 }} />
+      <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+        <Img src={staticFile("brand/av-logo-dark.png")} style={{ width: 58, height: 58, mixBlendMode: "screen" }} />
+        <div style={{ fontFamily: "Barlow", fontWeight: 700, fontSize: 22, letterSpacing: "0.32em", color: SOFT }}>ALVOLUTION ENTERPRISES</div>
+      </div>
+      <div style={{ width: 70, height: 2, background: BLUE, margin: "16px 0 18px" }} />
       <div style={{ fontFamily: "Cormorant", fontWeight: 600, fontSize: 57, lineHeight: 1, color: INK, letterSpacing: "0.005em", whiteSpace: "nowrap" }}>
         BUILDING PREMIUM
         <br />
