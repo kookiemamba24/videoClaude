@@ -12,7 +12,7 @@ const SOFT = "rgba(214,226,242,0.82)";
 const BLUE = "#4da3ff";
 
 const Icon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <svg width={64} height={64} viewBox="0 0 48 48" fill="none" stroke={INK} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+  <svg width={52} height={52} viewBox="0 0 48 48" fill="none" stroke={INK} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
     {children}
   </svg>
 );
@@ -53,7 +53,7 @@ const SERVICES: { icon: React.ReactNode; title: string; line: string }[] = [
       </>
     ),
     title: "LEADS & BOOKED JOBS",
-    line: "6–12 more booked jobs in 90 days.",
+    line: "6–12 more booked jobs in 90 days, guaranteed.",
   },
   {
     // phone + stopwatch: follow-up
@@ -66,7 +66,7 @@ const SERVICES: { icon: React.ReactNode; title: string; line: string }[] = [
       </>
     ),
     title: "30-SECOND FOLLOW-UP",
-    line: "Every lead contacted and qualified, fast.",
+    line: "Our customer service team + automated systems call every lead.",
   },
 ];
 
@@ -197,13 +197,13 @@ export const FbBanner: React.FC = () => (
     </div>
 
     {/* Right: services */}
-    <div style={{ position: "absolute", left: 1205, top: 74, width: 400, display: "flex", flexDirection: "column", gap: 24 }}>
+    <div style={{ position: "absolute", left: 1222, top: 62, width: 380, display: "flex", flexDirection: "column", gap: 30 }}>
       {SERVICES.map((s) => (
-        <div key={s.title} style={{ display: "flex", gap: 18, alignItems: "flex-start" }}>
+        <div key={s.title} style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
           <Icon>{s.icon}</Icon>
           <div>
-            <div style={{ fontFamily: "Barlow", fontWeight: 700, fontSize: 22, letterSpacing: "0.04em", color: INK }}>{s.title}</div>
-            <div style={{ fontFamily: "Barlow", fontWeight: 600, fontSize: 20, color: SOFT, marginTop: 3, lineHeight: 1.25 }}>{s.line}</div>
+            <div style={{ fontFamily: "Barlow", fontWeight: 700, fontSize: 21, letterSpacing: "0.06em", color: INK }}>{s.title}</div>
+            <div style={{ fontFamily: "Barlow", fontWeight: 500, fontSize: 18, color: SOFT, marginTop: 6, lineHeight: 1.4, textWrap: "balance" } as React.CSSProperties}>{s.line}</div>
           </div>
         </div>
       ))}
