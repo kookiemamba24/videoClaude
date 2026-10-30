@@ -154,86 +154,115 @@ export const FbBanner: React.FC = () => (
         );
       })()}
 
-      {/* Premium modern home, three-quarter view, lit from the upper left */}
+      {/* Luxury home at dusk: curved two-storey pavilion with glass balconies,
+          glazed centre block, gabled alfresco wing, warm interiors, pool. */}
       <defs>
-        <linearGradient id="gableFace" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="render" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#d9d3cb" />
+          <stop offset="1" stopColor="#b7aea4" />
+        </linearGradient>
+        <linearGradient id="slab" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#f3efe9" />
+          <stop offset="1" stopColor="#c9c1b6" />
+        </linearGradient>
+        <linearGradient id="col" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#9e958b" />
+          <stop offset="0.45" stopColor="#ece6de" />
+          <stop offset="1" stopColor="#a69d93" />
+        </linearGradient>
+        <linearGradient id="roofW" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#ffffff" />
-          <stop offset="1" stopColor="#d5e0ec" />
+          <stop offset="1" stopColor="#cfd8e3" />
         </linearGradient>
-        <linearGradient id="sideFace" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#b9c9db" />
-          <stop offset="1" stopColor="#8296ae" />
+        <linearGradient id="interior" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#fff1cf" />
+          <stop offset="0.55" stopColor="#f6c27a" />
+          <stop offset="1" stopColor="#d98e45" />
         </linearGradient>
-        <linearGradient id="roofTop" x1="0" y1="0" x2="0.4" y2="1">
-          <stop offset="0" stopColor="#ffffff" />
-          <stop offset="0.6" stopColor="#e6edf5" />
-          <stop offset="1" stopColor="#c2cfde" />
+        <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#7fe0ff" />
+          <stop offset="1" stopColor="#1590d6" />
         </linearGradient>
-        <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#ffe3a8" />
-          <stop offset="1" stopColor="#f39a3d" />
-        </linearGradient>
-        <linearGradient id="ao" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#000" stopOpacity="0" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.28" />
+        <linearGradient id="glassRail" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="rgba(220,240,255,0.45)" />
+          <stop offset="1" stopColor="rgba(220,240,255,0.15)" />
         </linearGradient>
         <radialGradient id="spill" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#ffb85c" stopOpacity="0.55" />
-          <stop offset="1" stopColor="#ffb85c" stopOpacity="0" />
+          <stop offset="0" stopColor="#ffbf6b" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#ffbf6b" stopOpacity="0" />
         </radialGradient>
       </defs>
 
-      {/* ground: shadow + warm light spill from the windows */}
-      <ellipse cx={915} cy={566} rx={290} ry={26} fill="rgba(0,0,0,0.55)" style={{ filter: "blur(14px)" }} />
-      <ellipse cx={985} cy={575} rx={180} ry={30} fill="url(#spill)" />
-      <ellipse cx={790} cy={575} rx={110} ry={24} fill="url(#spill)" />
+      {/* conifers behind the right wing */}
+      <path d="M1060 452 L1092 300 L1124 452 Z" fill="#0b2a2a" />
+      <path d="M1110 452 L1150 270 L1192 452 Z" fill="#0d3330" />
+      <path d="M1000 380 L1024 300 L1048 380 Z" fill="#0b2a2a" />
 
-      {/* plinth */}
-      <path d="M692 556 L908 556 L1130 556 L1130 568 L692 568 Z" fill="#2a3a52" />
+      {/* ground shadow + warm spill */}
+      <ellipse cx={920} cy={548} rx={300} ry={18} fill="rgba(0,0,0,0.5)" style={{ filter: "blur(10px)" }} />
+      <ellipse cx={900} cy={540} rx={280} ry={26} fill="url(#spill)" />
 
-      {/* gable wall (lit) */}
-      <path d="M700 556 L700 440 L800 356 L900 440 L900 556 Z" fill="url(#gableFace)" />
-      {/* tall gable glazing with warm interior glow */}
-      <path d="M752 552 L752 446 L800 408 L848 446 L848 552 Z" fill="url(#warm)" />
-      <path d="M752 552 L752 446 L800 408 L848 446 L848 552 Z" fill="none" stroke="#1b2a3f" strokeWidth={5} strokeLinejoin="round" />
-      <path d="M800 410 L800 552 M752 498 L848 498" stroke="#1b2a3f" strokeWidth={4} />
-      <path d="M760 452 L790 428 L790 470 L760 490 Z" fill="rgba(255,255,255,0.35)" />
+      {/* ===== right wing: gabled alfresco ===== */}
+      <rect x={960} y={444} width={220} height={86} fill="url(#render)" />
+      <rect x={1040} y={452} width={124} height={70} fill="url(#interior)" />
+      <path d="M1040 452 H1164 M1102 452 V522" stroke="rgba(120,80,40,0.45)" strokeWidth={2} />
+      <rect x={1150} y={444} width={30} height={86} fill="#a99f94" />
+      {/* hip roof of the wing */}
+      <path d="M1026 444 L1056 412 L1170 412 L1192 444 Z" fill="url(#roofW)" />
+      <path d="M1026 444 L1192 444 L1192 450 L1026 450 Z" fill="#9fb0c4" />
+      {/* glazed gable */}
+      <path d="M958 450 L1004 392 L1050 450 Z" fill="url(#roofW)" />
+      <path d="M968 448 L1004 404 L1040 448 Z" fill="url(#interior)" opacity={0.9} />
+      <path d="M1004 404 V448 M986 426 L1022 426" stroke="#e8e2da" strokeWidth={2} />
+      <rect x={966} y={450} width={10} height={80} fill="url(#col)" />
+      <rect x={1032} y={450} width={10} height={80} fill="url(#col)" />
+      <rect x={978} y={456} width={52} height={66} fill="url(#interior)" opacity={0.85} />
 
-      {/* side wall (in shade) */}
-      <path d="M900 556 L900 440 L1120 440 L1120 556 Z" fill="url(#sideFace)" />
-      {/* long ribbon window + door */}
-      <rect x={930} y={468} width={118} height={52} rx={2} fill="url(#warm)" stroke="#1b2a3f" strokeWidth={4} />
-      <path d="M969 468 V520 M1009 468 V520" stroke="#1b2a3f" strokeWidth={3} />
-      <rect x={1066} y={478} width={36} height={78} rx={2} fill="#3b2a1e" stroke="#1b2a3f" strokeWidth={3} />
-      <circle cx={1094} cy={518} r={2.5} fill="#e7c27d" />
-      {/* shade under the eave + ambient occlusion at the base */}
-      <path d="M900 440 L1120 440 L1120 462 L900 456 Z" fill="rgba(10,20,40,0.35)" />
-      <rect x={700} y={520} width={420} height={36} fill="url(#ao)" />
+      {/* ===== centre block: two storeys of glazing ===== */}
+      <rect x={826} y={378} width={140} height={152} fill="url(#render)" />
+      <rect x={840} y={388} width={112} height={58} fill="url(#interior)" />
+      <rect x={840} y={460} width={112} height={62} fill="url(#interior)" />
+      <path d="M868 388 V446 M896 388 V446 M924 388 V446 M840 416 H952 M868 460 V522 M896 460 V522 M924 460 V522" stroke="#e5ddd2" strokeWidth={2.5} />
+      <rect x={826} y={446} width={140} height={8} fill="url(#slab)" />
+      {/* hip roof */}
+      <path d="M814 380 L846 348 L950 348 L980 380 Z" fill="url(#roofW)" />
+      <path d="M814 380 L980 380 L980 386 L814 386 Z" fill="#9fb0c4" />
+      <path d="M846 348 L950 348" stroke="#ffffff" strokeWidth={3} />
 
-      {/* sleek chimney */}
-      <path d="M1040 318 L1066 318 L1066 380 L1040 380 Z" fill="#d7e1ec" />
-      <path d="M1066 318 L1078 326 L1078 388 L1066 380 Z" fill="#8a9db4" />
-      <path d="M1036 314 L1070 314 L1082 322 L1048 322 Z" fill="#ffffff" />
+      {/* ===== left: curved two-storey pavilion ===== */}
+      <rect x={672} y={388} width={150} height={56} fill="url(#interior)" opacity={0.95} />
+      <rect x={672} y={462} width={150} height={60} fill="url(#interior)" />
+      <path d="M700 388 V444 M760 388 V444 M700 462 V522 M760 462 V522" stroke="rgba(120,80,40,0.35)" strokeWidth={2} />
+      {/* curved slabs (rounded left end reads as the curve) */}
+      <rect x={656} y={444} width={176} height={12} rx={6} fill="url(#slab)" />
+      <rect x={652} y={372} width={182} height={14} rx={7} fill="url(#slab)" />
+      {/* columns */}
+      {[664, 728, 792].map((x) => (
+        <g key={x}>
+          <rect x={x} y={386} width={14} height={58} fill="url(#col)" />
+          <rect x={x} y={456} width={14} height={74} fill="url(#col)" />
+        </g>
+      ))}
+      {/* glass balustrade on the upper balcony */}
+      <rect x={656} y={418} width={170} height={26} fill="url(#glassRail)" stroke="rgba(255,255,255,0.6)" strokeWidth={1.5} />
+      {/* shallow curved roof */}
+      <path d="M646 372 Q656 350 700 344 L812 344 L840 372 Z" fill="url(#roofW)" />
+      <path d="M700 344 Q735 330 770 344" fill="url(#roofW)" />
 
-      {/* roof: slope surface, standing seams, thickness, crisp white trims */}
-      <path d="M800 350 L1024 350 L1144 450 L920 450 Z" fill="url(#roofTop)" />
-      {Array.from({ length: 13 }, (_, k) => {
-        const t = (k + 1) / 14;
-        const x1 = 800 + 224 * t;
-        const x2 = 920 + 224 * t;
-        return (
-          <g key={k}>
-            <line x1={x1} y1={350} x2={x2} y2={450} stroke="rgba(90,110,140,0.35)" strokeWidth={2} />
-            <line x1={x1 + 2} y1={350} x2={x2 + 2} y2={450} stroke="rgba(255,255,255,0.8)" strokeWidth={1.2} />
-          </g>
-        );
-      })}
-      <path d="M920 450 L1144 450 L1144 462 L920 462 Z" fill="#7d91aa" />
-      <path d="M680 456 L800 348 L920 456" fill="none" stroke="#ffffff" strokeWidth={14} strokeLinejoin="round" strokeLinecap="round" />
-      <path d="M686 466 L800 362 L914 466" fill="none" stroke="rgba(30,50,80,0.35)" strokeWidth={4} strokeLinejoin="round" />
-      <path d="M800 348 L1026 348" stroke="#ffffff" strokeWidth={8} strokeLinecap="round" />
-      {/* cool rim light from the blue backdrop */}
-      <path d="M1026 348 L1146 450" stroke="rgba(140,190,255,0.9)" strokeWidth={3} strokeLinecap="round" />
+      {/* lawn + pool fence */}
+      <rect x={640} y={528} width={560} height={8} fill="#2f7d3a" />
+      <rect x={640} y={524} width={560} height={14} fill="url(#glassRail)" opacity={0.6} />
+      {Array.from({ length: 12 }, (_, k) => (
+        <rect key={k} x={650 + k * 47} y={520} width={3} height={18} fill="#cfd8e3" />
+      ))}
+
+      {/* pool */}
+      <path d="M640 546 L1200 546 L1212 580 L628 580 Z" fill="url(#pool)" />
+      <path d="M640 546 L1200 546" stroke="#e9eef4" strokeWidth={5} />
+      {[0, 1, 2, 3].map((k) => (
+        <path key={k} d={`M${700 + k * 120} ${558 + (k % 2) * 8} q20 -4 40 0 t40 0`} stroke="rgba(255,255,255,0.55)" strokeWidth={2} fill="none" />
+      ))}
+      <rect x={860} y={552} width={70} height={22} fill="rgba(255,210,140,0.35)" style={{ filter: "blur(3px)" }} />
     </svg>
 
     {/* Left: wordmark + headline */}
