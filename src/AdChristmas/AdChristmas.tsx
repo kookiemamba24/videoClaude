@@ -157,10 +157,10 @@ const ClosedSign: React.FC<{ at: number }> = ({ at }) => {
             textAlign: "center",
             fontFamily: "Montserrat",
             fontWeight: 900,
-            fontSize: 110,
+            fontSize: 92,
             lineHeight: 1,
             color: "#fff",
-            letterSpacing: "0.04em",
+            letterSpacing: "0",
             boxShadow: "0 24px 50px rgba(0,0,0,0.5)",
           }}
         >
@@ -232,7 +232,7 @@ export const AdChristmas: React.FC = () => {
   const iEnd = find("So if you're");
 
   const c = {
-    empty: at("empty"),
+    empty: at("with an empty"),
     because: at("because everything"),
     dries: at("and the jobs dry"),
     well: at("Well here's"),
@@ -304,8 +304,8 @@ export const AdChristmas: React.FC = () => {
     { at: at("closed") + 8, name: "slap", volume: 0.9 },
     { at: c.xmas - 4, name: "pop" },
     { at: c.xmas, name: "pop", volume: 0.8 },
-    { at: c.touch + 4, name: "pop" },
-    { at: c.touch + 10, name: "success", volume: 0.8 },
+    { at: c.soIf + 4, name: "pop" },
+    { at: c.soIf + 8, name: "pop", volume: 0.8 },
     { at: c.soIf + 3, name: "slap" },
     { at: c.touch, name: "whoosh" },
     { at: c.touch + 6, name: "pop" },
@@ -350,7 +350,14 @@ export const AdChristmas: React.FC = () => {
           </>
         )}
       </Scene>
-      <Scene from={c.soIf} to={c.touch}>{() => <Sticker emoji="🎅" x={230} y={1240} size={240} />}</Scene>
+      <Scene from={c.soIf} to={c.touch}>
+        {() => (
+          <>
+            <BookedCalendarIcon x={200} y={1300} at={4} />
+            <Sticker emoji="🎄" x={880} y={1290} size={260} at={8} rotate={6} />
+          </>
+        )}
+      </Scene>
 
       {/* Chest-level graphics over the footage */}
       <Scene from={c.putYou} to={c.makeSure}>{(len) => <PremiumAd len={len} trustAt={c.looking - c.putYou} video={staticFile("ads/premium-ad.mp4")} />}</Scene>
@@ -418,8 +425,6 @@ export const AdChristmas: React.FC = () => {
         {(len) => (
           <>
             <CTA len={len} badge={staticFile("brand/av-logo-dark.png")} />
-            <Sticker emoji="🎄" x={880} y={1430} size={260} at={4} rotate={6} />
-            <BookedCalendarIcon x={200} y={1440} at={8} />
           </>
         )}
       </Scene>
