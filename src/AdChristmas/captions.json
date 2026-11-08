@@ -95,12 +95,12 @@
   "endMs": 5120
  },
  {
-  "text": " job",
+  "text": " jobs",
   "startMs": 5120,
   "endMs": 5260
  },
  {
-  "text": " dries",
+  "text": " dry",
   "startMs": 5260,
   "endMs": 5560
  },
@@ -155,18 +155,8 @@
   "endMs": 7520
  },
  {
-  "text": " six",
+  "text": " 6-12",
   "startMs": 7520,
-  "endMs": 7860
- },
- {
-  "text": " to",
-  "startMs": 7860,
-  "endMs": 8020
- },
- {
-  "text": " 12",
-  "startMs": 8020,
   "endMs": 8220
  },
  {
@@ -450,7 +440,7 @@
   "endMs": 20480
  },
  {
-  "text": " gets",
+  "text": " get",
   "startMs": 20480,
   "endMs": 20640
  },
@@ -535,7 +525,7 @@
   "endMs": 23640
  },
  {
-  "text": " seven",
+  "text": " 7",
   "startMs": 23640,
   "endMs": 24020
  },
@@ -710,13 +700,8 @@
   "endMs": 31780
  },
  {
-  "text": " $1.2",
+  "text": " $1.2M",
   "startMs": 31780,
-  "endMs": 32479
- },
- {
-  "text": " million",
-  "startMs": 32479,
   "endMs": 32780
  },
  {

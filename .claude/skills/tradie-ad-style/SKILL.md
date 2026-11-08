@@ -59,7 +59,12 @@ actually use keyword slams.
 Bundled in `public/fonts`: Montserrat 700/800/900 (+800 italic), Barlow
 Condensed 800 italic, Cormorant 600. Emoji use the system Noto Color Emoji.
 
-## Brand swap
+## Brand
 
-Colours are in `T` in `kit.tsx` (`yellow` is the reference's accent). For
-Alvolution work, keep the yellow for this style unless asked to use the blue.
+Alvolution brand blue (`T.accent`, `#4da3ff`) replaces the reference's
+yellow everywhere — keyword accents, card highlights, caption highlights,
+calendar fills. Keep it consistent with the other ads; don't reintroduce
+yellow. Open on captions, not a title: the first chunk ("ROOFERS,") is shown
+large in blue, then normal chest captions follow. Captions must match the
+script; where the recording differs from the script, caption what was said
+and flag it.

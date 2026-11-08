@@ -14,8 +14,11 @@ loadFont({ family: "Montserrat", url: staticFile("fonts/Montserrat-800i.woff2"),
 loadFont({ family: "BarlowCond", url: staticFile("fonts/BarlowCond-800i.woff2"), weight: "800", style: "italic" });
 loadFont({ family: "Cormorant", url: staticFile("fonts/Cormorant-600.woff2"), weight: "600" });
 
+// Accent is Alvolution blue (the reference used yellow; `yellow` is kept as
+// an alias so existing call sites keep working).
 export const T = {
-  yellow: "#ffd21f",
+  accent: "#4da3ff",
+  yellow: "#4da3ff",
   white: "#ffffff",
   sans: "Montserrat",
   cond: "BarlowCond",
@@ -96,7 +99,9 @@ const chunkWords = (words: Word[], fps: number, max = 3): Chunk[] => {
   return out;
 };
 
-const ChestLine: React.FC<{ text: string; y: number }> = ({ text, y }) => {
+const HIGHLIGHT = /^(roofers?|january|christmas|booked|guaranteed|free|homeowners|simple)$/i;
+
+const ChestLine: React.FC<{ text: string; y: number; size?: number }> = ({ text, y, size = 46 }) => {
   const enter = useEnter(0, 4);
   return (
     <div
@@ -108,7 +113,7 @@ const ChestLine: React.FC<{ text: string; y: number }> = ({ text, y }) => {
         textAlign: "center",
         fontFamily: T.sans,
         fontWeight: 800,
-        fontSize: 46,
+        fontSize: size,
         letterSpacing: "0.01em",
         color: T.white,
         textTransform: "uppercase",
@@ -116,7 +121,15 @@ const ChestLine: React.FC<{ text: string; y: number }> = ({ text, y }) => {
         ...enter,
       }}
     >
-      {text}
+      {text.split(" ").map((w, i) => {
+        const hot = /\d/.test(w) || HIGHLIGHT.test(w.replace(/[^a-z]/gi, ""));
+        return (
+          <span key={i} style={{ color: hot ? T.accent : T.white }}>
+            {i ? " " : ""}
+            {w}
+          </span>
+        );
+      })}
     </div>
   );
 };
@@ -132,7 +145,7 @@ export const ChestCaptions: React.FC<{ words: Word[]; y?: number; hide?: [number
         .filter((c) => !hide.some(([a, b]) => c.from < b && c.to > a))
         .map((c, i) => (
           <Sequence key={i} from={c.from} durationInFrames={Math.max(1, c.to - c.from)} layout="none">
-            <ChestLine text={c.text} y={y} />
+            <ChestLine text={c.text} y={i === 0 ? y - 30 : y} size={i === 0 ? 96 : 46} />
           </Sequence>
         ))}
     </>
@@ -203,18 +216,27 @@ export const StackedHook: React.FC<{ top: string; main: string; tag?: string; y?
 const Topo: React.FC = () => {
   const rings = useMemo(
     () =>
-      Array.from({ length: 5 }, (_, c) => {
-        const cx = 120 + random(`tx${c}`) * 840;
-        const cy = 150 + random(`ty${c}`) * 1620;
-        return Array.from({ length: 7 }, (_, k) => {
-          const r = 50 + k * 70;
-          const pts = Array.from({ length: 24 }, (_, j) => {
-            const a = (j / 24) * Math.PI * 2;
-            const wob = 1 + (random(`w${c}-${k}-${j}`) - 0.5) * 0.35;
-            return [cx + Math.cos(a) * r * wob, cy + Math.sin(a) * r * wob * 0.8] as const;
+      Array.from({ length: 6 }, (_, c) => {
+        const cx = 80 + random(`tx${c}`) * 920;
+        const cy = 120 + random(`ty${c}`) * 1680;
+        return Array.from({ length: 8 }, (_, k) => {
+          const r = 40 + k * 62;
+          const n = 14;
+          const pts = Array.from({ length: n }, (_, j) => {
+            const a = (j / n) * Math.PI * 2;
+            const wob = 1 + (random(`w${c}-${j}`) - 0.5) * 0.45 + (random(`v${c}-${k}-${j}`) - 0.5) * 0.08;
+            return [cx + Math.cos(a) * r * wob, cy + Math.sin(a) * r * wob * 0.82] as const;
           });
-          const d = pts.map(([x, y], j) => `${j ? "L" : "M"}${x.toFixed(0)} ${y.toFixed(0)}`).join(" ") + " Z";
-          return <path key={`${c}-${k}`} d={d} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={2.5} strokeLinejoin="round" />;
+          // Closed Catmull-Rom → cubic Bézier for smooth contours.
+          let d = `M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+          for (let j = 0; j < n; j++) {
+            const p0 = pts[(j - 1 + n) % n];
+            const p1 = pts[j];
+            const p2 = pts[(j + 1) % n];
+            const p3 = pts[(j + 2) % n];
+            d += ` C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(1)} ${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(1)} ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(1)} ${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+          }
+          return <path key={`${c}-${k}`} d={d} fill="none" stroke="rgba(150,190,255,0.16)" strokeWidth={2.2} />;
         });
       }),
     [],
@@ -239,11 +261,17 @@ const PART_STYLE: Record<CardPart["style"], React.CSSProperties> = {
 // Full-screen black card with faint contour lines and mixed-font kinetic
 // type; each part pops in (with glow) at its own frame.
 export const BlackCard: React.FC<{ parts: CardPart[][]; sticker?: React.ReactNode }> = ({ parts, sticker }) => (
-  <AbsoluteFill style={{ background: "#050505", justifyContent: "center", alignItems: "center" }}>
+  <AbsoluteFill
+    style={{
+      background: "radial-gradient(ellipse 80% 55% at 50% 45%, #0c2552 0%, #06101f 55%, #030509 100%)",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
     <Topo />
-    <div style={{ textAlign: "center", lineHeight: 0.98, position: "relative" }}>
+    <div style={{ textAlign: "center", lineHeight: 0.98, position: "relative", width: 980 }}>
       {parts.map((row, r) => (
-        <div key={r} style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: 18 }}>
+        <div key={r} style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", columnGap: 18 }}>
           {row.map((p, i) => (
             <CardWord key={i} p={p} />
           ))}
@@ -256,8 +284,11 @@ export const BlackCard: React.FC<{ parts: CardPart[][]; sticker?: React.ReactNod
 
 const CardWord: React.FC<{ p: CardPart }> = ({ p }) => {
   const enter = useEnter(p.at ?? 0, 6);
-  const glow = p.style === "yellow" || p.style === "cond" ? "0 0 30px rgba(255,210,31,0.45)" : "0 0 26px rgba(255,255,255,0.35)";
-  return <span style={{ ...PART_STYLE[p.style], textShadow: glow, display: "inline-block", ...enter }}>{p.text}</span>;
+  const base = PART_STYLE[p.style];
+  // Heavy caps run ~0.8em per glyph; shrink long words so they never clip.
+  const fit = p.style === "script" ? (base.fontSize as number) : Math.min(base.fontSize as number, Math.floor(940 / (p.text.length * 0.8)));
+  const glow = p.style === "yellow" || p.style === "cond" ? "0 0 30px rgba(77,163,255,0.55)" : "0 0 26px rgba(255,255,255,0.35)";
+  return <span style={{ ...base, fontSize: fit, textShadow: glow, display: "inline-block", ...enter }}>{p.text}</span>;
 };
 
 // --- Stickers ----------------------------------------------------------------
