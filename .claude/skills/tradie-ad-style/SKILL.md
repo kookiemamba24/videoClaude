@@ -18,17 +18,17 @@ loud, playful, readable on mute. Components live in `src/TradieStyle/kit.tsx`;
 2. **Giant keywords behind the speaker** — `KeywordSlam` drawn *between*
    `PunchFootage` and `PersonLayer`. One or two words, Montserrat 900 at
    200–250px (or Barlow Condensed 800 italic for an accent word), white or
-   yellow `#ffd21f`, near the top of frame so the head overlaps them. Use on
+   brand blue (`T.accent`), near the top of frame so the head overlaps them. Use on
    the emotional/key word of a sentence ("BURNED", "YOUR MONEY", "BUT
    THEY'RE NOT"). Needs a person cut-out (see below).
 3. **Black topographic cards** — `BlackCard`. Full-screen black with faint
    contour lines; 2–4 rows of mixed type that pop in word-by-word with a
-   glow: small Montserrat label, big white Montserrat 900, yellow Montserrat
-   900, condensed yellow italic, and a lowercase serif (Cormorant) for small
+   glow: small Montserrat label, big white Montserrat 900, blue Montserrat
+   900 (blue), condensed blue italic, and a lowercase serif (Cormorant) for small
    joining words ("they", "you", "they need"). Use for the "problem" beats
    and contrasts ("THE PROBLEM ISN'T…", "OR", "AND TO MAKE THEM ACTUALLY
    WANT TO…"). Often one emoji/3D sticker under the words.
-4. **Hook title** — `StackedHook`: yellow small line over a bigger white
+4. **Hook title** (optional; skip for Alvolution ads) — `StackedHook`: accent small line over a bigger white
    line, italic tag under; first 1–2 seconds, top of frame, in front of the
    speaker.
 5. **Stickers** — `Sticker` (emoji / 3D icon) popping with overshoot and a
@@ -38,7 +38,7 @@ loud, playful, readable on mute. Components live in `src/TradieStyle/kit.tsx`;
    `cuts` list: alternate 1.0× / ~1.14× at sentence or phrase boundaries,
    3-frame zoom-blur kick on each cut, plus a whoosh.
 7. **Offer / lead-magnet card** — `OfferCard`: white card with heavy black
-   title on a yellow highlighter stripe and a small italic subline, held at
+   title on a blue highlighter stripe and a small italic subline, held at
    chest height. For the freebie, guarantee or headline proof.
 8. **SFX** on every pop: whoosh on cuts, slap on keywords, pop on stickers,
    coins on money, error/fall on negatives, success on proof.
