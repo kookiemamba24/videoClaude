@@ -183,10 +183,10 @@ export const AdChristmas: React.FC = () => {
         {() => <KeywordSlam top={200} lines={[{ text: "MY", size: 200 }, { text: "PROMISE", color: T.yellow, size: 210 }]} />}
       </Scene>
       <Scene from={c.way} to={c.putYou}>
-        {() => <KeywordSlam top={200} lines={[{ text: "IT'S", size: 200 }, { text: "SIMPLE", color: T.yellow, size: 230 }]} />}
+        {() => <KeywordSlam top={70} lines={[{ text: "IT'S", size: 110 }, { text: "SIMPLE", color: T.yellow, size: 230 }]} />}
       </Scene>
       <Scene from={c.soIf} to={c.touch}>
-        {() => <KeywordSlam top={190} lines={[{ text: "BOOKED", size: 220 }, { text: "OUT", color: T.yellow, size: 240 }]} />}
+        {() => <KeywordSlam top={70} lines={[{ text: "BOOKED", size: 230 }, { text: "out before christmas", font: "cond", color: T.yellow, size: 96 }]} />}
       </Scene>
 
       <PersonClip src={A} fileStart={0} from={c.empty} to={c.because} cuts={cuts} />
