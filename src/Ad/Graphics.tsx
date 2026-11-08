@@ -634,7 +634,12 @@ export const ScrollThenHaggle: React.FC<{ len: number; scrollAt: number; callAt:
 
 // --- Offer -----------------------------------------------------------------
 
-export const Offer: React.FC<{ len: number; freeAt: number }> = ({ len, freeAt }) => {
+export const Offer: React.FC<{ len: number; freeAt: number; period?: string; freeText?: string }> = ({
+  len,
+  freeAt,
+  period = "in 90 days",
+  freeText = "Or we work for free",
+}) => {
   const { fps } = useVideoConfig();
   const c = useProgress(8, fps);
   const f = useProgress(freeAt, 12, back(1.6));
@@ -652,7 +657,7 @@ export const Offer: React.FC<{ len: number; freeAt: number }> = ({ len, freeAt }
             jobs
           </div>
         </div>
-        <div style={{ fontWeight: 700, fontSize: 40, marginTop: 20 }}>in 90 days</div>
+        <div style={{ fontWeight: 700, fontSize: 40, marginTop: 20 }}>{period}</div>
         <div
           style={{
             marginTop: 28,
@@ -670,7 +675,7 @@ export const Offer: React.FC<{ len: number; freeAt: number }> = ({ len, freeAt }
           }}
         >
           <Check p={f} size={44} />
-          Or we work for free
+          {freeText}
         </div>
       </Glass>
     </Stage>
