@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, interpolate, OffthreadVideo, random, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, interpolate, OffthreadVideo, random, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CTA, FollowUpPhone, FullOverlay, Glass, Kicker, Offer, PremiumAd, ResultCard, Stage } from "../Ad/Graphics";
 import { Sfx, SfxEvent } from "../Ad/Sfx";
 import { BlackCard, ChestCaptions, KeywordSlam, PunchFootage, Sticker, T } from "../TradieStyle/kit";
@@ -31,6 +31,144 @@ const PersonZoom: React.FC<{ src: string; trim: number; from: number; cuts: numb
     <AbsoluteFill style={{ scale: String((idx % 2 === 0 ? 1 : 1.14) * (1 + kick * 0.05)), transformOrigin: "50% 32%" }}>
       <OffthreadVideo src={src} trimBefore={trim} transparent muted />
     </AbsoluteFill>
+  );
+};
+
+// Roofing office with a "CLOSED FOR THE BREAK" sign, Christmas decorations.
+const ClosedOffice: React.FC<{ x: number; y: number; at?: number }> = ({ x, y, at = 0 }) => {
+  const frame = useCurrentFrame();
+  const p = interpolate(frame, [at, at + 9], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
+  const swing = Math.sin((frame - at) / 4) * 6 * Math.max(0, 1 - (frame - at) / 30);
+  return (
+    <div style={{ position: "absolute", left: x - 170, top: y - 160, width: 340, scale: String(p), filter: "drop-shadow(0 16px 26px rgba(0,0,0,0.45))" }}>
+      <svg width={340} height={300} viewBox="0 0 340 300">
+        <path d="M20 130 L170 30 L320 130 Z" fill="#3b4a5e" stroke="#fff" strokeWidth={6} strokeLinejoin="round" />
+        <rect x={45} y={128} width={250} height={150} rx={6} fill="#e9eef4" stroke="#fff" strokeWidth={5} />
+        <rect x={70} y={155} width={70} height={55} rx={4} fill="#1d2b40" />
+        <rect x={200} y={170} width={70} height={108} rx={4} fill="#1d2b40" />
+        {/* tinsel along the eave */}
+        {Array.from({ length: 9 }, (_, i) => (
+          <circle key={i} cx={40 + i * 33} cy={132 + (i % 2) * 6} r={8} fill={["#e3161b", "#2fbf5a", "#ffd23f"][i % 3]} />
+        ))}
+        <text x={170} y={110} textAnchor="middle" fontFamily="Montserrat" fontWeight={900} fontSize={30} fill="#fff">ROOFING</text>
+      </svg>
+      <div
+        style={{
+          position: "absolute",
+          left: 60,
+          top: 196,
+          padding: "8px 16px",
+          background: "#e3161b",
+          border: "4px solid #fff",
+          borderRadius: 10,
+          fontFamily: "Montserrat",
+          fontWeight: 900,
+          fontSize: 26,
+          lineHeight: 1.05,
+          color: "#fff",
+          textAlign: "center",
+          rotate: `${-6 + swing}deg`,
+          transformOrigin: "50% 0",
+          boxShadow: "0 8px 16px rgba(0,0,0,0.4)",
+        }}
+      >
+        CLOSED
+        <div style={{ fontSize: 15, fontWeight: 800 }}>FOR THE BREAK</div>
+      </div>
+    </div>
+  );
+};
+
+// Big "COMPLETELY GUARANTEED" stamp that thumps onto the promise card.
+const GuaranteeStamp: React.FC<{ at: number }> = ({ at }) => {
+  const frame = useCurrentFrame();
+  const p = interpolate(frame, [at, at + 6], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const shake = frame >= at && frame < at + 6 ? Math.sin(frame * 3) * 8 : 0;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        right: 70,
+        top: 1210,
+        padding: "16px 30px",
+        border: "9px solid #3ddc84",
+        borderRadius: 18,
+        color: "#3ddc84",
+        background: "rgba(5,20,12,0.55)",
+        fontFamily: "Montserrat",
+        fontWeight: 900,
+        fontSize: 54,
+        lineHeight: 1,
+        textAlign: "center",
+        letterSpacing: "0.04em",
+        rotate: "-10deg",
+        scale: String(2.4 - 1.4 * p),
+        opacity: p,
+        translate: `${shake}px 0`,
+        boxShadow: "0 0 40px rgba(61,220,132,0.35)",
+      }}
+    >
+      100%
+      <div style={{ fontSize: 40 }}>GUARANTEED</div>
+    </div>
+  );
+};
+
+// Calendar icon with every day ticked off.
+const BookedCalendarIcon: React.FC<{ x: number; y: number; at: number }> = ({ x, y, at }) => {
+  const frame = useCurrentFrame();
+  const p = interpolate(frame, [at, at + 9], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2.2)) });
+  return (
+    <div style={{ position: "absolute", left: x - 130, top: y - 130, width: 260, scale: String(p), rotate: `${-8 + Math.sin(frame / 6) * 3}deg`, filter: "drop-shadow(0 16px 26px rgba(0,0,0,0.45))" }}>
+      <div style={{ borderRadius: 26, overflow: "hidden", background: "#fff", border: "5px solid #fff" }}>
+        <div style={{ background: "#e3161b", color: "#fff", fontFamily: "Montserrat", fontWeight: 900, fontSize: 30, textAlign: "center", padding: "8px 0" }}>JANUARY</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 6, padding: 12 }}>
+          {Array.from({ length: 15 }, (_, i) => (
+            <div key={i} style={{ height: 36, borderRadius: 6, background: T.accent, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 900, fontSize: 22, fontFamily: "Montserrat" }}>
+              ✓
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style={{ marginTop: 10, textAlign: "center", fontFamily: "Montserrat", fontWeight: 900, fontSize: 30, color: "#fff", textShadow: "0 3px 10px rgba(0,0,0,0.6)" }}>BOOKED OUT</div>
+    </div>
+  );
+};
+
+// Swinging CLOSED sign that drops in on top of a full-screen overlay.
+const ClosedSign: React.FC<{ at: number }> = ({ at }) => {
+  const frame = useCurrentFrame();
+  const drop = interpolate(frame, [at, at + 10], [-420, 0], { ...clamp, easing: Easing.out(Easing.back(1.6)) });
+  const swing = Math.sin((frame - at) / 4) * 9 * Math.max(0, 1 - (frame - at) / 36);
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, top: 380 + drop, display: "flex", justifyContent: "center", opacity: frame >= at ? 1 : 0 }}>
+      <div style={{ position: "relative", rotate: `${swing}deg`, transformOrigin: "50% -120px" }}>
+        <svg width={470} height={130} style={{ position: "absolute", left: 0, top: -120 }}>
+          <path d="M235 4 L80 120 M235 4 L390 120" stroke="#d9dee6" strokeWidth={6} />
+          <circle cx={235} cy={8} r={10} fill="#d9dee6" />
+        </svg>
+        <div
+          style={{
+            width: 470,
+            padding: "22px 0 26px",
+            background: "#e3161b",
+            border: "8px solid #fff",
+            borderRadius: 22,
+            textAlign: "center",
+            fontFamily: "Montserrat",
+            fontWeight: 900,
+            fontSize: 110,
+            lineHeight: 1,
+            color: "#fff",
+            letterSpacing: "0.04em",
+            boxShadow: "0 24px 50px rgba(0,0,0,0.5)",
+          }}
+        >
+          CLOSED
+          <div style={{ fontSize: 30, fontWeight: 800, letterSpacing: "0.12em", marginTop: 8 }}>FOR THE SEASON</div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -162,6 +300,12 @@ export const AdChristmas: React.FC = () => {
     { at: c.exact, name: "whoosh-big" },
     { at: c.exact + 43, name: "coins", volume: 1.1 },
     { at: c.exact + 50, name: "coins-stack" },
+    { at: at("closed"), name: "drop", volume: 1.3 },
+    { at: at("closed") + 8, name: "slap", volume: 0.9 },
+    { at: c.xmas - 4, name: "pop" },
+    { at: c.xmas, name: "pop", volume: 0.8 },
+    { at: c.touch + 4, name: "pop" },
+    { at: c.touch + 10, name: "success", volume: 0.8 },
     { at: c.soIf + 3, name: "slap" },
     { at: c.touch, name: "whoosh" },
     { at: c.touch + 6, name: "pop" },
@@ -198,7 +342,14 @@ export const AdChristmas: React.FC = () => {
       <Scene from={c.empty} to={c.because}>{() => <Sticker emoji="😬" x={850} y={1230} size={220} rotate={8} />}</Scene>
       <Scene from={c.dries} to={c.well}>{() => <Sticker emoji="📉" x={230} y={1240} size={240} />}</Scene>
       <Scene from={c.way} to={c.putYou}>{() => <Sticker emoji="🛠️" x={850} y={1250} size={220} rotate={10} />}</Scene>
-      <Scene from={c.soBy} to={c.calendar}>{() => <Sticker emoji="🎄" x={850} y={1230} size={260} at={c.xmas - c.soBy} rotate={6} />}</Scene>
+      <Scene from={c.soBy} to={c.calendar}>
+        {() => (
+          <>
+            <ClosedOffice x={830} y={1280} at={c.xmas - c.soBy - 4} />
+            <Sticker emoji="🎅" x={220} y={1260} size={250} at={c.xmas - c.soBy} rotate={-8} />
+          </>
+        )}
+      </Scene>
       <Scene from={c.soIf} to={c.touch}>{() => <Sticker emoji="🎅" x={230} y={1240} size={240} />}</Scene>
 
       {/* Chest-level graphics over the footage */}
@@ -227,6 +378,7 @@ export const AdChristmas: React.FC = () => {
         {(len) => (
           <FullOverlay len={len}>
             <Offer len={len} freeAt={c.money - c.promise} period="right after Christmas" freeText="Or your money back" />
+            <GuaranteeStamp at={at("completely") - c.promise} />
           </FullOverlay>
         )}
       </Scene>
@@ -258,10 +410,19 @@ export const AdChristmas: React.FC = () => {
                 { label: "Revenue", value: "$1,200,000", w: 1, strong: true },
               ]}
             />
+            <ClosedSign at={at("closed") - c.exact} />
           </FullOverlay>
         )}
       </Scene>
-      <Scene from={c.touch - 6} to={durationInFrames}>{(len) => <CTA len={len} badge={staticFile("brand/av-logo-dark.png")} />}</Scene>
+      <Scene from={c.touch - 6} to={durationInFrames}>
+        {(len) => (
+          <>
+            <CTA len={len} badge={staticFile("brand/av-logo-dark.png")} />
+            <Sticker emoji="🎄" x={880} y={1430} size={260} at={4} rotate={6} />
+            <BookedCalendarIcon x={200} y={1440} at={8} />
+          </>
+        )}
+      </Scene>
 
       <Sfx events={sfx} />
     </AbsoluteFill>

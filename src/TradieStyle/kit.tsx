@@ -100,8 +100,9 @@ const chunkWords = (words: Word[], fps: number, max = 3): Chunk[] => {
 };
 
 const HIGHLIGHT = /^(roofers?|january|christmas|booked|guaranteed|free|homeowners|simple)$/i;
+// Whole-word highlight only; partial-word colouring looked like a glitch.
 
-const ChestLine: React.FC<{ text: string; y: number; size?: number }> = ({ text, y, size = 46 }) => {
+const ChestLine: React.FC<{ text: string; y: number; size?: number; caps?: boolean }> = ({ text, y, size = 58, caps = false }) => {
   const enter = useEnter(0, 4);
   return (
     <div
@@ -116,7 +117,8 @@ const ChestLine: React.FC<{ text: string; y: number; size?: number }> = ({ text,
         fontSize: size,
         letterSpacing: "0.01em",
         color: T.white,
-        textTransform: "uppercase",
+        textTransform: caps ? "uppercase" : "none",
+        padding: "0 60px",
         textShadow: T.shadow,
         ...enter,
       }}
@@ -145,7 +147,7 @@ export const ChestCaptions: React.FC<{ words: Word[]; y?: number; hide?: [number
         .filter((c) => !hide.some(([a, b]) => c.from < b && c.to > a))
         .map((c, i) => (
           <Sequence key={i} from={c.from} durationInFrames={Math.max(1, c.to - c.from)} layout="none">
-            <ChestLine text={c.text} y={i === 0 ? y - 30 : y} size={i === 0 ? 96 : 46} />
+            <ChestLine text={c.text} y={i === 0 ? y - 30 : y} size={i === 0 ? 96 : 58} caps={i === 0} />
           </Sequence>
         ))}
     </>
