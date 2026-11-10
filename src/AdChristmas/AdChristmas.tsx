@@ -16,7 +16,7 @@ const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 // Speaker cut-out for one stretch, so a keyword can sit behind the head.
 // `fileStart` is the frame the matte file starts at in the source clip.
-const PersonClip: React.FC<{ src: string; fileStart: number; from: number; to: number; cuts: number[] }> = ({ src, fileStart, from, to, cuts }) => (
+export const PersonClip: React.FC<{ src: string; fileStart: number; from: number; to: number; cuts: number[] }> = ({ src, fileStart, from, to, cuts }) => (
   <Sequence from={from} durationInFrames={to - from} layout="none">
     <PersonZoom src={src} trim={from - fileStart} from={from} cuts={cuts} />
   </Sequence>
@@ -80,7 +80,7 @@ const ClosedOffice: React.FC<{ x: number; y: number; at?: number }> = ({ x, y, a
 };
 
 // Big "COMPLETELY GUARANTEED" stamp that thumps onto the promise card.
-const GuaranteeStamp: React.FC<{ at: number }> = ({ at }) => {
+export const GuaranteeStamp: React.FC<{ at: number }> = ({ at }) => {
   const frame = useCurrentFrame();
   const p = interpolate(frame, [at, at + 6], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const shake = frame >= at && frame < at + 6 ? Math.sin(frame * 3) * 8 : 0;

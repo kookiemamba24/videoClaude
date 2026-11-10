@@ -6,6 +6,7 @@ import { BeforeAfterComic } from "./Static/BeforeAfterComic";
 import { FbBanner } from "./Static/FbBanner";
 import { TRADIE_DEMO_FRAMES, TradieDemo } from "./TradieStyle/TradieDemo";
 import { AD_CHRISTMAS_FRAMES, AdChristmas } from "./AdChristmas/AdChristmas";
+import { AD_LEADS_FRAMES, AdLeads } from "./AdLeads/AdLeads";
 import { ClientResult, clientResultSchema } from "./ClientResult/ClientResult";
 import { VSL, VSL_DURATION_FRAMES } from "./VSL/VSL";
 import { AD_SCARING_FRAMES, AdScaring } from "./Ad/AdScaring";
@@ -110,6 +111,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="FbBanner" component={FbBanner} width={1640} height={624} />
       <Composition id="TradieDemo" component={TradieDemo} durationInFrames={TRADIE_DEMO_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="AdChristmas" component={AdChristmas} durationInFrames={AD_CHRISTMAS_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="AdLeads" component={AdLeads} durationInFrames={AD_LEADS_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
