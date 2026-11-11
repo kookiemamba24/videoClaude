@@ -115,7 +115,7 @@ export const GuaranteeStamp: React.FC<{ at: number }> = ({ at }) => {
 };
 
 // Calendar icon with every day ticked off.
-const BookedCalendarIcon: React.FC<{ x: number; y: number; at: number }> = ({ x, y, at }) => {
+export const BookedCalendarIcon: React.FC<{ x: number; y: number; at: number }> = ({ x, y, at }) => {
   const frame = useCurrentFrame();
   const p = interpolate(frame, [at, at + 9], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2.2)) });
   return (

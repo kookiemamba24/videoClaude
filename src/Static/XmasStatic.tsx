@@ -1,10 +1,11 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
+import { BookedCalendarIcon } from "../AdChristmas/AdChristmas";
 import { T } from "../TradieStyle/kit";
 
 // 4:5 static ad. Photo sits low so the hero title has sky above the head;
 // offer on the right beside the vest, perks bottom-left on dark glass.
-const PHOTO_TOP = 200;
+const PHOTO_TOP = -170;
 
 const Perk: React.FC<{ text: string }> = ({ text }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 16, fontWeight: 800, fontSize: 31, lineHeight: 1.15, whiteSpace: "nowrap" }}>
@@ -23,7 +24,7 @@ export const XmasStatic: React.FC = () => (
     <AbsoluteFill
       style={{
         background:
-          "linear-gradient(180deg, #0a1730 0%, #0a1730 14%, rgba(10,23,48,0.75) 26%, rgba(10,23,48,0) 40%), linear-gradient(0deg, rgba(5,12,26,0.85) 0%, rgba(5,12,26,0) 34%)",
+          "linear-gradient(180deg, #0a1730 0%, #0a1730 16%, rgba(10,23,48,0.7) 28%, rgba(10,23,48,0) 38%), linear-gradient(0deg, rgba(5,12,26,0.85) 0%, rgba(5,12,26,0) 34%)",
       }}
     />
 
@@ -40,7 +41,7 @@ export const XmasStatic: React.FC = () => (
       style={{
         position: "absolute",
         right: 36,
-        top: 640,
+        top: 760,
         width: 540,
         padding: "34px 34px 38px",
         borderRadius: 28,
@@ -56,19 +57,21 @@ export const XmasStatic: React.FC = () => (
       <div
         style={{
           marginTop: 22,
-          display: "inline-block",
-          padding: "12px 20px",
+          padding: "12px 18px",
+          textAlign: "center",
           borderRadius: 14,
           background: T.accent,
           fontWeight: 900,
-          fontSize: 26,
+          fontSize: 27,
           lineHeight: 1.15,
-          whiteSpace: "nowrap",
         }}
       >
         or your money back, guaranteed
       </div>
     </div>
+
+    {/* Booked-out calendar sitting on top of the offer */}
+    <BookedCalendarIcon x={774} y={600} at={-30} />
 
     {/* Perks, lower left */}
     <div
