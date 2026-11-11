@@ -100,7 +100,7 @@ export const XmasStatic: React.FC = () => (
         backdropFilter: "blur(10px)",
       }}
     >
-      <Perk text="No ad spend — we cover it" />
+      <Perk text="No ad spend, we cover it" />
       <Perk text="No lock-in contract" />
       <Perk text="Live and running in under 7 days" />
     </div>
