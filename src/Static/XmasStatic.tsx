@@ -5,7 +5,7 @@ import { T } from "../TradieStyle/kit";
 
 // 4:5 static ad. Photo sits low so the hero title has sky above the head;
 // offer on the right beside the vest, perks bottom-left on dark glass.
-const PHOTO_TOP = -170;
+const PHOTO_TOP = -190;
 
 const Perk: React.FC<{ text: string }> = ({ text }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 16, fontWeight: 800, fontSize: 31, lineHeight: 1.15, whiteSpace: "nowrap" }}>
@@ -41,7 +41,7 @@ export const XmasStatic: React.FC = () => (
       style={{
         position: "absolute",
         right: 36,
-        top: 760,
+        top: 655,
         width: 540,
         padding: "34px 34px 38px",
         borderRadius: 28,
@@ -51,8 +51,17 @@ export const XmasStatic: React.FC = () => (
         backdropFilter: "blur(10px)",
       }}
     >
-      <div style={{ fontWeight: 900, fontSize: 48, lineHeight: 1.06, letterSpacing: "-0.01em", textWrap: "balance" } as React.CSSProperties}>
-        Get <span style={{ color: T.accent }}>booked out</span> in jobs before Christmas
+      <div style={{ display: "flex", alignItems: "flex-end", gap: 10 }}>
+        <div style={{ flex: 1, fontWeight: 900, fontSize: 48, lineHeight: 1.06, letterSpacing: "-0.01em" }}>
+          Get <span style={{ color: T.accent }}>booked out</span> in jobs before Christmas
+        </div>
+        {/* Christmas tree with presents in the spare corner */}
+        <div style={{ position: "relative", width: 140, height: 190, flexShrink: 0, fontFamily: "'Noto Color Emoji'" }}>
+          <div style={{ position: "absolute", left: 0, right: 0, top: 0, textAlign: "center", fontSize: 128, lineHeight: 1 }}>🎄</div>
+          <div style={{ position: "absolute", left: -6, bottom: 0, fontSize: 48, lineHeight: 1, rotate: "-8deg" }}>🎁</div>
+          <div style={{ position: "absolute", right: -4, bottom: 2, fontSize: 42, lineHeight: 1, rotate: "10deg" }}>🎁</div>
+          <div style={{ position: "absolute", left: 46, bottom: -4, fontSize: 38, lineHeight: 1 }}>🎁</div>
+        </div>
       </div>
       <div
         style={{
@@ -71,14 +80,16 @@ export const XmasStatic: React.FC = () => (
     </div>
 
     {/* Booked-out calendar sitting on top of the offer */}
-    <BookedCalendarIcon x={774} y={600} at={-30} />
+    <div style={{ position: "absolute", inset: 0, scale: "0.8", transformOrigin: "774px 640px" }}>
+      <BookedCalendarIcon x={774} y={515} at={-30} />
+    </div>
 
     {/* Perks, lower left */}
     <div
       style={{
         position: "absolute",
         left: 40,
-        bottom: 50,
+        bottom: 36,
         padding: "28px 34px",
         borderRadius: 26,
         background: "rgba(8,16,32,0.82)",
